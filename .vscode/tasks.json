@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build firmware",
+      "type": "shell",
+      "command": "echo $ARM_BIN && echo $ARM_INCLUDE && echo $ARM_LIB",
+      "options": {
+        "env": {
+          "ARM_BIN": "${config:arm-none-eabi.bin}",
+          "ARM_INCLUDE": "${config:arm-none-eabi.include}",
+          "ARM_LIB": "${config:arm-none-eabi.lib}",
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "clean firmware",
+      "type": "shell",
+      "command": "echo clean",
+      "group": "build",
+    },
+    {
+      "label": "telnet",
+      "type": "shell",
+      "command": "telnet localhost 19021",
+      "group": "none",
+    },
+  ]
+}
