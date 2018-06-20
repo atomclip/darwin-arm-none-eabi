@@ -21,6 +21,44 @@ packaged for Visual Studio Code:
 In Visual Studio Code goto extensions (Shift+Cmd+X), search for '*atomclip*' 
 and install the extension that is suited for your operating system. 
 
+The extension has three paths for the toolchain. You can use this in the 
+tasks.json.
+
+- arm-none-eabi.bin
+- arm-none-eabi.include
+- arm-none-eabi.lib
+
+Here is an example of tasks.json for GNU make. 
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build firmware",
+      "type": "shell",
+      "command": "make",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH}:${config:arm-none-eabi.bin}",
+          "INCLUDE": "${config:arm-none-eabi.include}",
+          "LIB": "${config:arm-none-eabi.lib}",
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
+```
+
 ## Release Notes
+
+### Version 0.0.2
+Changed default paths, added GNU Make 3.81.
+
+### Version 0.0.1
 Version 7-2017-q4-major for macOS
 Released: December 18, 2017
