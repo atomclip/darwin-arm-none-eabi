@@ -18,7 +18,7 @@ packaged for Visual Studio Code:
 [GNU Arm embedded toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
 
 ## Install
-In Visual Studio Code goto extensions (Shift+Cmd+X), search for '*atomclip*' 
+In Visual Studio Code goto extensions (shift+cmd+x), search for '*atomclip*' 
 and install the extension that is suited for your operating system. 
 
 The extension has three paths for the toolchain. You can use this in the 
