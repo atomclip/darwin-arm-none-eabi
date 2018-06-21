@@ -1,4 +1,4 @@
-### Version 0.0.3
+### Version 0.0.5
 The path separator punctiantion is a *colon :* in macOS and Linux and a 
 *semicolon ;* in Windows. To handle these operating system specific differences 
 I updated the tasks.json and added a simple makefile to test. You can use this 
