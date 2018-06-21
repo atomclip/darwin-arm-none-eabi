@@ -1,3 +1,9 @@
+### Version 0.0.3
+The path separator punctiantion is a *colon :* in macOS and Linux and a 
+*semicolon ;* in Windows. To handle these operating system specific differences 
+I updated the tasks.json and added a simple makefile to test. You can use this 
+tasks.json and makefile to check your paths. 
+
 ### Version 0.0.2
 Using the tilde in the paths had some problems during linking:
 
