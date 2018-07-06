@@ -85,7 +85,7 @@ test:
 
 ## Release Notes
 
-### Version 0.0.6
+### Version 0.1.0
 Version 7-2018-q2-update for macOS
 Added ./symlink.sh to create symlinks in /usr/local/bin.
 
