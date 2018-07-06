@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Insn-Attributes.html#Insn-Attributes">I
 
 <h4 class="subsection">16.19.5 Computing the Length of an Insn</h4>
 
-<p><a name="index-insn-lengths_002c-computing-3794"></a><a name="index-computing-the-length-of-an-insn-3795"></a>
+<p><a name="index-insn-lengths_002c-computing-3795"></a><a name="index-computing-the-length-of-an-insn-3796"></a>
 For many machines, multiple types of branch instructions are provided, each
 for different length branch displacements.  In most cases, the assembler
 will choose the correct instruction to use.  However, when the assembler
@@ -66,17 +66,17 @@ values by specifying a null string in its <code>define_attr</code>.
 arithmetic terms are allowed in test expressions:
 
      
-<a name="index-g_t_0040code_007bmatch_005fdup_007d-and-attributes-3796"></a>
+<a name="index-g_t_0040code_007bmatch_005fdup_007d-and-attributes-3797"></a>
 <dl><dt><code>(match_dup </code><var>n</var><code>)</code><dd>This refers to the address of operand <var>n</var> of the current insn, which
 must be a <code>label_ref</code>.
 
-     <p><a name="index-g_t_0040code_007bpc_007d-and-attributes-3797"></a><br><dt><code>(pc)</code><dd>For non-branch instructions and backward branch instructions, this refers
+     <p><a name="index-g_t_0040code_007bpc_007d-and-attributes-3798"></a><br><dt><code>(pc)</code><dd>For non-branch instructions and backward branch instructions, this refers
 to the address of the current insn.  But for forward branch instructions,
 this refers to the address of the next insn, because the length of the
 current insn is to be computed. 
 </dl>
 
- <p><a name="index-g_t_0040code_007baddr_005fvec_007d_002c-length-of-3798"></a><a name="index-g_t_0040code_007baddr_005fdiff_005fvec_007d_002c-length-of-3799"></a>For normal insns, the length will be determined by value of the
+ <p><a name="index-g_t_0040code_007baddr_005fvec_007d_002c-length-of-3799"></a><a name="index-g_t_0040code_007baddr_005fdiff_005fvec_007d_002c-length-of-3800"></a>For normal insns, the length will be determined by value of the
 <code>length</code> attribute.  In the case of <code>addr_vec</code> and
 <code>addr_diff_vec</code> insn patterns, the length is computed as
 the number of vectors multiplied by the size of each vector.
@@ -92,7 +92,7 @@ without using the function call.  You can an example of this in the
  <p>The following macros can be used to refine the length computation:
 
      
-<a name="index-ADJUST_005fINSN_005fLENGTH-3800"></a>
+<a name="index-ADJUST_005fINSN_005fLENGTH-3801"></a>
 <dl><dt><code>ADJUST_INSN_LENGTH (</code><var>insn</var><code>, </code><var>length</var><code>)</code><dd>If defined, modifies the length assigned to instruction <var>insn</var> as a
 function of the context in which it is used.  <var>length</var> is an lvalue
 that contains the initially computed length of the insn and should be
@@ -104,7 +104,7 @@ insn must be increased by two to compensate for the fact that alignment
 may be required. 
 </dl>
 
- <p><a name="index-get_005fattr_005flength-3801"></a>The routine that returns <code>get_attr_length</code> (the value of the
+ <p><a name="index-get_005fattr_005flength-3802"></a>The routine that returns <code>get_attr_length</code> (the value of the
 <code>length</code> attribute) can be used by the output routine to
 determine the form of the branch instruction to be written, as the
 example below illustrates.

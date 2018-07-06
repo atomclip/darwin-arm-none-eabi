@@ -10,10 +10,10 @@
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
 This file documents the GNU linker LD
-(GNU Tools for Arm Embedded Processors 7-2017-q4-major)
-version 2.29.51.
+(GNU Tools for Arm Embedded Processors 7-2018-q2-update)
+version 2.30.0.
 
-Copyright (C) 1991-2017 Free Software Foundation, Inc.
+Copyright (C) 1991-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -46,17 +46,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Dependent.html#Machine-Dependen
 
 <h3 class="section">4.1 <samp><span class="command">ld</span></samp> and the H8/300</h3>
 
-<p><a name="index-H8_002f300-support-616"></a>For the H8/300, <samp><span class="command">ld</span></samp> can perform these global optimizations when
+<p><a name="index-H8_002f300-support-617"></a>For the H8/300, <samp><span class="command">ld</span></samp> can perform these global optimizations when
 you specify the `<samp><span class="samp">--relax</span></samp>' command-line option.
 
      
-<a name="index-relaxing-on-H8_002f300-617"></a>
+<a name="index-relaxing-on-H8_002f300-618"></a>
 <dl><dt><em>relaxing address modes</em><dd><samp><span class="command">ld</span></samp> finds all <code>jsr</code> and <code>jmp</code> instructions whose
 targets are within eight bits, and turns them into eight-bit
 program-counter relative <code>bsr</code> and <code>bra</code> instructions,
 respectively.
 
-     <p><a name="index-synthesizing-on-H8_002f300-618"></a><br><dt><em>synthesizing instructions</em><dd><!-- FIXME: specifically mov.b, or any mov instructions really? -> mov.b only, at least on H8, H8H, H8S -->
+     <p><a name="index-synthesizing-on-H8_002f300-619"></a><br><dt><em>synthesizing instructions</em><dd><!-- FIXME: specifically mov.b, or any mov instructions really? -> mov.b only, at least on H8, H8H, H8S -->
 <samp><span class="command">ld</span></samp> finds all <code>mov.b</code> instructions which use the
 sixteen-bit absolute address form, but refer to the top
 page of memory, and changes them to use the eight-bit address form. 

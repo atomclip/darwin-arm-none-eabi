@@ -57,24 +57,24 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported by the MeP back end:
 
      <dl>
-<dt><code>disinterrupt</code><dd><a name="index-g_t_0040code_007bdisinterrupt_007d-function-attribute_002c-MeP-3408"></a>On MeP targets, this attribute causes the compiler to emit
+<dt><code>disinterrupt</code><dd><a name="index-g_t_0040code_007bdisinterrupt_007d-function-attribute_002c-MeP-3414"></a>On MeP targets, this attribute causes the compiler to emit
 instructions to disable interrupts for the duration of the given
 function.
 
-     <br><dt><code>interrupt</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-MeP-3409"></a>Use this attribute to indicate
+     <br><dt><code>interrupt</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-MeP-3415"></a>Use this attribute to indicate
 that the specified function is an interrupt handler.  The compiler generates
 function entry and exit sequences suitable for use in an interrupt handler
 when this attribute is present.
 
-     <br><dt><code>near</code><dd><a name="index-g_t_0040code_007bnear_007d-function-attribute_002c-MeP-3410"></a>This attribute causes the compiler to assume the called
+     <br><dt><code>near</code><dd><a name="index-g_t_0040code_007bnear_007d-function-attribute_002c-MeP-3416"></a>This attribute causes the compiler to assume the called
 function is close enough to use the normal calling convention,
 overriding the <samp><span class="option">-mtf</span></samp> command-line option.
 
-     <br><dt><code>far</code><dd><a name="index-g_t_0040code_007bfar_007d-function-attribute_002c-MeP-3411"></a>On MeP targets this causes the compiler to use a calling convention
+     <br><dt><code>far</code><dd><a name="index-g_t_0040code_007bfar_007d-function-attribute_002c-MeP-3417"></a>On MeP targets this causes the compiler to use a calling convention
 that assumes the called function is too far away for the built-in
 addressing modes.
 
-     <br><dt><code>vliw</code><dd><a name="index-g_t_0040code_007bvliw_007d-function-attribute_002c-MeP-3412"></a>The <code>vliw</code> attribute tells the compiler to emit
+     <br><dt><code>vliw</code><dd><a name="index-g_t_0040code_007bvliw_007d-function-attribute_002c-MeP-3418"></a>The <code>vliw</code> attribute tells the compiler to emit
 instructions in VLIW mode instead of core mode.  Note that this
 attribute is not allowed unless a VLIW coprocessor has been configured
 and enabled through command-line options. 

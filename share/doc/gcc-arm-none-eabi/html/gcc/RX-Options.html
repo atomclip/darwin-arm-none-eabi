@@ -54,17 +54,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 
 <h4 class="subsection">3.18.40 RX Options</h4>
 
-<p><a name="index-RX-Options-2586"></a>
+<p><a name="index-RX-Options-2589"></a>
 These command-line options are defined for RX targets:
 
      <dl>
-<dt><code>-m64bit-doubles</code><dt><code>-m32bit-doubles</code><dd><a name="index-m64bit_002ddoubles-2587"></a><a name="index-m32bit_002ddoubles-2588"></a>Make the <code>double</code> data type be 64 bits (<samp><span class="option">-m64bit-doubles</span></samp>)
+<dt><code>-m64bit-doubles</code><dt><code>-m32bit-doubles</code><dd><a name="index-m64bit_002ddoubles-2590"></a><a name="index-m32bit_002ddoubles-2591"></a>Make the <code>double</code> data type be 64 bits (<samp><span class="option">-m64bit-doubles</span></samp>)
 or 32 bits (<samp><span class="option">-m32bit-doubles</span></samp>) in size.  The default is
 <samp><span class="option">-m32bit-doubles</span></samp>.  <em>Note</em> RX floating-point hardware only
 works on 32-bit values, which is why the default is
 <samp><span class="option">-m32bit-doubles</span></samp>.
 
-     <br><dt><code>-fpu</code><dt><code>-nofpu</code><dd><a name="index-fpu-2589"></a><a name="index-nofpu-2590"></a>Enables (<samp><span class="option">-fpu</span></samp>) or disables (<samp><span class="option">-nofpu</span></samp>) the use of RX
+     <br><dt><code>-fpu</code><dt><code>-nofpu</code><dd><a name="index-fpu-2592"></a><a name="index-nofpu-2593"></a>Enables (<samp><span class="option">-fpu</span></samp>) or disables (<samp><span class="option">-nofpu</span></samp>) the use of RX
 floating-point hardware.  The default is enabled for the RX600
 series and disabled for the RX200 series.
 
@@ -76,7 +76,7 @@ values, however, so the FPU hardware is not used for doubles if the
 <samp><span class="option">-funsafe-math-optimizations</span></samp> is also enabled automatically. 
 This is because the RX FPU instructions are themselves unsafe.
 
-     <br><dt><code>-mcpu=</code><var>name</var><dd><a name="index-mcpu-2591"></a>Selects the type of RX CPU to be targeted.  Currently three types are
+     <br><dt><code>-mcpu=</code><var>name</var><dd><a name="index-mcpu-2594"></a>Selects the type of RX CPU to be targeted.  Currently three types are
 supported, the generic `<samp><span class="samp">RX600</span></samp>' and `<samp><span class="samp">RX200</span></samp>' series hardware and
 the specific `<samp><span class="samp">RX610</span></samp>' CPU.  The default is `<samp><span class="samp">RX600</span></samp>'.
 
@@ -87,11 +87,11 @@ the specific `<samp><span class="samp">RX610</span></samp>' CPU.  The default is
 and so <samp><span class="option">-nofpu</span></samp> is enabled by default when this type is
 selected.
 
-     <br><dt><code>-mbig-endian-data</code><dt><code>-mlittle-endian-data</code><dd><a name="index-mbig_002dendian_002ddata-2592"></a><a name="index-mlittle_002dendian_002ddata-2593"></a>Store data (but not code) in the big-endian format.  The default is
+     <br><dt><code>-mbig-endian-data</code><dt><code>-mlittle-endian-data</code><dd><a name="index-mbig_002dendian_002ddata-2595"></a><a name="index-mlittle_002dendian_002ddata-2596"></a>Store data (but not code) in the big-endian format.  The default is
 <samp><span class="option">-mlittle-endian-data</span></samp>, i.e. to store data in the little-endian
 format.
 
-     <br><dt><code>-msmall-data-limit=</code><var>N</var><dd><a name="index-msmall_002ddata_002dlimit-2594"></a>Specifies the maximum size in bytes of global and static variables
+     <br><dt><code>-msmall-data-limit=</code><var>N</var><dd><a name="index-msmall_002ddata_002dlimit-2597"></a>Specifies the maximum size in bytes of global and static variables
 which can be placed into the small data area.  Using the small data
 area can lead to smaller and faster code, but the size of area is
 limited and it is up to the programmer to ensure that the area does
@@ -113,14 +113,14 @@ discover whether this feature is of benefit to their program.  See the
 description of the <samp><span class="option">-mpid</span></samp> option for a description of how the
 actual register to hold the small data area pointer is chosen.
 
-     <br><dt><code>-msim</code><dt><code>-mno-sim</code><dd><a name="index-msim-2595"></a><a name="index-mno_002dsim-2596"></a>Use the simulator runtime.  The default is to use the libgloss
+     <br><dt><code>-msim</code><dt><code>-mno-sim</code><dd><a name="index-msim-2598"></a><a name="index-mno_002dsim-2599"></a>Use the simulator runtime.  The default is to use the libgloss
 board-specific runtime.
 
-     <br><dt><code>-mas100-syntax</code><dt><code>-mno-as100-syntax</code><dd><a name="index-mas100_002dsyntax-2597"></a><a name="index-mno_002das100_002dsyntax-2598"></a>When generating assembler output use a syntax that is compatible with
+     <br><dt><code>-mas100-syntax</code><dt><code>-mno-as100-syntax</code><dd><a name="index-mas100_002dsyntax-2600"></a><a name="index-mno_002das100_002dsyntax-2601"></a>When generating assembler output use a syntax that is compatible with
 Renesas's AS100 assembler.  This syntax can also be handled by the GAS
 assembler, but it has some restrictions so it is not generated by default.
 
-     <br><dt><code>-mmax-constant-size=</code><var>N</var><dd><a name="index-mmax_002dconstant_002dsize-2599"></a>Specifies the maximum size, in bytes, of a constant that can be used as
+     <br><dt><code>-mmax-constant-size=</code><var>N</var><dd><a name="index-mmax_002dconstant_002dsize-2602"></a>Specifies the maximum size, in bytes, of a constant that can be used as
 an operand in a RX instruction.  Although the RX instruction set does
 allow constants of up to 4 bytes in length to be used in instructions,
 a longer value equates to a longer instruction.  Thus in some
@@ -131,11 +131,11 @@ placed into a constant pool and referenced via register indirection.
      <p>The value <var>N</var> can be between 0 and 4.  A value of 0 (the default)
 or 4 means that constants of any size are allowed.
 
-     <br><dt><code>-mrelax</code><dd><a name="index-mrelax-2600"></a>Enable linker relaxation.  Linker relaxation is a process whereby the
+     <br><dt><code>-mrelax</code><dd><a name="index-mrelax-2603"></a>Enable linker relaxation.  Linker relaxation is a process whereby the
 linker attempts to reduce the size of a program by finding shorter
 versions of various instructions.  Disabled by default.
 
-     <br><dt><code>-mint-register=</code><var>N</var><dd><a name="index-mint_002dregister-2601"></a>Specify the number of registers to reserve for fast interrupt handler
+     <br><dt><code>-mint-register=</code><var>N</var><dd><a name="index-mint_002dregister-2604"></a>Specify the number of registers to reserve for fast interrupt handler
 functions.  The value <var>N</var> can be between 0 and 4.  A value of 1
 means that register <code>r13</code> is reserved for the exclusive use
 of fast interrupt handlers.  A value of 2 reserves <code>r13</code> and
@@ -143,13 +143,13 @@ of fast interrupt handlers.  A value of 2 reserves <code>r13</code> and
 <code>r11</code>, and a value of 4 reserves <code>r13</code> through <code>r10</code>. 
 A value of 0, the default, does not reserve any registers.
 
-     <br><dt><code>-msave-acc-in-interrupts</code><dd><a name="index-msave_002dacc_002din_002dinterrupts-2602"></a>Specifies that interrupt handler functions should preserve the
+     <br><dt><code>-msave-acc-in-interrupts</code><dd><a name="index-msave_002dacc_002din_002dinterrupts-2605"></a>Specifies that interrupt handler functions should preserve the
 accumulator register.  This is only necessary if normal code might use
 the accumulator register, for example because it performs 64-bit
 multiplications.  The default is to ignore the accumulator as this
 makes the interrupt handlers faster.
 
-     <br><dt><code>-mpid</code><dt><code>-mno-pid</code><dd><a name="index-mpid-2603"></a><a name="index-mno_002dpid-2604"></a>Enables the generation of position independent data.  When enabled any
+     <br><dt><code>-mpid</code><dt><code>-mno-pid</code><dd><a name="index-mpid-2606"></a><a name="index-mno_002dpid-2607"></a>Enables the generation of position independent data.  When enabled any
 access to constant data is done via an offset from a base address
 held in a register.  This allows the location of constant data to be
 determined at run time without requiring the executable to be
@@ -174,12 +174,12 @@ command line.
      <p>By default this feature is not enabled.  The default can be restored
 via the <samp><span class="option">-mno-pid</span></samp> command-line option.
 
-     <br><dt><code>-mno-warn-multiple-fast-interrupts</code><dt><code>-mwarn-multiple-fast-interrupts</code><dd><a name="index-mno_002dwarn_002dmultiple_002dfast_002dinterrupts-2605"></a><a name="index-mwarn_002dmultiple_002dfast_002dinterrupts-2606"></a>Prevents GCC from issuing a warning message if it finds more than one
+     <br><dt><code>-mno-warn-multiple-fast-interrupts</code><dt><code>-mwarn-multiple-fast-interrupts</code><dd><a name="index-mno_002dwarn_002dmultiple_002dfast_002dinterrupts-2608"></a><a name="index-mwarn_002dmultiple_002dfast_002dinterrupts-2609"></a>Prevents GCC from issuing a warning message if it finds more than one
 fast interrupt handler when it is compiling a file.  The default is to
 issue a warning for each extra fast interrupt handler found, as the RX
 only supports one such interrupt.
 
-     <br><dt><code>-mallow-string-insns</code><dt><code>-mno-allow-string-insns</code><dd><a name="index-mallow_002dstring_002dinsns-2607"></a><a name="index-mno_002dallow_002dstring_002dinsns-2608"></a>Enables or disables the use of the string manipulation instructions
+     <br><dt><code>-mallow-string-insns</code><dt><code>-mno-allow-string-insns</code><dd><a name="index-mallow_002dstring_002dinsns-2610"></a><a name="index-mno_002dallow_002dstring_002dinsns-2611"></a>Enables or disables the use of the string manipulation instructions
 <code>SMOVF</code>, <code>SCMPU</code>, <code>SMOVB</code>, <code>SMOVU</code>, <code>SUNTIL</code>
 <code>SWHILE</code> and also the <code>RMPA</code> instruction.  These
 instructions may prefetch data, which is not safe to do if accessing
@@ -197,7 +197,7 @@ accesses I/O space.
 symbol <code>__RX_ALLOW_STRING_INSNS__</code>, otherwise it defines the
 symbol <code>__RX_DISALLOW_STRING_INSNS__</code>.
 
-     <br><dt><code>-mjsr</code><dt><code>-mno-jsr</code><dd><a name="index-mjsr-2609"></a><a name="index-mno_002djsr-2610"></a>Use only (or not only) <code>JSR</code> instructions to access functions. 
+     <br><dt><code>-mjsr</code><dt><code>-mno-jsr</code><dd><a name="index-mjsr-2612"></a><a name="index-mno_002djsr-2613"></a>Use only (or not only) <code>JSR</code> instructions to access functions. 
 This option can be used when code size exceeds the range of <code>BSR</code>
 instructions.  Note that <samp><span class="option">-mno-jsr</span></samp> does not mean to not use
 <code>JSR</code> but instead means that any type of branch may be used. 

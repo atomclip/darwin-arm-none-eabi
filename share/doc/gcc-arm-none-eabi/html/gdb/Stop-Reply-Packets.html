@@ -10,7 +10,7 @@
 <link rel="next" href="General-Query-Packets.html#General-Query-Packets" title="General Query Packets">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988-2017 Free Software Foundation, Inc.
+Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Protocol.html#Remote-Protocol">R
 
 <h3 class="section">E.3 Stop Reply Packets</h3>
 
-<p><a name="index-stop-reply-packets-3401"></a>
+<p><a name="index-stop-reply-packets-3414"></a>
 The `<samp><span class="samp">C</span></samp>', `<samp><span class="samp">c</span></samp>', `<samp><span class="samp">S</span></samp>', `<samp><span class="samp">s</span></samp>', `<samp><span class="samp">vCont</span></samp>',
 `<samp><span class="samp">vAttach</span></samp>', `<samp><span class="samp">vRun</span></samp>', `<samp><span class="samp">vStopped</span></samp>', and `<samp><span class="samp">?</span></samp>' packets can
 receive any of the below as a reply.  Except for `<samp><span class="samp">?</span></samp>'
@@ -71,7 +71,7 @@ components.
 number).  This is equivalent to a `<samp><span class="samp">T</span></samp>' response with no
 <var>n</var>:<var>r</var> pairs.
 
-     <br><dt>`<samp><span class="samp">T </span><var>AA</var> <var>n1</var><span class="samp">:</span><var>r1</var><span class="samp">;</span><var>n2</var><span class="samp">:</span><var>r2</var><span class="samp">;...</span></samp>'<dd><a name="index-g_t_0040samp_007bT_007d-packet-reply-3402"></a>The program received signal number <var>AA</var> (a two-digit hexadecimal
+     <br><dt>`<samp><span class="samp">T </span><var>AA</var> <var>n1</var><span class="samp">:</span><var>r1</var><span class="samp">;</span><var>n2</var><span class="samp">:</span><var>r2</var><span class="samp">;...</span></samp>'<dd><a name="index-g_t_0040samp_007bT_007d-packet-reply-3415"></a>The program received signal number <var>AA</var> (a two-digit hexadecimal
 number).  This is equivalent to an `<samp><span class="samp">S</span></samp>' response, except that the
 `<samp><var>n</var><span class="samp">:</span><var>r</var></samp>' pairs can carry values of important registers
 and other information directly in the stop reply packet, reducing
@@ -109,11 +109,11 @@ hex.
           <br><dt>`<samp><span class="samp">syscall_entry</span></samp>'<dt>`<samp><span class="samp">syscall_return</span></samp>'<dd>The packet indicates a syscall entry or return, and <var>r</var> is the
 syscall number, in hex.
 
-          <p><a name="index-shared-library-events_002c-remote-reply-3403"></a><br><dt>`<samp><span class="samp">library</span></samp>'<dd>The packet indicates that the loaded libraries have changed. 
+          <p><a name="index-shared-library-events_002c-remote-reply-3416"></a><br><dt>`<samp><span class="samp">library</span></samp>'<dd>The packet indicates that the loaded libraries have changed. 
 <span class="sc">gdb</span> should use `<samp><span class="samp">qXfer:libraries:read</span></samp>' to fetch a new
 list of loaded libraries.  The <var>r</var> part is ignored.
 
-          <p><a name="index-replay-log-events_002c-remote-reply-3404"></a><br><dt>`<samp><span class="samp">replaylog</span></samp>'<dd>The packet indicates that the target cannot continue replaying
+          <p><a name="index-replay-log-events_002c-remote-reply-3417"></a><br><dt>`<samp><span class="samp">replaylog</span></samp>'<dd>The packet indicates that the target cannot continue replaying
 logged execution events, because it has reached the end (or the
 beginning when executing backward) of the log.  The value of <var>r</var>
 will be either `<samp><span class="samp">begin</span></samp>' or `<samp><span class="samp">end</span></samp>'.  See <a href="Reverse-Execution.html#Reverse-Execution">Reverse Execution</a>,
@@ -145,7 +145,7 @@ The <var>r</var> part must be left empty.
           <p>The same remarks about `<samp><span class="samp">qSupported</span></samp>' and non-stop mode above
 apply.
 
-          <p><a name="index-fork-events_002c-remote-reply-3405"></a><br><dt>`<samp><span class="samp">fork</span></samp>'<dd>The packet indicates that <code>fork</code> was called, and <var>r</var>
+          <p><a name="index-fork-events_002c-remote-reply-3418"></a><br><dt>`<samp><span class="samp">fork</span></samp>'<dd>The packet indicates that <code>fork</code> was called, and <var>r</var>
 is the thread ID of the new child process.  Refer to
 <a href="thread_002did-syntax.html#thread_002did-syntax">thread-id syntax</a> for the format of the <var>thread-id</var>
 field.  This packet is only applicable to targets that support
@@ -157,7 +157,7 @@ appropriate `<samp><span class="samp">qSupported</span></samp>' feature (see <a 
 remote stub must also supply the appropriate `<samp><span class="samp">qSupported</span></samp>' feature
 indicating support.
 
-          <p><a name="index-vfork-events_002c-remote-reply-3406"></a><br><dt>`<samp><span class="samp">vfork</span></samp>'<dd>The packet indicates that <code>vfork</code> was called, and <var>r</var>
+          <p><a name="index-vfork-events_002c-remote-reply-3419"></a><br><dt>`<samp><span class="samp">vfork</span></samp>'<dd>The packet indicates that <code>vfork</code> was called, and <var>r</var>
 is the thread ID of the new child process. Refer to
 <a href="thread_002did-syntax.html#thread_002did-syntax">thread-id syntax</a> for the format of the <var>thread-id</var>
 field.  This packet is only applicable to targets that support
@@ -169,7 +169,7 @@ appropriate `<samp><span class="samp">qSupported</span></samp>' feature (see <a 
 remote stub must also supply the appropriate `<samp><span class="samp">qSupported</span></samp>' feature
 indicating support.
 
-          <p><a name="index-vforkdone-events_002c-remote-reply-3407"></a><br><dt>`<samp><span class="samp">vforkdone</span></samp>'<dd>The packet indicates that a child process created by a vfork
+          <p><a name="index-vforkdone-events_002c-remote-reply-3420"></a><br><dt>`<samp><span class="samp">vforkdone</span></samp>'<dd>The packet indicates that a child process created by a vfork
 has either called <code>exec</code> or terminated, so that the
 address spaces of the parent and child process are no longer
 shared. The <var>r</var> part is ignored.  This packet is only
@@ -181,7 +181,7 @@ appropriate `<samp><span class="samp">qSupported</span></samp>' feature (see <a 
 remote stub must also supply the appropriate `<samp><span class="samp">qSupported</span></samp>' feature
 indicating support.
 
-          <p><a name="index-exec-events_002c-remote-reply-3408"></a><br><dt>`<samp><span class="samp">exec</span></samp>'<dd>The packet indicates that <code>execve</code> was called, and <var>r</var>
+          <p><a name="index-exec-events_002c-remote-reply-3421"></a><br><dt>`<samp><span class="samp">exec</span></samp>'<dd>The packet indicates that <code>execve</code> was called, and <var>r</var>
 is the absolute pathname of the file that was executed, in hex. 
 This packet is only applicable to targets that support exec events.
 
@@ -191,7 +191,7 @@ appropriate `<samp><span class="samp">qSupported</span></samp>' feature (see <a 
 remote stub must also supply the appropriate `<samp><span class="samp">qSupported</span></samp>' feature
 indicating support.
 
-          <p><a name="index-thread-create-event_002c-remote-reply-3409"></a><a name="thread-create-event"></a>
+          <p><a name="index-thread-create-event_002c-remote-reply-3422"></a><a name="thread-create-event"></a>
 <br><dt>`<samp><span class="samp">create</span></samp>'<dd>The packet indicates that the thread was just created.  The new thread
 is stopped until <span class="sc">gdb</span> sets it running with a resumption packet
 (see <a href="vCont-packet.html#vCont-packet">vCont packet</a>).  This packet should not be sent by default;
@@ -217,7 +217,7 @@ support for multiprocess protocol extensions; see <a href="multiprocess-extensio
 hex strings.
 
      <p><a name="thread-exit-event"></a>
-<a name="index-thread-exit-event_002c-remote-reply-3410"></a><br><dt>`<samp><span class="samp">w </span><var>AA</var><span class="samp"> ; </span><var>tid</var></samp>'<dd>
+<a name="index-thread-exit-event_002c-remote-reply-3423"></a><br><dt>`<samp><span class="samp">w </span><var>AA</var><span class="samp"> ; </span><var>tid</var></samp>'<dd>
 The thread exited, and <var>AA</var> is the exit status.  This response
 should not be sent by default; <span class="sc">gdb</span> requests it with the
 <a href="QThreadEvents.html#QThreadEvents">QThreadEvents</a> packet.  See also <a href="thread-create-event.html#thread-create-event">thread create event</a> above. 

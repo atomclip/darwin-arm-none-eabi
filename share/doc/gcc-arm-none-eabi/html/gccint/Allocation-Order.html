@@ -54,12 +54,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Registers.html#Registers">Registers</a>
 
 <h4 class="subsection">17.7.2 Order of Allocation of Registers</h4>
 
-<p><a name="index-order-of-register-allocation-4099"></a><a name="index-register-allocation-order-4100"></a>
+<p><a name="index-order-of-register-allocation-4100"></a><a name="index-register-allocation-order-4101"></a>
 <!-- prevent bad page break with this line -->
 Registers are allocated in order.
 
 <div class="defun">
-&mdash; Macro: <b>REG_ALLOC_ORDER</b><var><a name="index-REG_005fALLOC_005fORDER-4101"></a></var><br>
+&mdash; Macro: <b>REG_ALLOC_ORDER</b><var><a name="index-REG_005fALLOC_005fORDER-4102"></a></var><br>
 <blockquote><p>If defined, an initializer for a vector of integers, containing the
 numbers of hard registers in the order in which GCC should prefer
 to use them (from most preferred to least).
@@ -75,7 +75,7 @@ the highest numbered allocable register first.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>ADJUST_REG_ALLOC_ORDER</b><var><a name="index-ADJUST_005fREG_005fALLOC_005fORDER-4102"></a></var><br>
+&mdash; Macro: <b>ADJUST_REG_ALLOC_ORDER</b><var><a name="index-ADJUST_005fREG_005fALLOC_005fORDER-4103"></a></var><br>
 <blockquote><p>A C statement (sans semicolon) to choose the order in which to allocate
 hard registers for pseudo-registers local to a basic block.
 
@@ -90,7 +90,7 @@ register; and so on.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>HONOR_REG_ALLOC_ORDER</b><var><a name="index-HONOR_005fREG_005fALLOC_005fORDER-4103"></a></var><br>
+&mdash; Macro: <b>HONOR_REG_ALLOC_ORDER</b><var><a name="index-HONOR_005fREG_005fALLOC_005fORDER-4104"></a></var><br>
 <blockquote><p>Normally, IRA tries to estimate the costs for saving a register in the
 prologue and restoring it in the epilogue.  This discourages it from
 using call-saved registers.  If a machine wants to ensure that IRA
@@ -100,7 +100,7 @@ macro as a C expression to nonzero. Default is 0.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>IRA_HARD_REGNO_ADD_COST_MULTIPLIER</b> (<var>regno</var>)<var><a name="index-IRA_005fHARD_005fREGNO_005fADD_005fCOST_005fMULTIPLIER-4104"></a></var><br>
+&mdash; Macro: <b>IRA_HARD_REGNO_ADD_COST_MULTIPLIER</b> (<var>regno</var>)<var><a name="index-IRA_005fHARD_005fREGNO_005fADD_005fCOST_005fMULTIPLIER-4105"></a></var><br>
 <blockquote><p>In some case register allocation order is not enough for the
 Integrated Register Allocator (<acronym>IRA</acronym>) to generate a good code. 
 If this macro is defined, it should return a floating point value

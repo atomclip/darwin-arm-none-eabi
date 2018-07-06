@@ -53,10 +53,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Condition-Code.html#Condition-Code">Con
 
 <h4 class="subsection">17.15.2 Representation of condition codes using registers</h4>
 
-<p><a name="index-CCmode-4477"></a><a name="index-MODE_005fCC-4478"></a>
+<p><a name="index-CCmode-4478"></a><a name="index-MODE_005fCC-4479"></a>
 
 <div class="defun">
-&mdash; Macro: <b>SELECT_CC_MODE</b> (<var>op, x, y</var>)<var><a name="index-SELECT_005fCC_005fMODE-4479"></a></var><br>
+&mdash; Macro: <b>SELECT_CC_MODE</b> (<var>op, x, y</var>)<var><a name="index-SELECT_005fCC_005fMODE-4480"></a></var><br>
 <blockquote><p>On many machines, the condition code may be produced by other instructions
 than compares, for example the branch can use directly the condition
 code set by a subtract instruction.  However, on some machines
@@ -105,7 +105,7 @@ in <samp><var>machine</var><span class="file">-modes.def</span></samp>.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: void <b>TARGET_CANONICALIZE_COMPARISON</b> (<var>int *code, rtx *op0, rtx *op1, bool op0_preserve_value</var>)<var><a name="index-TARGET_005fCANONICALIZE_005fCOMPARISON-4480"></a></var><br>
+&mdash; Target Hook: void <b>TARGET_CANONICALIZE_COMPARISON</b> (<var>int *code, rtx *op0, rtx *op1, bool op0_preserve_value</var>)<var><a name="index-TARGET_005fCANONICALIZE_005fCOMPARISON-4481"></a></var><br>
 <blockquote><p>On some machines not all possible comparisons are defined, but you can
 convert an invalid comparison into a valid one.  For example, the Alpha
 does not have a <code>GT</code> comparison, but you can use an <code>LT</code>
@@ -128,7 +128,7 @@ comparison code or operands.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>REVERSIBLE_CC_MODE</b> (<var>mode</var>)<var><a name="index-REVERSIBLE_005fCC_005fMODE-4481"></a></var><br>
+&mdash; Macro: <b>REVERSIBLE_CC_MODE</b> (<var>mode</var>)<var><a name="index-REVERSIBLE_005fCC_005fMODE-4482"></a></var><br>
 <blockquote><p>A C expression whose value is one if it is always safe to reverse a
 comparison whose mode is <var>mode</var>.  If <code>SELECT_CC_MODE</code>
 can ever return <var>mode</var> for a floating-point inequality comparison,
@@ -145,7 +145,7 @@ inequality comparisons are given either <code>CCFPEmode</code> or <code>CCFPmode
       </blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>REVERSE_CONDITION</b> (<var>code, mode</var>)<var><a name="index-REVERSE_005fCONDITION-4482"></a></var><br>
+&mdash; Macro: <b>REVERSE_CONDITION</b> (<var>code, mode</var>)<var><a name="index-REVERSE_005fCONDITION-4483"></a></var><br>
 <blockquote><p>A C expression whose value is reversed condition code of the <var>code</var> for
 comparison done in CC_MODE <var>mode</var>.  The macro is used only in case
 <code>REVERSIBLE_CC_MODE (</code><var>mode</var><code>)</code> is nonzero.  Define this macro in case
@@ -161,7 +161,7 @@ like:
       </blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_FIXED_CONDITION_CODE_REGS</b> (<var>unsigned int *p1, unsigned int *p2</var>)<var><a name="index-TARGET_005fFIXED_005fCONDITION_005fCODE_005fREGS-4483"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_FIXED_CONDITION_CODE_REGS</b> (<var>unsigned int *p1, unsigned int *p2</var>)<var><a name="index-TARGET_005fFIXED_005fCONDITION_005fCODE_005fREGS-4484"></a></var><br>
 <blockquote><p>On targets which do not use <code>(cc0)</code>, and which use a hard
 register rather than a pseudo-register to hold condition codes, the
 regular CSE passes are often not able to identify cases in which the
@@ -177,7 +177,7 @@ integer pointed to by <var>p2</var> should be set to
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: machine_mode <b>TARGET_CC_MODES_COMPATIBLE</b> (<var>machine_mode m1, machine_mode m2</var>)<var><a name="index-TARGET_005fCC_005fMODES_005fCOMPATIBLE-4484"></a></var><br>
+&mdash; Target Hook: machine_mode <b>TARGET_CC_MODES_COMPATIBLE</b> (<var>machine_mode m1, machine_mode m2</var>)<var><a name="index-TARGET_005fCC_005fMODES_005fCOMPATIBLE-4485"></a></var><br>
 <blockquote><p>On targets which use multiple condition code modes in class
 <code>MODE_CC</code>, it is sometimes the case that a comparison can be
 validly done in more than one mode.  On such a system, define this
@@ -191,7 +191,7 @@ returns <code>VOIDmode</code>.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: unsigned int <b>TARGET_FLAGS_REGNUM</b><var><a name="index-TARGET_005fFLAGS_005fREGNUM-4485"></a></var><br>
+&mdash; Target Hook: unsigned int <b>TARGET_FLAGS_REGNUM</b><var><a name="index-TARGET_005fFLAGS_005fREGNUM-4486"></a></var><br>
 <blockquote><p>If the target has a dedicated flags register, and it needs to use the post-reload comparison elimination pass, then this value should be set appropriately. 
 </p></blockquote></div>
 

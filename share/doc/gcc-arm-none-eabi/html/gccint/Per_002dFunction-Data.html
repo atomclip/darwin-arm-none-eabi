@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Target-Macros.html#Target-Macros">Targe
 
 <h3 class="section">17.4 Defining data structures for per-function information.</h3>
 
-<p><a name="index-per_002dfunction-data-3947"></a><a name="index-data-structures-3948"></a>
+<p><a name="index-per_002dfunction-data-3948"></a><a name="index-data-structures-3949"></a>
 If the target needs to store information on a per-function basis, GCC
 provides a macro and a couple of variables to allow this.  Note, just
 using statics to store the information is a bad idea, since GCC supports
@@ -89,7 +89,7 @@ single data area approach is no longer used, these pointers are no
 longer supported.
 
 <div class="defun">
-&mdash; Macro: <b>INIT_EXPANDERS</b><var><a name="index-INIT_005fEXPANDERS-3949"></a></var><br>
+&mdash; Macro: <b>INIT_EXPANDERS</b><var><a name="index-INIT_005fEXPANDERS-3950"></a></var><br>
 <blockquote><p>Macro called to initialize any target specific information.  This macro
 is called once per function, before generation of any RTL has begun. 
 The intention of this macro is to allow the initialization of the
@@ -97,7 +97,7 @@ function pointer <code>init_machine_status</code>.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: void (*)(struct function *) <b>init_machine_status</b><var><a name="index-init_005fmachine_005fstatus-3950"></a></var><br>
+&mdash; Variable: void (*)(struct function *) <b>init_machine_status</b><var><a name="index-init_005fmachine_005fstatus-3951"></a></var><br>
 <blockquote><p>If this function pointer is non-<code>NULL</code> it will be called once per
 function, before function compilation starts, in order to allow the
 target to perform any target specific initialization of the

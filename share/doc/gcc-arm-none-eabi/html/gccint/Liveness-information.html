@@ -52,7 +52,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Control-Flow.html#Control-Flow">Control
 
 <h3 class="section">14.5 Liveness information</h3>
 
-<p><a name="index-Liveness-representation-3227"></a>Liveness information is useful to determine whether some register is
+<p><a name="index-Liveness-representation-3228"></a>Liveness information is useful to determine whether some register is
 &ldquo;live&rdquo; at given point of program, i.e. that it contains a value that
 may be used at a later point in the program.  This information is
 used, for instance, during register allocation, as the pseudo
@@ -79,7 +79,7 @@ by the register number.  This information is only guaranteed to be up to
 date after calls are made to <code>df_analyze</code>.  See the file
 <code>df-core.c</code> for details on using the dataflow.
 
- <p><a name="index-REG_005fDEAD_002c-REG_005fUNUSED-3228"></a>The liveness information is stored partly in the RTL instruction stream
+ <p><a name="index-REG_005fDEAD_002c-REG_005fUNUSED-3229"></a>The liveness information is stored partly in the RTL instruction stream
 and partly in the flow graph.  Local information is stored in the
 instruction stream: Each instruction may contain <code>REG_DEAD</code> notes
 representing that the value of a given register is no longer needed, or

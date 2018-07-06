@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Registers.html#Registers">Registers</a>
 
 <h4 class="subsection">17.7.4 Handling Leaf Functions</h4>
 
-<p><a name="index-leaf-functions-4115"></a><a name="index-functions_002c-leaf-4116"></a>On some machines, a leaf function (i.e., one which makes no calls) can run
+<p><a name="index-leaf-functions-4116"></a><a name="index-functions_002c-leaf-4117"></a>On some machines, a leaf function (i.e., one which makes no calls) can run
 more efficiently if it does not make its own register window.  Often this
 means it is required to receive its arguments in the registers where they
 are passed by the caller, instead of the registers where they would
@@ -73,7 +73,7 @@ registers in order to output a leaf function.  The following macros
 accomplish this.
 
 <div class="defun">
-&mdash; Macro: <b>LEAF_REGISTERS</b><var><a name="index-LEAF_005fREGISTERS-4117"></a></var><br>
+&mdash; Macro: <b>LEAF_REGISTERS</b><var><a name="index-LEAF_005fREGISTERS-4118"></a></var><br>
 <blockquote><p>Name of a char vector, indexed by hard register number, which
 contains 1 for a register that is allowable in a candidate for leaf
 function treatment.
@@ -89,7 +89,7 @@ the treatment of leaf functions.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>LEAF_REG_REMAP</b> (<var>regno</var>)<var><a name="index-LEAF_005fREG_005fREMAP-4118"></a></var><br>
+&mdash; Macro: <b>LEAF_REG_REMAP</b> (<var>regno</var>)<var><a name="index-LEAF_005fREG_005fREMAP-4119"></a></var><br>
 <blockquote><p>A C expression whose value is the register number to which <var>regno</var>
 should be renumbered, when a function is treated as a leaf function.
 
@@ -102,7 +102,7 @@ treatment of leaf functions, and registers need to be renumbered to do
 this. 
 </p></blockquote></div>
 
- <p><a name="index-current_005ffunction_005fis_005fleaf-4119"></a><a name="index-current_005ffunction_005fuses_005fonly_005fleaf_005fregs-4120"></a><code>TARGET_ASM_FUNCTION_PROLOGUE</code> and
+ <p><a name="index-current_005ffunction_005fis_005fleaf-4120"></a><a name="index-current_005ffunction_005fuses_005fonly_005fleaf_005fregs-4121"></a><code>TARGET_ASM_FUNCTION_PROLOGUE</code> and
 <code>TARGET_ASM_FUNCTION_EPILOGUE</code> must usually treat leaf functions
 specially.  They can test the C variable <code>current_function_is_leaf</code>
 which is nonzero for leaf functions.  <code>current_function_is_leaf</code> is

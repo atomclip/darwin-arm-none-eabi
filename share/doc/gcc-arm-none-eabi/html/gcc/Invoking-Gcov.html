@@ -195,11 +195,18 @@ program source code.  The format is
  <p>Additional block information may succeed each line, when requested by
 command line option.  The <var>execution_count</var> is `<samp><span class="samp">-</span></samp>' for lines
 containing no code.  Unexecuted lines are marked `<samp><span class="samp">#####</span></samp>' or
-`<samp><span class="samp">====</span></samp>', depending on whether they are reachable by
+`<samp><span class="samp">=====</span></samp>', depending on whether they are reachable by
 non-exceptional paths or only exceptional paths such as C++ exception
 handlers, respectively. Given `<samp><span class="samp">-a</span></samp>' option, unexecuted blocks are
 marked `<samp><span class="samp">$$$$$</span></samp>' or `<samp><span class="samp">%%%%%</span></samp>', depending on whether a basic block
 is reachable via non-exceptional or exceptional paths.
+
+ <p>Note that GCC can completely remove the bodies of functions that are
+not needed &ndash; for instance if they are inlined everywhere.  Such functions
+are marked with `<samp><span class="samp">-</span></samp>', which can be confusing. 
+Use the <samp><span class="option">-fkeep-inline-functions</span></samp> and <samp><span class="option">-fkeep-static-functions</span></samp>
+options to retain these functions and
+allow gcov to properly show their <var>execution_count</var>.
 
  <p>Some lines of information at the start have <var>line_number</var> of zero. 
 These preamble lines are of the form

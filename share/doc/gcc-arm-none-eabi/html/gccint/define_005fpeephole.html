@@ -53,7 +53,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Peephole-Definitions.html#Peephole-Defi
 
 <h4 class="subsection">16.18.1 RTL to Text Peephole Optimizers</h4>
 
-<p><a name="index-define_005fpeephole-3739"></a>
+<p><a name="index-define_005fpeephole-3740"></a>
 A definition looks like this:
 
 <pre class="smallexample">     (define_peephole
@@ -109,13 +109,13 @@ is complete.  Therefore, the peephole definition can check which
 operands have ended up in which kinds of registers, just by looking at
 the operands.
 
- <p><a name="index-prev_005factive_005finsn-3740"></a>The way to refer to the operands in <var>condition</var> is to write
+ <p><a name="index-prev_005factive_005finsn-3741"></a>The way to refer to the operands in <var>condition</var> is to write
 <code>operands[</code><var>i</var><code>]</code> for operand number <var>i</var> (as matched by
 <code>(match_operand </code><var>i</var><code> ...)</code>).  Use the variable <code>insn</code>
 to refer to the last of the insns being matched; use
 <code>prev_active_insn</code> to find the preceding insns.
 
- <p><a name="index-dead_005for_005fset_005fp-3741"></a>When optimizing computations with intermediate results, you can use
+ <p><a name="index-dead_005for_005fset_005fp-3742"></a>When optimizing computations with intermediate results, you can use
 <var>condition</var> to match only when the intermediate results are not used
 elsewhere.  Use the C expression <code>dead_or_set_p (</code><var>insn</var><code>,
 </code><var>op</var><code>)</code>, where <var>insn</var> is the insn in which you expect the value

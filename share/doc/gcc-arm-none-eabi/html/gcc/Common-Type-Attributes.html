@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Type-Attributes.html#Type-Attributes">T
 <p>The following type attributes are supported on most targets.
 
      
-<a name="index-g_t_0040code_007baligned_007d-type-attribute-3622"></a>
+<a name="index-g_t_0040code_007baligned_007d-type-attribute-3630"></a>
 <dl><dt><code>aligned (</code><var>alignment</var><code>)</code><dd>This attribute specifies a minimum alignment (in bytes) for variables
 of the specified type.  For example, the declarations:
 
@@ -128,7 +128,7 @@ alignment.  See your linker documentation for further information.
      <p>The <code>aligned</code> attribute can only increase alignment.  Alignment
 can be decreased by specifying the <code>packed</code> attribute.  See below.
 
-     <br><dt><code>bnd_variable_size</code><dd><a name="index-g_t_0040code_007bbnd_005fvariable_005fsize_007d-type-attribute-3623"></a><a name="index-Pointer-Bounds-Checker-attributes-3624"></a>When applied to a structure field, this attribute tells Pointer
+     <br><dt><code>bnd_variable_size</code><dd><a name="index-g_t_0040code_007bbnd_005fvariable_005fsize_007d-type-attribute-3631"></a><a name="index-Pointer-Bounds-Checker-attributes-3632"></a>When applied to a structure field, this attribute tells Pointer
 Bounds Checker that the size of this field should not be computed
 using static type information.  It may be used to mark variably-sized
 static array fields placed at the end of a structure.
@@ -152,7 +152,7 @@ violation checks:
           S *p = (S *)malloc (sizeof(S) + 100);
           p-&gt;data[10] = 0; //OK
      </pre>
-     <br><dt><code>deprecated</code><dt><code>deprecated (</code><var>msg</var><code>)</code><dd><a name="index-g_t_0040code_007bdeprecated_007d-type-attribute-3625"></a>The <code>deprecated</code> attribute results in a warning if the type
+     <br><dt><code>deprecated</code><dt><code>deprecated (</code><var>msg</var><code>)</code><dd><a name="index-g_t_0040code_007bdeprecated_007d-type-attribute-3633"></a>The <code>deprecated</code> attribute results in a warning if the type
 is used anywhere in the source file.  This is useful when identifying
 types that are expected to be removed in a future version of a program. 
 If possible, the warning also includes the location of the declaration
@@ -179,7 +179,7 @@ present.
      <p>The <code>deprecated</code> attribute can also be used for functions and
 variables (see <a href="Function-Attributes.html#Function-Attributes">Function Attributes</a>, see <a href="Variable-Attributes.html#Variable-Attributes">Variable Attributes</a>.)
 
-     <br><dt><code>designated_init</code><dd><a name="index-g_t_0040code_007bdesignated_005finit_007d-type-attribute-3626"></a>This attribute may only be applied to structure types.  It indicates
+     <br><dt><code>designated_init</code><dd><a name="index-g_t_0040code_007bdesignated_005finit_007d-type-attribute-3634"></a>This attribute may only be applied to structure types.  It indicates
 that any initialization of an object of this type must use designated
 initializers rather than positional initializers.  The intent of this
 attribute is to allow the programmer to indicate that a structure's
@@ -189,7 +189,7 @@ initialization will result in future breakage.
      <p>GCC emits warnings based on this attribute by default; use
 <samp><span class="option">-Wno-designated-init</span></samp> to suppress them.
 
-     <br><dt><code>may_alias</code><dd><a name="index-g_t_0040code_007bmay_005falias_007d-type-attribute-3627"></a>Accesses through pointers to types with this attribute are not subject
+     <br><dt><code>may_alias</code><dd><a name="index-g_t_0040code_007bmay_005falias_007d-type-attribute-3635"></a>Accesses through pointers to types with this attribute are not subject
 to type-based alias analysis, but are instead assumed to be able to alias
 any other type of objects. 
 In the context of section 6.5 paragraph 7 of the C99 standard,
@@ -225,13 +225,13 @@ declaration, the above program would abort when compiled with
 <samp><span class="option">-fstrict-aliasing</span></samp>, which is on by default at <samp><span class="option">-O2</span></samp> or
 above.
 
-     <br><dt><code>packed</code><dd><a name="index-g_t_0040code_007bpacked_007d-type-attribute-3628"></a>This attribute, attached to <code>struct</code> or <code>union</code> type
+     <br><dt><code>packed</code><dd><a name="index-g_t_0040code_007bpacked_007d-type-attribute-3636"></a>This attribute, attached to <code>struct</code> or <code>union</code> type
 definition, specifies that each member (other than zero-width bit-fields)
 of the structure or union is placed to minimize the memory required.  When
 attached to an <code>enum</code> definition, it indicates that the smallest
 integral type should be used.
 
-     <p><a name="index-fshort_002denums-3629"></a>Specifying the <code>packed</code> attribute for <code>struct</code> and <code>union</code>
+     <p><a name="index-fshort_002denums-3637"></a>Specifying the <code>packed</code> attribute for <code>struct</code> and <code>union</code>
 types is equivalent to specifying the <code>packed</code> attribute on each
 of the structure or union members.  Specifying the <samp><span class="option">-fshort-enums</span></samp>
 flag on the command line is equivalent to specifying the <code>packed</code>
@@ -259,7 +259,7 @@ be packed too.
 of an <code>enum</code>, <code>struct</code> or <code>union</code>, not on a <code>typedef</code>
 that does not also define the enumerated type, structure or union.
 
-     <br><dt><code>scalar_storage_order ("</code><var>endianness</var><code>")</code><dd><a name="index-g_t_0040code_007bscalar_005fstorage_005forder_007d-type-attribute-3630"></a>When attached to a <code>union</code> or a <code>struct</code>, this attribute sets
+     <br><dt><code>scalar_storage_order ("</code><var>endianness</var><code>")</code><dd><a name="index-g_t_0040code_007bscalar_005fstorage_005forder_007d-type-attribute-3638"></a>When attached to a <code>union</code> or a <code>struct</code>, this attribute sets
 the storage order, aka endianness, of the scalar fields of the type, as
 well as the array fields whose component is scalar.  The supported
 endiannesses are <code>big-endian</code> and <code>little-endian</code>.  The attribute
@@ -297,7 +297,7 @@ from or to the array.
 is not supported; that is to say, a given scalar object cannot be accessed
 through distinct types that assign a different storage order to it.
 
-     <br><dt><code>transparent_union</code><dd><a name="index-g_t_0040code_007btransparent_005funion_007d-type-attribute-3631"></a>
+     <br><dt><code>transparent_union</code><dd><a name="index-g_t_0040code_007btransparent_005funion_007d-type-attribute-3639"></a>
 This attribute, attached to a <code>union</code> type definition, indicates
 that any function parameter having that union type causes calls to that
 function to be treated in a special way.
@@ -349,7 +349,7 @@ The program can call <code>wait</code> with arguments of either type:
             return waitpid (-1, p.__ip, 0);
           }
      </pre>
-     <br><dt><code>unused</code><dd><a name="index-g_t_0040code_007bunused_007d-type-attribute-3632"></a>When attached to a type (including a <code>union</code> or a <code>struct</code>),
+     <br><dt><code>unused</code><dd><a name="index-g_t_0040code_007bunused_007d-type-attribute-3640"></a>When attached to a type (including a <code>union</code> or a <code>struct</code>),
 this attribute means that variables of that type are meant to appear
 possibly unused.  GCC does not produce a warning for any variables of
 that type, even if the variable appears to do nothing.  This is often
@@ -357,7 +357,7 @@ the case with lock or thread classes, which are usually defined and then
 not referenced, but contain constructors and destructors that have
 nontrivial bookkeeping functions.
 
-     <br><dt><code>visibility</code><dd><a name="index-g_t_0040code_007bvisibility_007d-type-attribute-3633"></a>In C++, attribute visibility (see <a href="Function-Attributes.html#Function-Attributes">Function Attributes</a>) can also be
+     <br><dt><code>visibility</code><dd><a name="index-g_t_0040code_007bvisibility_007d-type-attribute-3641"></a>In C++, attribute visibility (see <a href="Function-Attributes.html#Function-Attributes">Function Attributes</a>) can also be
 applied to class, struct, union and enum types.  Unlike other type
 attributes, the attribute must appear between the initial keyword and
 the name of the type; it cannot appear after the body of the type.

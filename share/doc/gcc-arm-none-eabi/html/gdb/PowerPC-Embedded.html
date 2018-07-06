@@ -6,11 +6,11 @@
 <meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Embedded-Processors.html#Embedded-Processors" title="Embedded Processors">
-<link rel="prev" href="MIPS-Embedded.html#MIPS-Embedded" title="MIPS Embedded">
+<link rel="prev" href="OpenRISC-1000.html#OpenRISC-1000" title="OpenRISC 1000">
 <link rel="next" href="AVR.html#AVR" title="AVR">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988-2017 Free Software Foundation, Inc.
+Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -41,14 +41,14 @@ developing GNU and promoting software freedom.''
 <p>
 <a name="PowerPC-Embedded"></a>
 Next:&nbsp;<a rel="next" accesskey="n" href="AVR.html#AVR">AVR</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="MIPS-Embedded.html#MIPS-Embedded">MIPS Embedded</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OpenRISC-1000.html#OpenRISC-1000">OpenRISC 1000</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Embedded-Processors.html#Embedded-Processors">Embedded Processors</a>
 <hr>
 </div>
 
-<h4 class="subsection">21.3.6 PowerPC Embedded</h4>
+<h4 class="subsection">21.3.7 PowerPC Embedded</h4>
 
-<p><a name="index-DVC-register-1552"></a><span class="sc">gdb</span> supports using the DVC (Data Value Compare) register to
+<p><a name="index-DVC-register-1564"></a><span class="sc">gdb</span> supports using the DVC (Data Value Compare) register to
 implement in hardware simple hardware watchpoint conditions of the form:
 
 <pre class="smallexample">     (gdb) watch <var>ADDRESS|VARIABLE</var> \
@@ -75,7 +75,7 @@ region using one of the following commands (see <a href="Expressions.html#Expres
    <p>PowerPC embedded processors support masked watchpoints.  See the discussion
 about the <code>mask</code> argument in <a href="Set-Watchpoints.html#Set-Watchpoints">Set Watchpoints</a>.
 
-   <p><a name="index-ranged-breakpoint-1553"></a>PowerPC embedded processors support hardware accelerated
+   <p><a name="index-ranged-breakpoint-1565"></a>PowerPC embedded processors support hardware accelerated
 <dfn>ranged breakpoints</dfn>.  A ranged breakpoint stops execution of
 the inferior whenever it executes an instruction at any address within
 the range it specifies.  To set a ranged breakpoint in <span class="sc">gdb</span>,
@@ -84,7 +84,7 @@ use the <code>break-range</code> command.
    <p><span class="sc">gdb</span> provides the following PowerPC-specific commands:
 
      
-<a name="index-break_002drange-1554"></a>
+<a name="index-break_002drange-1566"></a>
 <dl><dt><code>break-range </code><var>start-location</var><code>, </code><var>end-location</var><dd>Set a breakpoint for an address range given by
 <var>start-location</var> and <var>end-location</var>, which can specify a function name,
 a line number, an offset of lines from the current line or from the start
@@ -94,7 +94,7 @@ The breakpoint will stop execution of the inferior whenever it
 executes an instruction at any address within the specified range,
 (including <var>start-location</var> and <var>end-location</var>.)
 
-     <p><a name="index-set-powerpc-1555"></a><br><dt><code>set powerpc soft-float</code><dt><code>show powerpc soft-float</code><dd>Force <span class="sc">gdb</span> to use (or not use) a software floating point calling
+     <p><a name="index-set-powerpc-1567"></a><br><dt><code>set powerpc soft-float</code><dt><code>show powerpc soft-float</code><dd>Force <span class="sc">gdb</span> to use (or not use) a software floating point calling
 convention.  By default, <span class="sc">gdb</span> selects the calling convention based
 on the selected architecture and the provided executable file.
 

@@ -71,6 +71,14 @@ number between <code>0</code> and <code>RAND_MAX</code> (inclusive).
    <pre class="sp">
 
 </pre>
+<strong>Notes</strong><br>
+<code>random</code> and <code>srandom</code> are unsafe for multi-threaded applications.
+
+   <p>_XOPEN_SOURCE may be any value &gt;= 500.
+
+   <pre class="sp">
+
+</pre>
 <strong>Portability</strong><br>
 <code>random</code> is required by XSI. This implementation uses the same
 algorithm as <code>rand</code>.

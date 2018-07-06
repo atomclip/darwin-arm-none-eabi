@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Invoking-GCC.html#Invoking-GCC">Invokin
 
 <h3 class="section">3.19 Specifying Subprocesses and the Switches to Pass to Them</h3>
 
-<p><a name="index-Spec-Files-3050"></a>
+<p><a name="index-Spec-Files-3056"></a>
 <samp><span class="command">gcc</span></samp> is a driver program.  It performs its job by invoking a
 sequence of other programs to do the work of compiling, assembling and
 linking.  GCC interprets its command-line parameters and uses these to
@@ -76,13 +76,13 @@ character on the line, which can be one of the following:
 appear here are:
 
           <dl>
-<dt><code>%include &lt;</code><var>file</var><code>&gt;</code><dd><a name="index-g_t_0040code_007b_0025include_007d-3051"></a>Search for <var>file</var> and insert its text at the current point in the
+<dt><code>%include &lt;</code><var>file</var><code>&gt;</code><dd><a name="index-g_t_0040code_007b_0025include_007d-3057"></a>Search for <var>file</var> and insert its text at the current point in the
 specs file.
 
-          <br><dt><code>%include_noerr &lt;</code><var>file</var><code>&gt;</code><dd><a name="index-g_t_0040code_007b_0025include_005fnoerr_007d-3052"></a>Just like `<samp><span class="samp">%include</span></samp>', but do not generate an error message if the include
+          <br><dt><code>%include_noerr &lt;</code><var>file</var><code>&gt;</code><dd><a name="index-g_t_0040code_007b_0025include_005fnoerr_007d-3058"></a>Just like `<samp><span class="samp">%include</span></samp>', but do not generate an error message if the include
 file cannot be found.
 
-          <br><dt><code>%rename </code><var>old_name</var> <var>new_name</var><dd><a name="index-g_t_0040code_007b_0025rename_007d-3053"></a>Rename the spec string <var>old_name</var> to <var>new_name</var>.
+          <br><dt><code>%rename </code><var>old_name</var> <var>new_name</var><dd><a name="index-g_t_0040code_007b_0025rename_007d-3059"></a>Rename the spec string <var>old_name</var> to <var>new_name</var>.
 
      </dl>
 

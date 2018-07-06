@@ -57,17 +57,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported by the Epiphany back end:
 
      <dl>
-<dt><code>disinterrupt</code><dd><a name="index-g_t_0040code_007bdisinterrupt_007d-function-attribute_002c-Epiphany-3385"></a>This attribute causes the compiler to emit
+<dt><code>disinterrupt</code><dd><a name="index-g_t_0040code_007bdisinterrupt_007d-function-attribute_002c-Epiphany-3391"></a>This attribute causes the compiler to emit
 instructions to disable interrupts for the duration of the given
 function.
 
-     <br><dt><code>forwarder_section</code><dd><a name="index-g_t_0040code_007bforwarder_005fsection_007d-function-attribute_002c-Epiphany-3386"></a>This attribute modifies the behavior of an interrupt handler. 
+     <br><dt><code>forwarder_section</code><dd><a name="index-g_t_0040code_007bforwarder_005fsection_007d-function-attribute_002c-Epiphany-3392"></a>This attribute modifies the behavior of an interrupt handler. 
 The interrupt handler may be in external memory which cannot be
 reached by a branch instruction, so generate a local memory trampoline
 to transfer control.  The single parameter identifies the section where
 the trampoline is placed.
 
-     <br><dt><code>interrupt</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-Epiphany-3387"></a>Use this attribute to indicate
+     <br><dt><code>interrupt</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-Epiphany-3393"></a>Use this attribute to indicate
 that the specified function is an interrupt handler.  The compiler generates
 function entry and exit sequences suitable for use in an interrupt handler
 when this attribute is present.  It may also generate
@@ -102,7 +102,7 @@ Epiphany targets:
                                forwarder_section ("tramp")))
             external_dma_handler ();
      </pre>
-     <br><dt><code>long_call</code><dt><code>short_call</code><dd><a name="index-g_t_0040code_007blong_005fcall_007d-function-attribute_002c-Epiphany-3388"></a><a name="index-g_t_0040code_007bshort_005fcall_007d-function-attribute_002c-Epiphany-3389"></a><a name="index-indirect-calls_002c-Epiphany-3390"></a>These attributes specify how a particular function is called. 
+     <br><dt><code>long_call</code><dt><code>short_call</code><dd><a name="index-g_t_0040code_007blong_005fcall_007d-function-attribute_002c-Epiphany-3394"></a><a name="index-g_t_0040code_007bshort_005fcall_007d-function-attribute_002c-Epiphany-3395"></a><a name="index-indirect-calls_002c-Epiphany-3396"></a>These attributes specify how a particular function is called. 
 These attributes override the
 <samp><span class="option">-mlong-calls</span></samp> (see <a href="Adapteva-Epiphany-Options.html#Adapteva-Epiphany-Options">Adapteva Epiphany Options</a>)
 command-line switch and <code>#pragma long_calls</code> settings. 

@@ -100,7 +100,7 @@ empty.  GCC interprets an empty list as meaning that all globally
 accessible variables should be protected.
 
      <dl>
-<dt><var>type</var><code> __sync_fetch_and_add (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_sub (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_or (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_and (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_xor (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_nand (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dd><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fadd-3776"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fsub-3777"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005for-3778"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fand-3779"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fxor-3780"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fnand-3781"></a>These built-in functions perform the operation suggested by the name, and
+<dt><var>type</var><code> __sync_fetch_and_add (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_sub (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_or (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_and (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_xor (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_fetch_and_nand (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dd><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fadd-3785"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fsub-3786"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005for-3787"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fand-3788"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fxor-3789"></a><a name="index-g_t_005f_005fsync_005ffetch_005fand_005fnand-3790"></a>These built-in functions perform the operation suggested by the name, and
 returns the value that had previously been in memory.  That is, operations
 on integer operands have the following semantics.  Operations on pointer
 arguments are performed as if the operands were of the <code>uintptr_t</code>
@@ -116,7 +116,7 @@ type.  It must not be a boolean type.
      <p><em>Note:</em> GCC 4.4 and later implement <code>__sync_fetch_and_nand</code>
 as <code>*ptr = ~(tmp &amp; value)</code> instead of <code>*ptr = ~tmp &amp; value</code>.
 
-     <br><dt><var>type</var><code> __sync_add_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_sub_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_or_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_and_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_xor_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_nand_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dd><a name="index-g_t_005f_005fsync_005fadd_005fand_005ffetch-3782"></a><a name="index-g_t_005f_005fsync_005fsub_005fand_005ffetch-3783"></a><a name="index-g_t_005f_005fsync_005for_005fand_005ffetch-3784"></a><a name="index-g_t_005f_005fsync_005fand_005fand_005ffetch-3785"></a><a name="index-g_t_005f_005fsync_005fxor_005fand_005ffetch-3786"></a><a name="index-g_t_005f_005fsync_005fnand_005fand_005ffetch-3787"></a>These built-in functions perform the operation suggested by the name, and
+     <br><dt><var>type</var><code> __sync_add_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_sub_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_or_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_and_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_xor_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dt><var>type</var><code> __sync_nand_and_fetch (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dd><a name="index-g_t_005f_005fsync_005fadd_005fand_005ffetch-3791"></a><a name="index-g_t_005f_005fsync_005fsub_005fand_005ffetch-3792"></a><a name="index-g_t_005f_005fsync_005for_005fand_005ffetch-3793"></a><a name="index-g_t_005f_005fsync_005fand_005fand_005ffetch-3794"></a><a name="index-g_t_005f_005fsync_005fxor_005fand_005ffetch-3795"></a><a name="index-g_t_005f_005fsync_005fnand_005fand_005ffetch-3796"></a>These built-in functions perform the operation suggested by the name, and
 return the new value.  That is, operations on integer operands have
 the following semantics.  Operations on pointer operands are performed as
 if the operand's type were <code>uintptr_t</code>.
@@ -131,7 +131,7 @@ if the operand's type were <code>uintptr_t</code>.
 as <code>*ptr = ~(*ptr &amp; value)</code> instead of
 <code>*ptr = ~*ptr &amp; value</code>.
 
-     <br><dt><code>bool __sync_bool_compare_and_swap (</code><var>type</var><code> *ptr, </code><var>type</var><code> oldval, </code><var>type</var><code> newval, ...)</code><dt><var>type</var><code> __sync_val_compare_and_swap (</code><var>type</var><code> *ptr, </code><var>type</var><code> oldval, </code><var>type</var><code> newval, ...)</code><dd><a name="index-g_t_005f_005fsync_005fbool_005fcompare_005fand_005fswap-3788"></a><a name="index-g_t_005f_005fsync_005fval_005fcompare_005fand_005fswap-3789"></a>These built-in functions perform an atomic compare and swap. 
+     <br><dt><code>bool __sync_bool_compare_and_swap (</code><var>type</var><code> *ptr, </code><var>type</var><code> oldval, </code><var>type</var><code> newval, ...)</code><dt><var>type</var><code> __sync_val_compare_and_swap (</code><var>type</var><code> *ptr, </code><var>type</var><code> oldval, </code><var>type</var><code> newval, ...)</code><dd><a name="index-g_t_005f_005fsync_005fbool_005fcompare_005fand_005fswap-3797"></a><a name="index-g_t_005f_005fsync_005fval_005fcompare_005fand_005fswap-3798"></a>These built-in functions perform an atomic compare and swap. 
 That is, if the current
 value of <code>*</code><var>ptr</var> is <var>oldval</var>, then write <var>newval</var> into
 <code>*</code><var>ptr</var>.
@@ -140,9 +140,9 @@ value of <code>*</code><var>ptr</var> is <var>oldval</var>, then write <var>newv
 <var>newval</var> is written.  The &ldquo;val&rdquo; version returns the contents
 of <code>*</code><var>ptr</var> before the operation.
 
-     <br><dt><code>__sync_synchronize (...)</code><dd><a name="index-g_t_005f_005fsync_005fsynchronize-3790"></a>This built-in function issues a full memory barrier.
+     <br><dt><code>__sync_synchronize (...)</code><dd><a name="index-g_t_005f_005fsync_005fsynchronize-3799"></a>This built-in function issues a full memory barrier.
 
-     <br><dt><var>type</var><code> __sync_lock_test_and_set (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dd><a name="index-g_t_005f_005fsync_005flock_005ftest_005fand_005fset-3791"></a>This built-in function, as described by Intel, is not a traditional test-and-set
+     <br><dt><var>type</var><code> __sync_lock_test_and_set (</code><var>type</var><code> *ptr, </code><var>type</var><code> value, ...)</code><dd><a name="index-g_t_005f_005fsync_005flock_005ftest_005fand_005fset-3800"></a>This built-in function, as described by Intel, is not a traditional test-and-set
 operation, but rather an atomic exchange operation.  It writes <var>value</var>
 into <code>*</code><var>ptr</var>, and returns the previous contents of
 <code>*</code><var>ptr</var>.
@@ -160,7 +160,7 @@ speculated to) before the operation, but previous memory stores may not
 be globally visible yet, and previous memory loads may not yet be
 satisfied.
 
-     <br><dt><code>void __sync_lock_release (</code><var>type</var><code> *ptr, ...)</code><dd><a name="index-g_t_005f_005fsync_005flock_005frelease-3792"></a>This built-in function releases the lock acquired by
+     <br><dt><code>void __sync_lock_release (</code><var>type</var><code> *ptr, ...)</code><dd><a name="index-g_t_005f_005fsync_005flock_005frelease-3801"></a>This built-in function releases the lock acquired by
 <code>__sync_lock_test_and_set</code>. 
 Normally this means writing the constant 0 to <code>*</code><var>ptr</var>.
 

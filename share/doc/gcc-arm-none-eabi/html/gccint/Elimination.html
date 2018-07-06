@@ -58,7 +58,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Stack-and-Calling.html#Stack-and-Callin
 <p>This is about eliminating the frame pointer and arg pointer.
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_FRAME_POINTER_REQUIRED</b> (<var>void</var>)<var><a name="index-TARGET_005fFRAME_005fPOINTER_005fREQUIRED-4237"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_FRAME_POINTER_REQUIRED</b> (<var>void</var>)<var><a name="index-TARGET_005fFRAME_005fPOINTER_005fREQUIRED-4238"></a></var><br>
 <blockquote><p>This target hook should return <code>true</code> if a function must have and use
 a frame pointer.  This target hook is called in the reload pass.  If its return
 value is <code>true</code> the function will have a frame pointer.
@@ -84,7 +84,7 @@ fixed register.  See <code>FIXED_REGISTERS</code> for more information.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>ELIMINABLE_REGS</b><var><a name="index-ELIMINABLE_005fREGS-4238"></a></var><br>
+&mdash; Macro: <b>ELIMINABLE_REGS</b><var><a name="index-ELIMINABLE_005fREGS-4239"></a></var><br>
 <blockquote><p>This macro specifies a table of register pairs used to eliminate
 unneeded registers that point into the stack frame.
 
@@ -108,7 +108,7 @@ specified first since that is the preferred elimination.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_CAN_ELIMINATE</b> (<var>const int from_reg, const int to_reg</var>)<var><a name="index-TARGET_005fCAN_005fELIMINATE-4239"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_CAN_ELIMINATE</b> (<var>const int from_reg, const int to_reg</var>)<var><a name="index-TARGET_005fCAN_005fELIMINATE-4240"></a></var><br>
 <blockquote><p>This target hook should return <code>true</code> if the compiler is allowed to
 try to replace register number <var>from_reg</var> with register number
 <var>to_reg</var>.  This target hook will usually be <code>true</code>, since most of the
@@ -119,7 +119,7 @@ knows about.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Macro: <b>INITIAL_ELIMINATION_OFFSET</b> (<var>from-reg, to-reg, offset-var</var>)<var><a name="index-INITIAL_005fELIMINATION_005fOFFSET-4240"></a></var><br>
+&mdash; Macro: <b>INITIAL_ELIMINATION_OFFSET</b> (<var>from-reg, to-reg, offset-var</var>)<var><a name="index-INITIAL_005fELIMINATION_005fOFFSET-4241"></a></var><br>
 <blockquote><p>This macro returns the initial difference between the specified pair
 of registers.  The value would be computed from information
 such as the result of <code>get_frame_size ()</code> and the tables of

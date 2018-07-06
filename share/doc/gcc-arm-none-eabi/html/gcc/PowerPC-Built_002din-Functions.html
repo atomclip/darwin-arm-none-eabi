@@ -59,19 +59,19 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Target-Builtins.html#Target-Builtins">T
 check the PowerPC target platform type:
 
 <div class="defun">
-&mdash; Built-in Function: void <b>__builtin_cpu_init</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005finit-4384"></a></var><br>
+&mdash; Built-in Function: void <b>__builtin_cpu_init</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005finit-4393"></a></var><br>
 <blockquote><p>This function is a <code>nop</code> on the PowerPC platform and is included solely
 to maintain API compatibility with the x86 builtins. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Built-in Function: void <b>__builtin_cpu_init</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005finit-4385"></a></var><br>
+&mdash; Built-in Function: void <b>__builtin_cpu_init</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005finit-4394"></a></var><br>
 <blockquote><p>This function is a <code>nop</code> on the PowerPC platform and is included solely
 to maintain API compatibility with the x86 builtins. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Built-in Function: int <b>__builtin_cpu_is</b> (<var>const char *cpuname</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fis-4386"></a></var><br>
+&mdash; Built-in Function: int <b>__builtin_cpu_is</b> (<var>const char *cpuname</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fis-4395"></a></var><br>
 <blockquote><p>This function returns a value of <code>1</code> if the run-time CPU is of type
 <var>cpuname</var> and returns <code>0</code> otherwise
 
@@ -119,7 +119,7 @@ issues a warning.
       </blockquote></div>
 
 <div class="defun">
-&mdash; Built-in Function: int <b>__builtin_cpu_supports</b> (<var>const char *feature</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fsupports-4387"></a></var><br>
+&mdash; Built-in Function: int <b>__builtin_cpu_supports</b> (<var>const char *feature</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fsupports-4396"></a></var><br>
 <blockquote><p>This function returns a value of <code>1</code> if the run-time CPU supports the HWCAP
 feature <var>feature</var> and returns <code>0</code> otherwise.
 
@@ -234,33 +234,28 @@ and Altivec support.
 
      <dl>
 <dt><code>__float128 __builtin_infq (void)</code><dd>Similar to <code>__builtin_inf</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005finfq-4388"></a>
+<a name="index-g_t_005f_005fbuiltin_005finfq-4397"></a>
 <br><dt><code>__float128 __builtin_huge_valq (void)</code><dd>Similar to <code>__builtin_huge_val</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005fhuge_005fvalq-4389"></a>
+<a name="index-g_t_005f_005fbuiltin_005fhuge_005fvalq-4398"></a>
 <br><dt><code>__float128 __builtin_nanq (void)</code><dd>Similar to <code>__builtin_nan</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005fnanq-4390"></a>
+<a name="index-g_t_005f_005fbuiltin_005fnanq-4399"></a>
 <br><dt><code>__float128 __builtin_nansq (void)</code><dd>Similar to <code>__builtin_nans</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005fnansq-4391"></a></dl>
+<a name="index-g_t_005f_005fbuiltin_005fnansq-4400"></a></dl>
 
  <p>The following built-in functions are available for the PowerPC family
 of processors, starting with ISA 2.06 or later (<samp><span class="option">-mcpu=power7</span></samp>
 or <samp><span class="option">-mpopcntd</span></samp>):
 <pre class="smallexample">     long __builtin_bpermd (long, long);
      int __builtin_divwe (int, int);
-     int __builtin_divweo (int, int);
      unsigned int __builtin_divweu (unsigned int, unsigned int);
-     unsigned int __builtin_divweuo (unsigned int, unsigned int);
      long __builtin_divde (long, long);
-     long __builtin_divdeo (long, long);
      unsigned long __builtin_divdeu (unsigned long, unsigned long);
-     unsigned long __builtin_divdeuo (unsigned long, unsigned long);
      unsigned int cdtbcd (unsigned int);
      unsigned int cbcdtd (unsigned int);
      unsigned int addg6s (unsigned int, unsigned int);
 </pre>
- <p>The <code>__builtin_divde</code>, <code>__builtin_divdeo</code>,
-<code>__builtin_divdeu</code>, <code>__builtin_divdeou</code> functions require a
-64-bit environment support ISA 2.06 or later.
+ <p>The <code>__builtin_divde</code> and <code>__builtin_divdeu</code> functions
+require a 64-bit environment supporting ISA 2.06 or later.
 
  <p>The following built-in functions are available for the PowerPC family
 of processors, starting with ISA 3.0 or later (<samp><span class="option">-mcpu=power9</span></samp>):

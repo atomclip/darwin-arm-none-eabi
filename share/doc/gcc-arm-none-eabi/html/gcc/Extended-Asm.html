@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Using-Assembly-Language-with-C.html#Usi
 
 <h4 class="subsection">6.45.2 Extended Asm - Assembler Instructions with C Expression Operands</h4>
 
-<p><a name="index-extended-_0040code_007basm_007d-3689"></a><a name="index-assembly-language-in-C_002c-extended-3690"></a>
+<p><a name="index-extended-_0040code_007basm_007d-3697"></a><a name="index-assembly-language-in-C_002c-extended-3698"></a>
 With extended <code>asm</code> you can read and write C variables from
 assembler and perform jumps from assembler code to C labels. 
 Extended <code>asm</code> syntax uses colons (`<samp><span class="samp">:</span></samp>') to delimit
@@ -152,7 +152,7 @@ example for i386 using <code>asm</code> might look like this:
 
 <h5 class="subsubsection">6.45.2.1 Volatile</h5>
 
-<p><a name="index-volatile-_0040code_007basm_007d-3691"></a><a name="index-g_t_0040code_007basm_007d-volatile-3692"></a>
+<p><a name="index-volatile-_0040code_007basm_007d-3699"></a><a name="index-g_t_0040code_007basm_007d-volatile-3700"></a>
 GCC's optimizers sometimes discard <code>asm</code> statements if they determine
 there is no need for the output variables. Also, the optimizers may move
 code out of loops if they believe that the code will always return the same
@@ -264,7 +264,7 @@ Using `<samp><span class="samp">%=</span></samp>'
 
 <h5 class="subsubsection">6.45.2.2 Assembler Template</h5>
 
-<p><a name="index-g_t_0040code_007basm_007d-assembler-template-3693"></a>
+<p><a name="index-g_t_0040code_007basm_007d-assembler-template-3701"></a>
 An assembler template is a literal string containing assembler instructions. 
 The compiler replaces tokens in the template that refer
 to inputs, outputs, and goto labels,
@@ -365,7 +365,7 @@ assembler template such as this:
 
 <h5 class="subsubsection">6.45.2.3 Output Operands</h5>
 
-<p><a name="index-g_t_0040code_007basm_007d-output-operands-3694"></a>
+<p><a name="index-g_t_0040code_007basm_007d-output-operands-3702"></a>
 An <code>asm</code> statement has zero or more output operands indicating the names
 of C variables modified by the assembler code.
 
@@ -529,7 +529,7 @@ for <code>d</code> by specifying both constraints.
 
 <h5 class="subsubsection">6.45.2.4 Flag Output Operands</h5>
 
-<p><a name="index-g_t_0040code_007basm_007d-flag-output-operands-3695"></a>
+<p><a name="index-g_t_0040code_007basm_007d-flag-output-operands-3703"></a>
 Some targets have a special register that holds the &ldquo;flags&rdquo; for the
 result of an operation or comparison.  Normally, the contents of that
 register are either unmodifed by the asm, or the asm is considered to
@@ -579,7 +579,7 @@ conditions defined in the ISA manual for <code>j</code><var>cc</var> or
 
 <h5 class="subsubsection">6.45.2.5 Input Operands</h5>
 
-<p><a name="index-g_t_0040code_007basm_007d-input-operands-3696"></a><a name="index-g_t_0040code_007basm_007d-expressions-3697"></a>
+<p><a name="index-g_t_0040code_007basm_007d-input-operands-3704"></a><a name="index-g_t_0040code_007basm_007d-expressions-3705"></a>
 Input operands make values from C variables and expressions available to the
 assembly code.
 
@@ -674,7 +674,7 @@ the generated assembler code.
 
 <h5 class="subsubsection">6.45.2.6 Clobbers</h5>
 
-<p><a name="index-g_t_0040code_007basm_007d-clobbers-3698"></a>
+<p><a name="index-g_t_0040code_007basm_007d-clobbers-3706"></a>
 While the compiler is aware of changes to entries listed in the output
 operands, the inline <code>asm</code> code may modify more than just the outputs. For
 example, calculations may require additional registers, or the processor may
@@ -743,7 +743,7 @@ ten bytes of a string, use a memory input like:
 
 <h5 class="subsubsection">6.45.2.7 Goto Labels</h5>
 
-<p><a name="index-g_t_0040code_007basm_007d-goto-labels-3699"></a>
+<p><a name="index-g_t_0040code_007basm_007d-goto-labels-3707"></a>
 <code>asm goto</code> allows assembly code to jump to one or more C labels.  The
 <var>GotoLabels</var> section in an <code>asm goto</code> statement contains
 a comma-separated
@@ -896,6 +896,9 @@ following code uses the `<samp><span class="samp">h</span></samp>' and `<samp><s
 </td><td valign="top"><code>2</code>
 </td><td valign="top"><code>2</code>
  <br></td></tr></table>
+
+ <p><code>V</code> is a special modifier which prints the name of the full integer
+register without <code>%</code>.
 
  <p><a name="x86floatingpointasmoperands"></a>
 

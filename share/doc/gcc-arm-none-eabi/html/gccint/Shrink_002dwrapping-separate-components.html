@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Stack-and-Calling.html#Stack-and-Callin
 
 <h4 class="subsection">17.9.14 Shrink-wrapping separate components</h4>
 
-<p><a name="index-shrink_002dwrapping-separate-components-4350"></a>
+<p><a name="index-shrink_002dwrapping-separate-components-4351"></a>
 The prologue may perform a variety of target dependent tasks such as
 saving callee-saved registers, saving the return address, aligning the
 stack, creating a stack frame, initializing the PIC register, setting
@@ -78,7 +78,7 @@ and <code>shrink_wrap.components_for_bb</code> hooks, and deallocated by the
 generic code.
 
 <div class="defun">
-&mdash; Target Hook: sbitmap <b>TARGET_SHRINK_WRAP_GET_SEPARATE_COMPONENTS</b> (<var>void</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fGET_005fSEPARATE_005fCOMPONENTS-4351"></a></var><br>
+&mdash; Target Hook: sbitmap <b>TARGET_SHRINK_WRAP_GET_SEPARATE_COMPONENTS</b> (<var>void</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fGET_005fSEPARATE_005fCOMPONENTS-4352"></a></var><br>
 <blockquote><p>This hook should return an <code>sbitmap</code> with the bits set for those
 components that can be separately shrink-wrapped in the current function. 
 Return <code>NULL</code> if the current function should not get any separate
@@ -88,14 +88,14 @@ If it is defined, the other hooks in this group have to be defined as well.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: sbitmap <b>TARGET_SHRINK_WRAP_COMPONENTS_FOR_BB</b> (<var>basic_block</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fCOMPONENTS_005fFOR_005fBB-4352"></a></var><br>
+&mdash; Target Hook: sbitmap <b>TARGET_SHRINK_WRAP_COMPONENTS_FOR_BB</b> (<var>basic_block</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fCOMPONENTS_005fFOR_005fBB-4353"></a></var><br>
 <blockquote><p>This hook should return an <code>sbitmap</code> with the bits set for those
 components where either the prologue component has to be executed before
 the <code>basic_block</code>, or the epilogue component after it, or both. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_DISQUALIFY_COMPONENTS</b> (<var>sbitmap components, edge e, sbitmap edge_components, bool is_prologue</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fDISQUALIFY_005fCOMPONENTS-4353"></a></var><br>
+&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_DISQUALIFY_COMPONENTS</b> (<var>sbitmap components, edge e, sbitmap edge_components, bool is_prologue</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fDISQUALIFY_005fCOMPONENTS-4354"></a></var><br>
 <blockquote><p>This hook should clear the bits in the <var>components</var> bitmap for those
 components in <var>edge_components</var> that the target cannot handle on edge
 <var>e</var>, where <var>is_prologue</var> says if this is for a prologue or an
@@ -103,17 +103,17 @@ epilogue instead.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_EMIT_PROLOGUE_COMPONENTS</b> (<var>sbitmap</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fEMIT_005fPROLOGUE_005fCOMPONENTS-4354"></a></var><br>
+&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_EMIT_PROLOGUE_COMPONENTS</b> (<var>sbitmap</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fEMIT_005fPROLOGUE_005fCOMPONENTS-4355"></a></var><br>
 <blockquote><p>Emit prologue insns for the components indicated by the parameter. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_EMIT_EPILOGUE_COMPONENTS</b> (<var>sbitmap</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fEMIT_005fEPILOGUE_005fCOMPONENTS-4355"></a></var><br>
+&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_EMIT_EPILOGUE_COMPONENTS</b> (<var>sbitmap</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fEMIT_005fEPILOGUE_005fCOMPONENTS-4356"></a></var><br>
 <blockquote><p>Emit epilogue insns for the components indicated by the parameter. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_SET_HANDLED_COMPONENTS</b> (<var>sbitmap</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fSET_005fHANDLED_005fCOMPONENTS-4356"></a></var><br>
+&mdash; Target Hook: void <b>TARGET_SHRINK_WRAP_SET_HANDLED_COMPONENTS</b> (<var>sbitmap</var>)<var><a name="index-TARGET_005fSHRINK_005fWRAP_005fSET_005fHANDLED_005fCOMPONENTS-4357"></a></var><br>
 <blockquote><p>Mark the components in the parameter as handled, so that the
 <code>prologue</code> and <code>epilogue</code> named patterns know to ignore those
 components.  The target code should not hang on to the <code>sbitmap</code>, it

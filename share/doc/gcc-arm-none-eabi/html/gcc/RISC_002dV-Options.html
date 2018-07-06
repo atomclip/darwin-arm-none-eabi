@@ -61,31 +61,65 @@ These command-line options are defined for RISC-V targets:
      <dl>
 <dt><code>-mbranch-cost=</code><var>n</var><dd><a name="index-mbranch_002dcost-2378"></a>Set the cost of branches to roughly <var>n</var> instructions.
 
-     <br><dt><code>-mmemcpy</code><dt><code>-mno-memcpy</code><dd><a name="index-mmemcpy-2379"></a>Don't optimize block moves.
+     <br><dt><code>-mplt</code><dt><code>-mno-plt</code><dd><a name="index-plt-2379"></a>When generating PIC code, do or don't allow the use of PLTs. Ignored for
+non-PIC.  The default is <samp><span class="option">-mplt</span></samp>.
 
-     <br><dt><code>-mplt</code><dt><code>-mno-plt</code><dd><a name="index-plt-2380"></a>When generating PIC code, allow the use of PLTs. Ignored for non-PIC.
+     <br><dt><code>-mabi=</code><var>ABI-string</var><dd><a name="index-mabi-2380"></a>Specify integer and floating-point calling convention.  <var>ABI-string</var>
+contains two parts: the size of integer types and the registers used for
+floating-point types.  For example `<samp><span class="samp">-march=rv64ifd -mabi=lp64d</span></samp>' means that
+`<samp><span class="samp">long</span></samp>' and pointers are 64-bit (implicitly defining `<samp><span class="samp">int</span></samp>' to be
+32-bit), and that floating-point values up to 64 bits wide are passed in F
+registers.  Contrast this with `<samp><span class="samp">-march=rv64ifd -mabi=lp64f</span></samp>', which still
+allows the compiler to generate code that uses the F and D extensions but only
+allows floating-point values up to 32 bits long to be passed in registers; or
+`<samp><span class="samp">-march=rv64ifd -mabi=lp64</span></samp>', in which no floating-point arguments will be
+passed in registers.
 
-     <br><dt><code>-mabi=</code><var>ABI-string</var><dd><a name="index-mabi-2381"></a>Specify integer and floating-point calling convention.  This defaults to the
-natural calling convention: e.g. LP64 for RV64I, ILP32 for RV32I, LP64D for
-RV64G.
+     <p>The default for this argument is system dependent, users who want a specific
+calling convention should specify one explicitly.  The valid calling
+conventions are: `<samp><span class="samp">ilp32</span></samp>', `<samp><span class="samp">ilp32f</span></samp>', `<samp><span class="samp">ilp32d</span></samp>', `<samp><span class="samp">lp64</span></samp>',
+`<samp><span class="samp">lp64f</span></samp>', and `<samp><span class="samp">lp64d</span></samp>'.  Some calling conventions are impossible to
+implement on some ISAs: for example, `<samp><span class="samp">-march=rv32if -mabi=ilp32d</span></samp>' is
+invalid because the ABI requires 64-bit values be passed in F registers, but F
+registers are only 32 bits wide.
 
-     <br><dt><code>-mfdiv</code><dt><code>-mno-fdiv</code><dd><a name="index-mfdiv-2382"></a>Use hardware floating-point divide and square root instructions.  This requires
-the F or D extensions for floating-point registers.
+     <br><dt><code>-mfdiv</code><dt><code>-mno-fdiv</code><dd><a name="index-mfdiv-2381"></a>Do or don't use hardware floating-point divide and square root instructions. 
+This requires the F or D extensions for floating-point registers.  The default
+is to use them if the specified architecture has these instructions.
 
-     <br><dt><code>-mdiv</code><dt><code>-mno-div</code><dd><a name="index-mdiv-2383"></a>Use hardware instructions for integer division.  This requires the M extension.
+     <br><dt><code>-mdiv</code><dt><code>-mno-div</code><dd><a name="index-mdiv-2382"></a>Do or don't use hardware instructions for integer division.  This requires the
+M extension.  The default is to use them if the specified architecture has
+these instructions.
 
-     <br><dt><code>-march=</code><var>ISA-string</var><dd><a name="index-march-2384"></a>Generate code for given RISC-V ISA (e.g. `<samp><span class="samp">rv64im</span></samp>').  ISA strings must be
+     <br><dt><code>-march=</code><var>ISA-string</var><dd><a name="index-march-2383"></a>Generate code for given RISC-V ISA (e.g. `<samp><span class="samp">rv64im</span></samp>').  ISA strings must be
 lower-case.  Examples include `<samp><span class="samp">rv64i</span></samp>', `<samp><span class="samp">rv32g</span></samp>', and `<samp><span class="samp">rv32imaf</span></samp>'.
 
-     <br><dt><code>-mtune=</code><var>processor-string</var><dd><a name="index-mtune-2385"></a>Optimize the output for the given processor, specified by microarchitecture
+     <br><dt><code>-mtune=</code><var>processor-string</var><dd><a name="index-mtune-2384"></a>Optimize the output for the given processor, specified by microarchitecture
 name.
 
-     <br><dt><code>-msmall-data-limit=</code><var>n</var><dd><a name="index-msmall_002ddata_002dlimit-2386"></a>Put global and static data smaller than <var>n</var> bytes into a special section
+     <br><dt><code>-msmall-data-limit=</code><var>n</var><dd><a name="index-msmall_002ddata_002dlimit-2385"></a>Put global and static data smaller than <var>n</var> bytes into a special section
 (on some targets).
 
-     <br><dt><code>-msave-restore</code><dt><code>-mno-save-restore</code><dd><a name="index-msave_002drestore-2387"></a>Use smaller but slower prologue and epilogue code.
+     <br><dt><code>-msave-restore</code><dt><code>-mno-save-restore</code><dd><a name="index-msave_002drestore-2386"></a>Do or don't use smaller but slower prologue and epilogue code that uses
+library function calls.  The default is to use fast inline prologues and
+epilogues.
 
-     <br><dt><code>-mcmodel=</code><var>code-model</var><dd><a name="index-mcmodel-2388"></a>Specify the code model.
+     <br><dt><code>-mstrict-align</code><dt><code>-mno-strict-align</code><dd><a name="index-mstrict_002dalign-2387"></a>Do not or do generate unaligned memory accesses.  The default is set depending
+on whether the processor we are optimizing for supports fast unaligned access
+or not.
+
+     <br><dt><code>-mcmodel=medlow</code><dd><a name="index-mcmodel_003dmedlow-2388"></a>Generate code for the medium-low code model. The program and its statically
+defined symbols must lie within a single 2 GiB address range and must lie
+between absolute addresses &minus;2 GiB and +2 GiB. Programs can be
+statically or dynamically linked. This is the default code model.
+
+     <br><dt><code>-mcmodel=medany</code><dd><a name="index-mcmodel_003dmedany-2389"></a>Generate code for the medium-any code model. The program and its statically
+defined symbols must be within any single 2 GiB address range. Programs can be
+statically or dynamically linked.
+
+     <br><dt><code>-mexplicit-relocs</code><dt><code>-mno-exlicit-relocs</code><dd>Use or do not use assembler relocation operators when dealing with symbolic
+addresses.  The alternative is to use assembler macros instead, which may
+limit optimization.
 
  </dl>
 

@@ -11,7 +11,7 @@
 <!--
 This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2017 Free Software Foundation, Inc.
+Copyright (C) 1991-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -49,23 +49,23 @@ Up:&nbsp;<a rel="up" accesskey="u" href="MIPS_002dDependent.html#MIPS_002dDepend
 special options:
 
      
-<a name="index-g_t_0040code_007b_002dG_007d-option-_0028MIPS_0029-1501"></a>
+<a name="index-g_t_0040code_007b_002dG_007d-option-_0028MIPS_0029-1502"></a>
 <dl><dt><code>-G </code><var>num</var><dd>Set the &ldquo;small data&rdquo; limit to <var>n</var> bytes.  The default limit is 8 bytes. 
 See <a href="MIPS-Small-Data.html#MIPS-Small-Data">Controlling the use of small data accesses</a>.
 
-     <p><a name="index-g_t_0040code_007b_002dEB_007d-option-_0028MIPS_0029-1502"></a><a name="index-g_t_0040code_007b_002dEL_007d-option-_0028MIPS_0029-1503"></a><a name="index-MIPS-big_002dendian-output-1504"></a><a name="index-MIPS-little_002dendian-output-1505"></a><a name="index-big_002dendian-output_002c-MIPS-1506"></a><a name="index-little_002dendian-output_002c-MIPS-1507"></a><br><dt><code>-EB</code><dt><code>-EL</code><dd>Any MIPS configuration of <code>as</code> can select big-endian or
+     <p><a name="index-g_t_0040code_007b_002dEB_007d-option-_0028MIPS_0029-1503"></a><a name="index-g_t_0040code_007b_002dEL_007d-option-_0028MIPS_0029-1504"></a><a name="index-MIPS-big_002dendian-output-1505"></a><a name="index-MIPS-little_002dendian-output-1506"></a><a name="index-big_002dendian-output_002c-MIPS-1507"></a><a name="index-little_002dendian-output_002c-MIPS-1508"></a><br><dt><code>-EB</code><dt><code>-EL</code><dd>Any MIPS configuration of <code>as</code> can select big-endian or
 little-endian output at run time (unlike the other <span class="sc">gnu</span> development
 tools, which must be configured for one or the other).  Use `<samp><span class="samp">-EB</span></samp>'
 to select big-endian output, and `<samp><span class="samp">-EL</span></samp>' for little-endian.
 
-     <br><dt><code>-KPIC</code><dd><a name="index-PIC-selection_002c-MIPS-1508"></a><a name="index-g_t_0040option_007b_002dKPIC_007d-option_002c-MIPS-1509"></a>Generate SVR4-style PIC.  This option tells the assembler to generate
+     <br><dt><code>-KPIC</code><dd><a name="index-PIC-selection_002c-MIPS-1509"></a><a name="index-g_t_0040option_007b_002dKPIC_007d-option_002c-MIPS-1510"></a>Generate SVR4-style PIC.  This option tells the assembler to generate
 SVR4-style position-independent macro expansions.  It also tells the
 assembler to mark the output file as PIC.
 
-     <br><dt><code>-mvxworks-pic</code><dd><a name="index-g_t_0040option_007b_002dmvxworks_002dpic_007d-option_002c-MIPS-1510"></a>Generate VxWorks PIC.  This option tells the assembler to generate
+     <br><dt><code>-mvxworks-pic</code><dd><a name="index-g_t_0040option_007b_002dmvxworks_002dpic_007d-option_002c-MIPS-1511"></a>Generate VxWorks PIC.  This option tells the assembler to generate
 VxWorks-style position-independent macro expansions.
 
-     <p><a name="index-MIPS-architecture-options-1511"></a><br><dt><code>-mips1</code><dt><code>-mips2</code><dt><code>-mips3</code><dt><code>-mips4</code><dt><code>-mips5</code><dt><code>-mips32</code><dt><code>-mips32r2</code><dt><code>-mips32r3</code><dt><code>-mips32r5</code><dt><code>-mips32r6</code><dt><code>-mips64</code><dt><code>-mips64r2</code><dt><code>-mips64r3</code><dt><code>-mips64r5</code><dt><code>-mips64r6</code><dd>Generate code for a particular MIPS Instruction Set Architecture level. 
+     <p><a name="index-MIPS-architecture-options-1512"></a><br><dt><code>-mips1</code><dt><code>-mips2</code><dt><code>-mips3</code><dt><code>-mips4</code><dt><code>-mips5</code><dt><code>-mips32</code><dt><code>-mips32r2</code><dt><code>-mips32r3</code><dt><code>-mips32r5</code><dt><code>-mips32r6</code><dt><code>-mips64</code><dt><code>-mips64r2</code><dt><code>-mips64r3</code><dt><code>-mips64r5</code><dt><code>-mips64r6</code><dd>Generate code for a particular MIPS Instruction Set Architecture level. 
 `<samp><span class="samp">-mips1</span></samp>' corresponds to the R2000 and R3000 processors,
 `<samp><span class="samp">-mips2</span></samp>' to the R6000 processor, `<samp><span class="samp">-mips3</span></samp>' to the
 R4000 processor, and `<samp><span class="samp">-mips4</span></samp>' to the R8000 and R10000 processors. 
@@ -329,10 +329,10 @@ identical to `<samp><span class="samp">-march=</span><var>cpu</var></samp>'.
      <br><dt><code>-mabi=</code><var>abi</var><dd>Record which ABI the source code uses.  The recognized arguments
 are: `<samp><span class="samp">32</span></samp>', `<samp><span class="samp">n32</span></samp>', `<samp><span class="samp">o64</span></samp>', `<samp><span class="samp">64</span></samp>' and `<samp><span class="samp">eabi</span></samp>'.
 
-     <br><dt><code>-msym32</code><dt><code>-mno-sym32</code><dd><a name="index-g_t_002dmsym32-1512"></a><a name="index-g_t_002dmno_002dsym32-1513"></a>Equivalent to adding <code>.set sym32</code> or <code>.set nosym32</code> to
+     <br><dt><code>-msym32</code><dt><code>-mno-sym32</code><dd><a name="index-g_t_002dmsym32-1513"></a><a name="index-g_t_002dmno_002dsym32-1514"></a>Equivalent to adding <code>.set sym32</code> or <code>.set nosym32</code> to
 the beginning of the assembler input.  See <a href="MIPS-Symbol-Sizes.html#MIPS-Symbol-Sizes">MIPS Symbol Sizes</a>.
 
-     <p><a name="index-g_t_0040code_007b_002dnocpp_007d-ignored-_0028MIPS_0029-1514"></a><br><dt><code>-nocpp</code><dd>This option is ignored.  It is accepted for command-line compatibility with
+     <p><a name="index-g_t_0040code_007b_002dnocpp_007d-ignored-_0028MIPS_0029-1515"></a><br><dt><code>-nocpp</code><dd>This option is ignored.  It is accepted for command-line compatibility with
 other assemblers, which use it to turn off C style preprocessing.  With
 <span class="sc">gnu</span> <code>as</code>, there is no need for `<samp><span class="samp">-nocpp</span></samp>', because the
 <span class="sc">gnu</span> assembler itself never runs the C preprocessor.
@@ -405,7 +405,7 @@ for branches.
      <p>By default `<samp><span class="samp">-mno-ignore-branch-isa</span></samp>' is selected, causing any invalid
 branch requiring a transition between ISA modes to produce an error.
 
-     <p><a name="index-g_t_0040option_007b_002dmnan_003d_007d-command-line-option_002c-MIPS-1515"></a><br><dt><code>-mnan=</code><var>encoding</var><dd>This option indicates whether the source code uses the IEEE 2008
+     <p><a name="index-g_t_0040option_007b_002dmnan_003d_007d-command-line-option_002c-MIPS-1516"></a><br><dt><code>-mnan=</code><var>encoding</var><dd>This option indicates whether the source code uses the IEEE 2008
 NaN encoding (<samp><span class="option">-mnan=2008</span></samp>) or the original MIPS encoding
 (<samp><span class="option">-mnan=legacy</span></samp>).  It is equivalent to adding a <code>.nan</code>
 directive to the beginning of the source file.  See <a href="MIPS-NaN-Encodings.html#MIPS-NaN-Encodings">MIPS NaN Encodings</a>.

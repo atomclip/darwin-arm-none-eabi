@@ -58,19 +58,19 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are available for H8/300 targets:
 
      <dl>
-<dt><code>function_vector</code><dd><a name="index-g_t_0040code_007bfunction_005fvector_007d-function-attribute_002c-H8_002f300-3391"></a>Use this attribute on the H8/300, H8/300H, and H8S to indicate
+<dt><code>function_vector</code><dd><a name="index-g_t_0040code_007bfunction_005fvector_007d-function-attribute_002c-H8_002f300-3397"></a>Use this attribute on the H8/300, H8/300H, and H8S to indicate
 that the specified function should be called through the function vector. 
 Calling a function through the function vector reduces code size; however,
 the function vector has a limited size (maximum 128 entries on the H8/300
 and 64 entries on the H8/300H and H8S)
 and shares space with the interrupt vector.
 
-     <br><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-H8_002f300-3392"></a>Use this attribute on the H8/300, H8/300H, and H8S to
+     <br><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-H8_002f300-3398"></a>Use this attribute on the H8/300, H8/300H, and H8S to
 indicate that the specified function is an interrupt handler.  The compiler
 generates function entry and exit sequences suitable for use in an
 interrupt handler when this attribute is present.
 
-     <br><dt><code>saveall</code><dd><a name="index-g_t_0040code_007bsaveall_007d-function-attribute_002c-H8_002f300-3393"></a><a name="index-save-all-registers-on-the-H8_002f300_002c-H8_002f300H_002c-and-H8S-3394"></a>Use this attribute on the H8/300, H8/300H, and H8S to indicate that
+     <br><dt><code>saveall</code><dd><a name="index-g_t_0040code_007bsaveall_007d-function-attribute_002c-H8_002f300-3399"></a><a name="index-save-all-registers-on-the-H8_002f300_002c-H8_002f300H_002c-and-H8S-3400"></a>Use this attribute on the H8/300, H8/300H, and H8S to indicate that
 all registers except the stack pointer should be saved in the prologue
 regardless of whether they are used or not. 
 </dl>

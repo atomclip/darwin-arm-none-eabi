@@ -10,7 +10,7 @@
 <link rel="next" href="Checkpoint_002fRestart.html#Checkpoint_002fRestart" title="Checkpoint/Restart">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988-2017 Free Software Foundation, Inc.
+Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Running.html#Running">Running</a>
 
 <h3 class="section">4.11 Debugging Forks</h3>
 
-<p><a name="index-fork_002c-debugging-programs-which-call-203"></a><a name="index-multiple-processes-204"></a><a name="index-processes_002c-multiple-205"></a>On most systems, <span class="sc">gdb</span> has no special support for debugging
+<p><a name="index-fork_002c-debugging-programs-which-call-204"></a><a name="index-multiple-processes-205"></a><a name="index-processes_002c-multiple-206"></a>On most systems, <span class="sc">gdb</span> has no special support for debugging
 programs which create additional processes using the <code>fork</code>
 function.  When a program forks, <span class="sc">gdb</span> will continue to debug the
 parent process and the child process will run unimpeded.  If you have
@@ -83,7 +83,7 @@ the parent process and the child process will run unimpeded.
 use the command <code>set&nbsp;follow-fork-mode</code><!-- /@w -->.
 
      
-<a name="index-set-follow_002dfork_002dmode-206"></a>
+<a name="index-set-follow_002dfork_002dmode-207"></a>
 <dl><dt><code>set follow-fork-mode </code><var>mode</var><dd>Set the debugger response to a program call of <code>fork</code> or
 <code>vfork</code>.  A call to <code>fork</code> or <code>vfork</code> creates a new
 process.  The <var>mode</var> argument can be:
@@ -97,14 +97,14 @@ unimpeded.
 
      </dl>
 
-     <p><a name="index-show-follow_002dfork_002dmode-207"></a><br><dt><code>show follow-fork-mode</code><dd>Display the current debugger response to a <code>fork</code> or <code>vfork</code> call. 
+     <p><a name="index-show-follow_002dfork_002dmode-208"></a><br><dt><code>show follow-fork-mode</code><dd>Display the current debugger response to a <code>fork</code> or <code>vfork</code> call. 
 </dl>
 
-   <p><a name="index-debugging-multiple-processes-208"></a>On Linux, if you want to debug both the parent and child processes, use the
+   <p><a name="index-debugging-multiple-processes-209"></a>On Linux, if you want to debug both the parent and child processes, use the
 command <code>set&nbsp;detach-on-fork</code><!-- /@w -->.
 
      
-<a name="index-set-detach_002don_002dfork-209"></a>
+<a name="index-set-detach_002don_002dfork-210"></a>
 <dl><dt><code>set detach-on-fork </code><var>mode</var><dd>Tells gdb whether to detach one of the processes after a fork, or
 retain debugger control over them both.
 
@@ -120,7 +120,7 @@ is held suspended.
 
      </dl>
 
-     <p><a name="index-show-detach_002don_002dfork-210"></a><br><dt><code>show detach-on-fork</code><dd>Show whether detach-on-fork mode is on/off. 
+     <p><a name="index-show-detach_002don_002dfork-211"></a><br><dt><code>show detach-on-fork</code><dd>Show whether detach-on-fork mode is on/off. 
 </dl>
 
    <p>If you choose to set `<samp><span class="samp">detach-on-fork</span></samp>' mode off, then <span class="sc">gdb</span>
@@ -152,7 +152,7 @@ You can change this behaviour with the <code>set&nbsp;follow-exec-mode</code><!-
 command.
 
      
-<a name="index-set-follow_002dexec_002dmode-211"></a>
+<a name="index-set-follow_002dexec_002dmode-212"></a>
 <dl><dt><code>set follow-exec-mode </code><var>mode</var><dd>
 Set debugger response to a program call of <code>exec</code>.  An
 <code>exec</code> call replaces the program image of a process.

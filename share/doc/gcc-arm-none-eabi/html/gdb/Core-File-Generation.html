@@ -10,7 +10,7 @@
 <link rel="next" href="Character-Sets.html#Character-Sets" title="Character Sets">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988-2017 Free Software Foundation, Inc.
+Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Data.html#Data">Data</a>
 
 <h3 class="section">10.19 How to Produce a Core File from Your Program</h3>
 
-<p><a name="index-dump-core-from-inferior-777"></a>
+<p><a name="index-dump-core-from-inferior-781"></a>
 A <dfn>core file</dfn> or <dfn>core dump</dfn> is a file that records the memory
 image of a running process and its process status (register values
 etc.).  Its primary use is post-mortem debugging of a program that
@@ -62,8 +62,8 @@ are debugging in order to preserve a snapshot of its state.
 <span class="sc">gdb</span> has a special command for that.
 
      
-<a name="index-gcore-778"></a>
-<a name="index-generate_002dcore_002dfile-779"></a>
+<a name="index-gcore-782"></a>
+<a name="index-generate_002dcore_002dfile-783"></a>
 <dl><dt><code>generate-core-file [</code><var>file</var><code>]</code><dt><code>gcore [</code><var>file</var><code>]</code><dd>Produce a core dump of the inferior process.  The optional argument
 <var>file</var> specifies the file name where to put the core dump.  If not
 specified, the file name defaults to <samp><span class="file">core.</span><var>pid</var></samp>, where
@@ -74,9 +74,11 @@ this writing, <span class="sc">gnu</span>/Linux, FreeBSD, Solaris, and S390).
 
      <p>On <span class="sc">gnu</span>/Linux, this command can take into account the value of the
 file <samp><span class="file">/proc/</span><var>pid</var><span class="file">/coredump_filter</span></samp> when generating the core
-dump (see <a href="set-use_002dcoredump_002dfilter.html#set-use_002dcoredump_002dfilter">set use-coredump-filter</a>).
+dump (see <a href="set-use_002dcoredump_002dfilter.html#set-use_002dcoredump_002dfilter">set use-coredump-filter</a>), and by default honors the
+<code>VM_DONTDUMP</code> flag for mappings where it is present in the file
+<samp><span class="file">/proc/</span><var>pid</var><span class="file">/smaps</span></samp> (see <a href="set-dump_002dexcluded_002dmappings.html#set-dump_002dexcluded_002dmappings">set dump-excluded-mappings</a>).
 
-     <p><a name="index-set-use_002dcoredump_002dfilter-780"></a><a name="set-use_002dcoredump_002dfilter"></a>
+     <p><a name="index-set-use_002dcoredump_002dfilter-784"></a><a name="set-use_002dcoredump_002dfilter"></a>
 <br><dt><code>set use-coredump-filter on</code><dt><code>set use-coredump-filter off</code><dd>Enable or disable the use of the file
 <samp><span class="file">/proc/</span><var>pid</var><span class="file">/coredump_filter</span></samp> when generating core dump
 files.  This file is used by the Linux kernel to decide what types of
@@ -100,7 +102,14 @@ to decide which pages will be dumped in the core dump file.  This
 value is currently <code>0x33</code>, which means that bits <code>0</code>
 (anonymous private mappings), <code>1</code> (anonymous shared mappings),
 <code>4</code> (ELF headers) and <code>5</code> (private huge pages) are active. 
-This will cause these memory mappings to be dumped automatically. 
+This will cause these memory mappings to be dumped automatically.
+
+     <p><a name="index-set-dump_002dexcluded_002dmappings-785"></a><a name="set-dump_002dexcluded_002dmappings"></a>
+<br><dt><code>set dump-excluded-mappings on</code><dt><code>set dump-excluded-mappings off</code><dd>If <code>on</code> is specified, <span class="sc">gdb</span> will dump memory mappings
+marked with the <code>VM_DONTDUMP</code> flag.  This flag is represented in
+the file <samp><span class="file">/proc/</span><var>pid</var><span class="file">/smaps</span></samp> with the acronym <code>dd</code>.
+
+     <p>The default value is <code>off</code>. 
 </dl>
 
    </body></html>

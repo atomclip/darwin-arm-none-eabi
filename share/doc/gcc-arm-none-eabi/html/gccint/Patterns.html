@@ -54,8 +54,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Desc.html#Machine-Desc">Machine
 
 <h3 class="section">16.2 Everything about Instruction Patterns</h3>
 
-<p><a name="index-patterns-3241"></a><a name="index-instruction-patterns-3242"></a>
-<a name="index-define_005finsn-3243"></a>A <code>define_insn</code> expression is used to define instruction patterns
+<p><a name="index-patterns-3242"></a><a name="index-instruction-patterns-3243"></a>
+<a name="index-define_005finsn-3244"></a>A <code>define_insn</code> expression is used to define instruction patterns
 to which insns may be matched.  A <code>define_insn</code> expression contains
 an incomplete RTL expression, with pieces to be filled in later, operand
 constraints that restrict how the pieces can be filled in, and an output
@@ -93,18 +93,18 @@ operands of the instruction.
      <p>If the vector has multiple elements, the RTL template is treated as a
 <code>parallel</code> expression.
 
-     <li><a name="index-pattern-conditions-3244"></a><a name="index-conditions_002c-in-patterns-3245"></a>The condition: This is a string which contains a C expression.  When the
+     <li><a name="index-pattern-conditions-3245"></a><a name="index-conditions_002c-in-patterns-3246"></a>The condition: This is a string which contains a C expression.  When the
 compiler attempts to match RTL against a pattern, the condition is
 evaluated.  If the condition evaluates to <code>true</code>, the match is
 permitted.  The condition may be an empty string, which is treated
 as always <code>true</code>.
 
-     <p><a name="index-named-patterns-and-conditions-3246"></a>For a named pattern, the condition may not depend on the data in the
+     <p><a name="index-named-patterns-and-conditions-3247"></a>For a named pattern, the condition may not depend on the data in the
 insn being matched, but only the target-machine-type flags.  The compiler
 needs to test these conditions during initialization in order to learn
 exactly which named instructions are available in a particular run.
 
-     <p><a name="index-operands-3247"></a>For nameless patterns, the condition is applied only when matching an
+     <p><a name="index-operands-3248"></a>For nameless patterns, the condition is applied only when matching an
 individual insn, and only after the insn has matched the pattern's
 recognition template.  The insn's operands may be found in the vector
 <code>operands</code>.

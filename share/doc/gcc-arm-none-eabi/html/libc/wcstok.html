@@ -32,7 +32,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Wchar-strings.html#Wchar-strings">Wchar
 <hr>
 </div>
 
-<h3 class="section">6.26 <code>wcstok</code>&mdash;get next token from a string</h3>
+<h3 class="section">6.27 <code>wcstok</code>&mdash;get next token from a string</h3>
 
 <p><a name="index-wcstok-522"></a><strong>Synopsis</strong>
 <pre class="example">     #include &lt;wchar.h&gt;
@@ -76,6 +76,13 @@ remain, a null pointer is returned.
 <strong>Returns</strong><br>
 <code>wcstok</code> returns a pointer to the first wide character of a token, or
 <code>NULL</code> if there is no token.
+
+   <pre class="sp">
+
+</pre>
+<strong>Notes</strong><br>
+<code>wcstok</code> is thread-safe (unlike <code>strtok</code>, but like <code>strtok_r</code>). 
+<code>wcstok</code> writes into the string being searched.
 
    <pre class="sp">
 

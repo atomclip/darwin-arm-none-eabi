@@ -57,7 +57,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported on the SH family of processors:
 
      <dl>
-<dt><code>function_vector</code><dd><a name="index-g_t_0040code_007bfunction_005fvector_007d-function-attribute_002c-SH-3498"></a><a name="index-calling-functions-through-the-function-vector-on-SH2A-3499"></a>On SH2A targets, this attribute declares a function to be called using the
+<dt><code>function_vector</code><dd><a name="index-g_t_0040code_007bfunction_005fvector_007d-function-attribute_002c-SH-3504"></a><a name="index-calling-functions-through-the-function-vector-on-SH2A-3505"></a>On SH2A targets, this attribute declares a function to be called using the
 TBR relative addressing mode.  The argument to this attribute is the entry
 number of the same function in a vector table containing all the TBR
 relative addressable functions.  For correct operation the TBR must be setup
@@ -73,20 +73,20 @@ saves at least 8 bytes of code; and if other successive calls are being
 made to the same function, it saves 2 bytes of code per each of these
 calls.
 
-     <br><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-SH-3500"></a>Use this attribute to
+     <br><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-SH-3506"></a>Use this attribute to
 indicate that the specified function is an interrupt handler.  The compiler
 generates function entry and exit sequences suitable for use in an
 interrupt handler when this attribute is present.
 
-     <br><dt><code>nosave_low_regs</code><dd><a name="index-g_t_0040code_007bnosave_005flow_005fregs_007d-function-attribute_002c-SH-3501"></a>Use this attribute on SH targets to indicate that an <code>interrupt_handler</code>
+     <br><dt><code>nosave_low_regs</code><dd><a name="index-g_t_0040code_007bnosave_005flow_005fregs_007d-function-attribute_002c-SH-3507"></a>Use this attribute on SH targets to indicate that an <code>interrupt_handler</code>
 function should not save and restore registers R0..R7.  This can be used on SH3*
 and SH4* targets that have a second R0..R7 register bank for non-reentrant
 interrupt handlers.
 
-     <br><dt><code>renesas</code><dd><a name="index-g_t_0040code_007brenesas_007d-function-attribute_002c-SH-3502"></a>On SH targets this attribute specifies that the function or struct follows the
+     <br><dt><code>renesas</code><dd><a name="index-g_t_0040code_007brenesas_007d-function-attribute_002c-SH-3508"></a>On SH targets this attribute specifies that the function or struct follows the
 Renesas ABI.
 
-     <br><dt><code>resbank</code><dd><a name="index-g_t_0040code_007bresbank_007d-function-attribute_002c-SH-3503"></a>On the SH2A target, this attribute enables the high-speed register
+     <br><dt><code>resbank</code><dd><a name="index-g_t_0040code_007bresbank_007d-function-attribute_002c-SH-3509"></a>On the SH2A target, this attribute enables the high-speed register
 saving and restoration using a register bank for <code>interrupt_handler</code>
 routines.  Saving to the bank is performed automatically after the CPU
 accepts an interrupt that uses a register bank.
@@ -97,7 +97,7 @@ vector table address offset are saved into a register bank.  Register
 banks are stacked in first-in last-out (FILO) sequence.  Restoration
 from the bank is executed by issuing a RESBANK instruction.
 
-     <br><dt><code>sp_switch</code><dd><a name="index-g_t_0040code_007bsp_005fswitch_007d-function-attribute_002c-SH-3504"></a>Use this attribute on the SH to indicate an <code>interrupt_handler</code>
+     <br><dt><code>sp_switch</code><dd><a name="index-g_t_0040code_007bsp_005fswitch_007d-function-attribute_002c-SH-3510"></a>Use this attribute on the SH to indicate an <code>interrupt_handler</code>
 function should switch to an alternate stack.  It expects a string
 argument that names a global variable holding the address of the
 alternate stack.
@@ -106,11 +106,11 @@ alternate stack.
           void f () __attribute__ ((interrupt_handler,
                                     sp_switch ("alt_stack")));
      </pre>
-     <br><dt><code>trap_exit</code><dd><a name="index-g_t_0040code_007btrap_005fexit_007d-function-attribute_002c-SH-3505"></a>Use this attribute on the SH for an <code>interrupt_handler</code> to return using
+     <br><dt><code>trap_exit</code><dd><a name="index-g_t_0040code_007btrap_005fexit_007d-function-attribute_002c-SH-3511"></a>Use this attribute on the SH for an <code>interrupt_handler</code> to return using
 <code>trapa</code> instead of <code>rte</code>.  This attribute expects an integer
 argument specifying the trap number to be used.
 
-     <br><dt><code>trapa_handler</code><dd><a name="index-g_t_0040code_007btrapa_005fhandler_007d-function-attribute_002c-SH-3506"></a>On SH targets this function attribute is similar to <code>interrupt_handler</code>
+     <br><dt><code>trapa_handler</code><dd><a name="index-g_t_0040code_007btrapa_005fhandler_007d-function-attribute_002c-SH-3512"></a>On SH targets this function attribute is similar to <code>interrupt_handler</code>
 but it does not save and restore all registers. 
 </dl>
 

@@ -58,13 +58,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported on IA-64 targets:
 
      <dl>
-<dt><code>syscall_linkage</code><dd><a name="index-g_t_0040code_007bsyscall_005flinkage_007d-function-attribute_002c-IA_002d64-3395"></a>This attribute is used to modify the IA-64 calling convention by marking
+<dt><code>syscall_linkage</code><dd><a name="index-g_t_0040code_007bsyscall_005flinkage_007d-function-attribute_002c-IA_002d64-3401"></a>This attribute is used to modify the IA-64 calling convention by marking
 all input registers as live at all function exits.  This makes it possible
 to restart a system call after an interrupt without having to save/restore
 the input registers.  This also prevents kernel data from leaking into
 application code.
 
-     <br><dt><code>version_id</code><dd><a name="index-g_t_0040code_007bversion_005fid_007d-function-attribute_002c-IA_002d64-3396"></a>This IA-64 HP-UX attribute, attached to a global variable or function, renames a
+     <br><dt><code>version_id</code><dd><a name="index-g_t_0040code_007bversion_005fid_007d-function-attribute_002c-IA_002d64-3402"></a>This IA-64 HP-UX attribute, attached to a global variable or function, renames a
 symbol to contain a version string, thus allowing for function level
 versioning.  HP-UX system header files may use function level versioning
 for some system calls.

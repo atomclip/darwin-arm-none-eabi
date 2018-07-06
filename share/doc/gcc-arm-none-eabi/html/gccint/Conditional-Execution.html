@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Desc.html#Machine-Desc">Machine
 
 <h3 class="section">16.20 Conditional Execution</h3>
 
-<p><a name="index-conditional-execution-3845"></a><a name="index-predication-3846"></a>
+<p><a name="index-conditional-execution-3846"></a><a name="index-predication-3847"></a>
 A number of architectures provide for some form of conditional
 execution, or predication.  The hallmark of this feature is the
 ability to nullify most of the instructions in the instruction set. 
@@ -62,7 +62,7 @@ When the instruction set is large and not entirely symmetric, it
 can be quite tedious to describe these forms directly in the
 <samp><span class="file">.md</span></samp> file.  An alternative is the <code>define_cond_exec</code> template.
 
- <p><a name="index-define_005fcond_005fexec-3847"></a>
+ <p><a name="index-define_005fcond_005fexec-3848"></a>
 <pre class="smallexample">     (define_cond_exec
        [<var>predicate-pattern</var>]
        "<var>condition</var>"
@@ -78,7 +78,7 @@ alternative.
  <p><var>condition</var> is a C expression that must be true for the generated
 pattern to match.
 
- <p><a name="index-current_005finsn_005fpredicate-3848"></a><var>output-template</var> is a string similar to the <code>define_insn</code>
+ <p><a name="index-current_005finsn_005fpredicate-3849"></a><var>output-template</var> is a string similar to the <code>define_insn</code>
 output template (see <a href="Output-Template.html#Output-Template">Output Template</a>), except that the `<samp><span class="samp">*</span></samp>'
 and `<samp><span class="samp">@</span></samp>' special cases do not apply.  This is only useful if the
 assembly text for the predicate is a simple prefix to the main insn. 

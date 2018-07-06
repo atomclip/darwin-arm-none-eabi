@@ -57,7 +57,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
      <dl>
 <!-- Keep this table alphabetized by attribute name.  Treat _ as space. -->
 
-     <dt><code>alias ("</code><var>target</var><code>")</code><dd><a name="index-g_t_0040code_007balias_007d-function-attribute-3263"></a>The <code>alias</code> attribute causes the declaration to be emitted as an
+     <dt><code>alias ("</code><var>target</var><code>")</code><dd><a name="index-g_t_0040code_007balias_007d-function-attribute-3269"></a>The <code>alias</code> attribute causes the declaration to be emitted as an
 alias for another symbol, which must be specified.  For instance,
 
      <pre class="smallexample">          void __f () { /* <span class="roman">Do something.</span> */; }
@@ -70,7 +70,7 @@ is not defined in the same translation unit.
      <p>This attribute requires assembler and object file support,
 and may not be available on all targets.
 
-     <br><dt><code>aligned (</code><var>alignment</var><code>)</code><dd><a name="index-g_t_0040code_007baligned_007d-function-attribute-3264"></a>This attribute specifies a minimum alignment for the function,
+     <br><dt><code>aligned (</code><var>alignment</var><code>)</code><dd><a name="index-g_t_0040code_007baligned_007d-function-attribute-3270"></a>This attribute specifies a minimum alignment for the function,
 measured in bytes.
 
      <p>You cannot use this attribute to decrease the alignment of a function,
@@ -89,7 +89,7 @@ further information.
      <p>The <code>aligned</code> attribute can also be used for variables and fields
 (see <a href="Variable-Attributes.html#Variable-Attributes">Variable Attributes</a>.)
 
-     <br><dt><code>alloc_align</code><dd><a name="index-g_t_0040code_007balloc_005falign_007d-function-attribute-3265"></a>The <code>alloc_align</code> attribute is used to tell the compiler that the
+     <br><dt><code>alloc_align</code><dd><a name="index-g_t_0040code_007balloc_005falign_007d-function-attribute-3271"></a>The <code>alloc_align</code> attribute is used to tell the compiler that the
 function return value points to memory, where the returned pointer minimum
 alignment is given by one of the functions parameters.  GCC uses this
 information to improve pointer alignment analysis.
@@ -105,7 +105,7 @@ Argument numbering starts at one.
      <p class="noindent">declares that <code>my_memalign</code> returns memory with minimum alignment
 given by parameter 1.
 
-     <br><dt><code>alloc_size</code><dd><a name="index-g_t_0040code_007balloc_005fsize_007d-function-attribute-3266"></a>The <code>alloc_size</code> attribute is used to tell the compiler that the
+     <br><dt><code>alloc_size</code><dd><a name="index-g_t_0040code_007balloc_005fsize_007d-function-attribute-3272"></a>The <code>alloc_size</code> attribute is used to tell the compiler that the
 function return value points to memory, where the size is given by
 one or two of the functions parameters.  GCC uses this
 information to improve the correctness of <code>__builtin_object_size</code>.
@@ -125,7 +125,7 @@ one.
 the product of parameter 1 and 2 and that <code>my_realloc</code> returns memory
 of the size given by parameter 2.
 
-     <br><dt><code>always_inline</code><dd><a name="index-g_t_0040code_007balways_005finline_007d-function-attribute-3267"></a>Generally, functions are not inlined unless optimization is specified. 
+     <br><dt><code>always_inline</code><dd><a name="index-g_t_0040code_007balways_005finline_007d-function-attribute-3273"></a>Generally, functions are not inlined unless optimization is specified. 
 For functions declared inline, this attribute inlines the function
 independent of any restrictions that otherwise apply to inlining. 
 Failure to inline such a function is diagnosed as an error. 
@@ -133,13 +133,13 @@ Note that if such a function is called indirectly the compiler may
 or may not inline it depending on optimization level and a failure
 to inline an indirect call may or may not be diagnosed.
 
-     <br><dt><code>artificial</code><dd><a name="index-g_t_0040code_007bartificial_007d-function-attribute-3268"></a>This attribute is useful for small inline wrappers that if possible
+     <br><dt><code>artificial</code><dd><a name="index-g_t_0040code_007bartificial_007d-function-attribute-3274"></a>This attribute is useful for small inline wrappers that if possible
 should appear during debugging as a unit.  Depending on the debug
 info format it either means marking the function as artificial
 or using the caller location for all instructions within the inlined
 body.
 
-     <br><dt><code>assume_aligned</code><dd><a name="index-g_t_0040code_007bassume_005faligned_007d-function-attribute-3269"></a>The <code>assume_aligned</code> attribute is used to tell the compiler that the
+     <br><dt><code>assume_aligned</code><dd><a name="index-g_t_0040code_007bassume_005faligned_007d-function-attribute-3275"></a>The <code>assume_aligned</code> attribute is used to tell the compiler that the
 function return value points to memory, where the returned pointer minimum
 alignment is given by the first argument. 
 If the attribute has two arguments, the second argument is misalignment offset.
@@ -153,15 +153,15 @@ If the attribute has two arguments, the second argument is misalignment offset.
 that <code>my_alloc2</code> returns a pointer whose value modulo 32 is equal
 to 8.
 
-     <br><dt><code>bnd_instrument</code><dd><a name="index-g_t_0040code_007bbnd_005finstrument_007d-function-attribute-3270"></a>The <code>bnd_instrument</code> attribute on functions is used to inform the
+     <br><dt><code>bnd_instrument</code><dd><a name="index-g_t_0040code_007bbnd_005finstrument_007d-function-attribute-3276"></a>The <code>bnd_instrument</code> attribute on functions is used to inform the
 compiler that the function should be instrumented when compiled
 with the <samp><span class="option">-fchkp-instrument-marked-only</span></samp> option.
 
-     <br><dt><code>bnd_legacy</code><dd><a name="index-g_t_0040code_007bbnd_005flegacy_007d-function-attribute-3271"></a><a name="index-Pointer-Bounds-Checker-attributes-3272"></a>The <code>bnd_legacy</code> attribute on functions is used to inform the
+     <br><dt><code>bnd_legacy</code><dd><a name="index-g_t_0040code_007bbnd_005flegacy_007d-function-attribute-3277"></a><a name="index-Pointer-Bounds-Checker-attributes-3278"></a>The <code>bnd_legacy</code> attribute on functions is used to inform the
 compiler that the function should not be instrumented when compiled
 with the <samp><span class="option">-fcheck-pointer-bounds</span></samp> option.
 
-     <br><dt><code>cold</code><dd><a name="index-g_t_0040code_007bcold_007d-function-attribute-3273"></a>The <code>cold</code> attribute on functions is used to inform the compiler that
+     <br><dt><code>cold</code><dd><a name="index-g_t_0040code_007bcold_007d-function-attribute-3279"></a>The <code>cold</code> attribute on functions is used to inform the compiler that
 the function is unlikely to be executed.  The function is optimized for
 size rather than speed and on many targets it is placed into a special
 subsection of the text section so all cold functions appear close together,
@@ -174,18 +174,18 @@ of hot functions that do call marked functions in rare occasions.
      <p>When profile feedback is available, via <samp><span class="option">-fprofile-use</span></samp>, cold functions
 are automatically detected and this attribute is ignored.
 
-     <br><dt><code>const</code><dd><a name="index-g_t_0040code_007bconst_007d-function-attribute-3274"></a><a name="index-functions-that-have-no-side-effects-3275"></a>Many functions do not examine any values except their arguments, and
+     <br><dt><code>const</code><dd><a name="index-g_t_0040code_007bconst_007d-function-attribute-3280"></a><a name="index-functions-that-have-no-side-effects-3281"></a>Many functions do not examine any values except their arguments, and
 have no effects except the return value.  Basically this is just slightly
 more strict class than the <code>pure</code> attribute below, since function is not
 allowed to read global memory.
 
-     <p><a name="index-pointer-arguments-3276"></a>Note that a function that has pointer arguments and examines the data
+     <p><a name="index-pointer-arguments-3282"></a>Note that a function that has pointer arguments and examines the data
 pointed to must <em>not</em> be declared <code>const</code>.  Likewise, a
 function that calls a non-<code>const</code> function usually must not be
 <code>const</code>.  It does not make sense for a <code>const</code> function to
 return <code>void</code>.
 
-     <br><dt><code>constructor</code><dt><code>destructor</code><dt><code>constructor (</code><var>priority</var><code>)</code><dt><code>destructor (</code><var>priority</var><code>)</code><dd><a name="index-g_t_0040code_007bconstructor_007d-function-attribute-3277"></a><a name="index-g_t_0040code_007bdestructor_007d-function-attribute-3278"></a>The <code>constructor</code> attribute causes the function to be called
+     <br><dt><code>constructor</code><dt><code>destructor</code><dt><code>constructor (</code><var>priority</var><code>)</code><dt><code>destructor (</code><var>priority</var><code>)</code><dd><a name="index-g_t_0040code_007bconstructor_007d-function-attribute-3283"></a><a name="index-g_t_0040code_007bdestructor_007d-function-attribute-3284"></a>The <code>constructor</code> attribute causes the function to be called
 automatically before execution enters <code>main ()</code>.  Similarly, the
 <code>destructor</code> attribute causes the function to be called
 automatically after <code>main ()</code> completes or <code>exit ()</code> is
@@ -207,7 +207,7 @@ decorated with attribute <code>constructor</code> are invoked is unspecified.
 In mixed declarations, attribute <code>init_priority</code> can be used to
 impose a specific ordering.
 
-     <br><dt><code>deprecated</code><dt><code>deprecated (</code><var>msg</var><code>)</code><dd><a name="index-g_t_0040code_007bdeprecated_007d-function-attribute-3279"></a>The <code>deprecated</code> attribute results in a warning if the function
+     <br><dt><code>deprecated</code><dt><code>deprecated (</code><var>msg</var><code>)</code><dd><a name="index-g_t_0040code_007bdeprecated_007d-function-attribute-3285"></a>The <code>deprecated</code> attribute results in a warning if the function
 is used anywhere in the source file.  This is useful when identifying
 functions that are expected to be removed in a future version of a
 program.  The warning also includes the location of the declaration
@@ -226,7 +226,7 @@ present.
      <p>The <code>deprecated</code> attribute can also be used for variables and
 types (see <a href="Variable-Attributes.html#Variable-Attributes">Variable Attributes</a>, see <a href="Type-Attributes.html#Type-Attributes">Type Attributes</a>.)
 
-     <br><dt><code>error ("</code><var>message</var><code>")</code><dt><code>warning ("</code><var>message</var><code>")</code><dd><a name="index-g_t_0040code_007berror_007d-function-attribute-3280"></a><a name="index-g_t_0040code_007bwarning_007d-function-attribute-3281"></a>If the <code>error</code> or <code>warning</code> attribute
+     <br><dt><code>error ("</code><var>message</var><code>")</code><dt><code>warning ("</code><var>message</var><code>")</code><dd><a name="index-g_t_0040code_007berror_007d-function-attribute-3286"></a><a name="index-g_t_0040code_007bwarning_007d-function-attribute-3287"></a>If the <code>error</code> or <code>warning</code> attribute
 is used on a function declaration and a call to such a function
 is not eliminated through dead code elimination or other optimizations,
 an error or warning (respectively) that includes <var>message</var> is diagnosed. 
@@ -242,7 +242,7 @@ when using these attributes the problem is diagnosed
 earlier and with exact location of the call even in presence of inline
 functions or when not emitting debugging information.
 
-     <br><dt><code>externally_visible</code><dd><a name="index-g_t_0040code_007bexternally_005fvisible_007d-function-attribute-3282"></a>This attribute, attached to a global variable or function, nullifies
+     <br><dt><code>externally_visible</code><dd><a name="index-g_t_0040code_007bexternally_005fvisible_007d-function-attribute-3288"></a>This attribute, attached to a global variable or function, nullifies
 the effect of the <samp><span class="option">-fwhole-program</span></samp> command-line option, so the
 object remains visible outside the current compilation unit.
 
@@ -255,12 +255,12 @@ produced by <samp><span class="command">gold</span></samp>.
 For other linkers that cannot generate resolution file,
 explicit <code>externally_visible</code> attributes are still necessary.
 
-     <br><dt><code>flatten</code><dd><a name="index-g_t_0040code_007bflatten_007d-function-attribute-3283"></a>Generally, inlining into a function is limited.  For a function marked with
+     <br><dt><code>flatten</code><dd><a name="index-g_t_0040code_007bflatten_007d-function-attribute-3289"></a>Generally, inlining into a function is limited.  For a function marked with
 this attribute, every call inside this function is inlined, if possible. 
 Whether the function itself is considered for inlining depends on its size and
 the current inlining parameters.
 
-     <br><dt><code>format (</code><var>archetype</var><code>, </code><var>string-index</var><code>, </code><var>first-to-check</var><code>)</code><dd><a name="index-g_t_0040code_007bformat_007d-function-attribute-3284"></a><a name="index-functions-with-_0040code_007bprintf_007d_002c-_0040code_007bscanf_007d_002c-_0040code_007bstrftime_007d-or-_0040code_007bstrfmon_007d-style-arguments-3285"></a><a name="index-Wformat-3286"></a>The <code>format</code> attribute specifies that a function takes <code>printf</code>,
+     <br><dt><code>format (</code><var>archetype</var><code>, </code><var>string-index</var><code>, </code><var>first-to-check</var><code>)</code><dd><a name="index-g_t_0040code_007bformat_007d-function-attribute-3290"></a><a name="index-functions-with-_0040code_007bprintf_007d_002c-_0040code_007bscanf_007d_002c-_0040code_007bstrftime_007d-or-_0040code_007bstrfmon_007d-style-arguments-3291"></a><a name="index-Wformat-3292"></a>The <code>format</code> attribute specifies that a function takes <code>printf</code>,
 <code>scanf</code>, <code>strftime</code> or <code>strfmon</code> style arguments that
 should be type-checked against a format string.  For example, the
 declaration:
@@ -303,7 +303,7 @@ argument of the function <code>my_print</code>, and the arguments to check
 start with the third argument, so the correct parameters for the format
 attribute are 2 and 3.
 
-     <p><a name="index-ffreestanding-3287"></a><a name="index-fno_002dbuiltin-3288"></a>The <code>format</code> attribute allows you to identify your own functions
+     <p><a name="index-ffreestanding-3293"></a><a name="index-fno_002dbuiltin-3294"></a>The <code>format</code> attribute allows you to identify your own functions
 that take format strings as arguments, so that GCC can check the
 calls to these functions for errors.  The compiler always (unless
 <samp><span class="option">-ffreestanding</span></samp> or <samp><span class="option">-fno-builtin</span></samp> is used) checks formats
@@ -327,7 +327,7 @@ compiler.
      <p>The target may also provide additional types of format checks. 
 See <a href="Target-Format-Checks.html#Target-Format-Checks">Format Checks Specific to Particular Target Machines</a>.
 
-     <br><dt><code>format_arg (</code><var>string-index</var><code>)</code><dd><a name="index-g_t_0040code_007bformat_005farg_007d-function-attribute-3289"></a><a name="index-Wformat_002dnonliteral-3290"></a>The <code>format_arg</code> attribute specifies that a function takes a format
+     <br><dt><code>format_arg (</code><var>string-index</var><code>)</code><dd><a name="index-g_t_0040code_007bformat_005farg_007d-function-attribute-3295"></a><a name="index-Wformat_002dnonliteral-3296"></a>The <code>format_arg</code> attribute specifies that a function takes a format
 string for a <code>printf</code>, <code>scanf</code>, <code>strftime</code> or
 <code>strfmon</code> style function and modifies it (for example, to translate
 it into another language), so the result can be passed to a
@@ -372,7 +372,7 @@ above.
      <p>The target may also allow additional types in <code>format-arg</code> attributes. 
 See <a href="Target-Format-Checks.html#Target-Format-Checks">Format Checks Specific to Particular Target Machines</a>.
 
-     <br><dt><code>gnu_inline</code><dd><a name="index-g_t_0040code_007bgnu_005finline_007d-function-attribute-3291"></a>This attribute should be used with a function that is also declared
+     <br><dt><code>gnu_inline</code><dd><a name="index-g_t_0040code_007bgnu_005finline_007d-function-attribute-3297"></a>This attribute should be used with a function that is also declared
 with the <code>inline</code> keyword.  It directs GCC to treat the function
 as if it were defined in gnu90 mode even when compiling in C99 or
 gnu99 mode.
@@ -407,7 +407,7 @@ preprocessor macros <code>__GNUC_GNU_INLINE__</code> or
 but it still requires the <code>inline</code> keyword to enable its special
 behavior.
 
-     <br><dt><code>hot</code><dd><a name="index-g_t_0040code_007bhot_007d-function-attribute-3292"></a>The <code>hot</code> attribute on a function is used to inform the compiler that
+     <br><dt><code>hot</code><dd><a name="index-g_t_0040code_007bhot_007d-function-attribute-3298"></a>The <code>hot</code> attribute on a function is used to inform the compiler that
 the function is a hot spot of the compiled program.  The function is
 optimized more aggressively and on many targets it is placed into a special
 subsection of the text section so all hot functions appear close together,
@@ -416,7 +416,7 @@ improving locality.
      <p>When profile feedback is available, via <samp><span class="option">-fprofile-use</span></samp>, hot functions
 are automatically detected and this attribute is ignored.
 
-     <br><dt><code>ifunc ("</code><var>resolver</var><code>")</code><dd><a name="index-g_t_0040code_007bifunc_007d-function-attribute-3293"></a><a name="index-indirect-functions-3294"></a><a name="index-functions-that-are-dynamically-resolved-3295"></a>The <code>ifunc</code> attribute is used to mark a function as an indirect
+     <br><dt><code>ifunc ("</code><var>resolver</var><code>")</code><dd><a name="index-g_t_0040code_007bifunc_007d-function-attribute-3299"></a><a name="index-indirect-functions-3300"></a><a name="index-functions-that-are-dynamically-resolved-3301"></a>The <code>ifunc</code> attribute is used to mark a function as an indirect
 function using the STT_GNU_IFUNC symbol type extension to the ELF
 standard.  This allows the resolution of the symbol value to be
 determined dynamically at load time, and an optimized version of the
@@ -459,7 +459,7 @@ entry and exit sequences that differ from those from regular
 functions.  The exact syntax and behavior are target-specific;
 refer to the following subsections for details.
 
-     <br><dt><code>leaf</code><dd><a name="index-g_t_0040code_007bleaf_007d-function-attribute-3296"></a>Calls to external functions with this attribute must return to the
+     <br><dt><code>leaf</code><dd><a name="index-g_t_0040code_007bleaf_007d-function-attribute-3302"></a>Calls to external functions with this attribute must return to the
 current compilation unit only by return or by exception handling.  In
 particular, a leaf function is not allowed to invoke callback functions
 passed to it from the current compilation unit, directly call functions
@@ -494,7 +494,7 @@ units into one, for example, by using the link-time optimization.  For
 this reason the attribute is not allowed on types to annotate indirect
 calls.
 
-     <br><dt><code>malloc</code><dd><a name="index-g_t_0040code_007bmalloc_007d-function-attribute-3297"></a><a name="index-functions-that-behave-like-malloc-3298"></a>This tells the compiler that a function is <code>malloc</code>-like, i.e.,
+     <br><dt><code>malloc</code><dd><a name="index-g_t_0040code_007bmalloc_007d-function-attribute-3303"></a><a name="index-functions-that-behave-like-malloc-3304"></a>This tells the compiler that a function is <code>malloc</code>-like, i.e.,
 that the pointer <var>P</var> returned by the function cannot alias any
 other pointer valid when the function returns, and moreover no
 pointers to valid objects occur in any storage addressed by <var>P</var>.
@@ -505,18 +505,18 @@ a pointer to uninitialized or zeroed-out storage.  However, functions
 like <code>realloc</code> do not have this property, as they can return a
 pointer to storage containing pointers.
 
-     <br><dt><code>no_icf</code><dd><a name="index-g_t_0040code_007bno_005ficf_007d-function-attribute-3299"></a>This function attribute prevents a functions from being merged with another
+     <br><dt><code>no_icf</code><dd><a name="index-g_t_0040code_007bno_005ficf_007d-function-attribute-3305"></a>This function attribute prevents a functions from being merged with another
 semantically equivalent function.
 
-     <br><dt><code>no_instrument_function</code><dd><a name="index-g_t_0040code_007bno_005finstrument_005ffunction_007d-function-attribute-3300"></a><a name="index-finstrument_002dfunctions-3301"></a>If <samp><span class="option">-finstrument-functions</span></samp> is given, profiling function calls are
+     <br><dt><code>no_instrument_function</code><dd><a name="index-g_t_0040code_007bno_005finstrument_005ffunction_007d-function-attribute-3306"></a><a name="index-finstrument_002dfunctions-3307"></a>If <samp><span class="option">-finstrument-functions</span></samp> is given, profiling function calls are
 generated at entry and exit of most user-compiled functions. 
 Functions with this attribute are not so instrumented.
 
-     <br><dt><code>no_profile_instrument_function</code><dd><a name="index-g_t_0040code_007bno_005fprofile_005finstrument_005ffunction_007d-function-attribute-3302"></a>The <code>no_profile_instrument_function</code> attribute on functions is used
+     <br><dt><code>no_profile_instrument_function</code><dd><a name="index-g_t_0040code_007bno_005fprofile_005finstrument_005ffunction_007d-function-attribute-3308"></a>The <code>no_profile_instrument_function</code> attribute on functions is used
 to inform the compiler that it should not process any profile feedback based
 optimization code instrumentation.
 
-     <br><dt><code>no_reorder</code><dd><a name="index-g_t_0040code_007bno_005freorder_007d-function-attribute-3303"></a>Do not reorder functions or variables marked <code>no_reorder</code>
+     <br><dt><code>no_reorder</code><dd><a name="index-g_t_0040code_007bno_005freorder_007d-function-attribute-3309"></a>Do not reorder functions or variables marked <code>no_reorder</code>
 against each other or top level assembler statements the executable. 
 The actual order in the program will depend on the linker command
 line. Static variables marked like this are also not removed. 
@@ -524,36 +524,36 @@ This has a similar effect
 as the <samp><span class="option">-fno-toplevel-reorder</span></samp> option, but only applies to the
 marked symbols.
 
-     <br><dt><code>no_sanitize_address</code><dt><code>no_address_safety_analysis</code><dd><a name="index-g_t_0040code_007bno_005fsanitize_005faddress_007d-function-attribute-3304"></a>The <code>no_sanitize_address</code> attribute on functions is used
+     <br><dt><code>no_sanitize_address</code><dt><code>no_address_safety_analysis</code><dd><a name="index-g_t_0040code_007bno_005fsanitize_005faddress_007d-function-attribute-3310"></a>The <code>no_sanitize_address</code> attribute on functions is used
 to inform the compiler that it should not instrument memory accesses
 in the function when compiling with the <samp><span class="option">-fsanitize=address</span></samp> option. 
 The <code>no_address_safety_analysis</code> is a deprecated alias of the
 <code>no_sanitize_address</code> attribute, new code should use
 <code>no_sanitize_address</code>.
 
-     <br><dt><code>no_sanitize_thread</code><dd><a name="index-g_t_0040code_007bno_005fsanitize_005fthread_007d-function-attribute-3305"></a>The <code>no_sanitize_thread</code> attribute on functions is used
+     <br><dt><code>no_sanitize_thread</code><dd><a name="index-g_t_0040code_007bno_005fsanitize_005fthread_007d-function-attribute-3311"></a>The <code>no_sanitize_thread</code> attribute on functions is used
 to inform the compiler that it should not instrument memory accesses
 in the function when compiling with the <samp><span class="option">-fsanitize=thread</span></samp> option.
 
-     <br><dt><code>no_sanitize_undefined</code><dd><a name="index-g_t_0040code_007bno_005fsanitize_005fundefined_007d-function-attribute-3306"></a>The <code>no_sanitize_undefined</code> attribute on functions is used
+     <br><dt><code>no_sanitize_undefined</code><dd><a name="index-g_t_0040code_007bno_005fsanitize_005fundefined_007d-function-attribute-3312"></a>The <code>no_sanitize_undefined</code> attribute on functions is used
 to inform the compiler that it should not check for undefined behavior
 in the function when compiling with the <samp><span class="option">-fsanitize=undefined</span></samp> option.
 
-     <br><dt><code>no_split_stack</code><dd><a name="index-g_t_0040code_007bno_005fsplit_005fstack_007d-function-attribute-3307"></a><a name="index-fsplit_002dstack-3308"></a>If <samp><span class="option">-fsplit-stack</span></samp> is given, functions have a small
+     <br><dt><code>no_split_stack</code><dd><a name="index-g_t_0040code_007bno_005fsplit_005fstack_007d-function-attribute-3313"></a><a name="index-fsplit_002dstack-3314"></a>If <samp><span class="option">-fsplit-stack</span></samp> is given, functions have a small
 prologue which decides whether to split the stack.  Functions with the
 <code>no_split_stack</code> attribute do not have that prologue, and thus
 may run with only a small amount of stack space available.
 
-     <br><dt><code>no_stack_limit</code><dd><a name="index-g_t_0040code_007bno_005fstack_005flimit_007d-function-attribute-3309"></a>This attribute locally overrides the <samp><span class="option">-fstack-limit-register</span></samp>
+     <br><dt><code>no_stack_limit</code><dd><a name="index-g_t_0040code_007bno_005fstack_005flimit_007d-function-attribute-3315"></a>This attribute locally overrides the <samp><span class="option">-fstack-limit-register</span></samp>
 and <samp><span class="option">-fstack-limit-symbol</span></samp> command-line options; it has the effect
 of disabling stack limit checking in the function it applies to.
 
-     <br><dt><code>noclone</code><dd><a name="index-g_t_0040code_007bnoclone_007d-function-attribute-3310"></a>This function attribute prevents a function from being considered for
+     <br><dt><code>noclone</code><dd><a name="index-g_t_0040code_007bnoclone_007d-function-attribute-3316"></a>This function attribute prevents a function from being considered for
 cloning&mdash;a mechanism that produces specialized copies of functions
 and which is (currently) performed by interprocedural constant
 propagation.
 
-     <br><dt><code>noinline</code><dd><a name="index-g_t_0040code_007bnoinline_007d-function-attribute-3311"></a>This function attribute prevents a function from being considered for
+     <br><dt><code>noinline</code><dd><a name="index-g_t_0040code_007bnoinline_007d-function-attribute-3317"></a>This function attribute prevents a function from being considered for
 inlining. 
 <!-- Don't enumerate the optimizations by name here; we try to be -->
 <!-- future-compatible with this mechanism. -->
@@ -566,7 +566,7 @@ optimized away, put
      <p class="noindent">(see <a href="Extended-Asm.html#Extended-Asm">Extended Asm</a>) in the called function, to serve as a special
 side-effect.
 
-     <br><dt><code>nonnull (</code><var>arg-index</var><code>, ...)</code><dd><a name="index-g_t_0040code_007bnonnull_007d-function-attribute-3312"></a><a name="index-functions-with-non_002dnull-pointer-arguments-3313"></a>The <code>nonnull</code> attribute specifies that some function parameters should
+     <br><dt><code>nonnull (</code><var>arg-index</var><code>, ...)</code><dd><a name="index-g_t_0040code_007bnonnull_007d-function-attribute-3318"></a><a name="index-functions-with-non_002dnull-pointer-arguments-3319"></a>The <code>nonnull</code> attribute specifies that some function parameters should
 be non-null pointers.  For instance, the declaration:
 
      <pre class="smallexample">          extern void *
@@ -588,7 +588,7 @@ following declaration is equivalent to the previous example:
           my_memcpy (void *dest, const void *src, size_t len)
                   __attribute__((nonnull));
      </pre>
-     <br><dt><code>noplt</code><dd><a name="index-g_t_0040code_007bnoplt_007d-function-attribute-3314"></a>The <code>noplt</code> attribute is the counterpart to option <samp><span class="option">-fno-plt</span></samp>. 
+     <br><dt><code>noplt</code><dd><a name="index-g_t_0040code_007bnoplt_007d-function-attribute-3320"></a>The <code>noplt</code> attribute is the counterpart to option <samp><span class="option">-fno-plt</span></samp>. 
 Calls to functions marked with this attribute in position-independent code
 do not use the PLT.
 
@@ -612,7 +612,7 @@ in position-independent code.
      <p>In position-dependent code, a few targets also convert calls to
 functions that are marked to not use the PLT to use the GOT instead.
 
-     <br><dt><code>noreturn</code><dd><a name="index-g_t_0040code_007bnoreturn_007d-function-attribute-3315"></a><a name="index-functions-that-never-return-3316"></a>A few standard library functions, such as <code>abort</code> and <code>exit</code>,
+     <br><dt><code>noreturn</code><dd><a name="index-g_t_0040code_007bnoreturn_007d-function-attribute-3321"></a><a name="index-functions-that-never-return-3322"></a>A few standard library functions, such as <code>abort</code> and <code>exit</code>,
 cannot return.  GCC knows this automatically.  Some programs define
 their own functions that never return.  You can declare them
 <code>noreturn</code> to tell the compiler this fact.  For example,
@@ -642,13 +642,13 @@ restored before calling the <code>noreturn</code> function.
      <p>It does not make sense for a <code>noreturn</code> function to have a return
 type other than <code>void</code>.
 
-     <br><dt><code>nothrow</code><dd><a name="index-g_t_0040code_007bnothrow_007d-function-attribute-3317"></a>The <code>nothrow</code> attribute is used to inform the compiler that a
+     <br><dt><code>nothrow</code><dd><a name="index-g_t_0040code_007bnothrow_007d-function-attribute-3323"></a>The <code>nothrow</code> attribute is used to inform the compiler that a
 function cannot throw an exception.  For example, most functions in
 the standard C library can be guaranteed not to throw an exception
 with the notable exceptions of <code>qsort</code> and <code>bsearch</code> that
 take function pointer arguments.
 
-     <br><dt><code>optimize</code><dd><a name="index-g_t_0040code_007boptimize_007d-function-attribute-3318"></a>The <code>optimize</code> attribute is used to specify that a function is to
+     <br><dt><code>optimize</code><dd><a name="index-g_t_0040code_007boptimize_007d-function-attribute-3324"></a>The <code>optimize</code> attribute is used to specify that a function is to
 be compiled with different optimization options than specified on the
 command line.  Arguments can either be numbers or strings.  Numbers
 are assumed to be an optimization level.  Strings that begin with
@@ -662,7 +662,7 @@ See <a href="Function-Specific-Option-Pragmas.html#Function-Specific-Option-Prag
      <p>This attribute should be used for debugging purposes only.  It is not
 suitable in production code.
 
-     <br><dt><code>pure</code><dd><a name="index-g_t_0040code_007bpure_007d-function-attribute-3319"></a><a name="index-functions-that-have-no-side-effects-3320"></a>Many functions have no effects except the return value and their
+     <br><dt><code>pure</code><dd><a name="index-g_t_0040code_007bpure_007d-function-attribute-3325"></a><a name="index-functions-that-have-no-side-effects-3326"></a>Many functions have no effects except the return value and their
 return value depends only on the parameters and/or global variables. 
 Such a function can be subject
 to common subexpression elimination and loop optimization just as an
@@ -679,7 +679,7 @@ Interesting non-pure functions are functions with infinite loops or those
 depending on volatile memory or other system resource, that may change between
 two consecutive calls (such as <code>feof</code> in a multithreading environment).
 
-     <br><dt><code>returns_nonnull</code><dd><a name="index-g_t_0040code_007breturns_005fnonnull_007d-function-attribute-3321"></a>The <code>returns_nonnull</code> attribute specifies that the function
+     <br><dt><code>returns_nonnull</code><dd><a name="index-g_t_0040code_007breturns_005fnonnull_007d-function-attribute-3327"></a>The <code>returns_nonnull</code> attribute specifies that the function
 return value should be a non-null pointer.  For instance, the declaration:
 
      <pre class="smallexample">          extern void *
@@ -688,7 +688,7 @@ return value should be a non-null pointer.  For instance, the declaration:
      <p class="noindent">lets the compiler optimize callers based on the knowledge
 that the return value will never be null.
 
-     <br><dt><code>returns_twice</code><dd><a name="index-g_t_0040code_007breturns_005ftwice_007d-function-attribute-3322"></a><a name="index-functions-that-return-more-than-once-3323"></a>The <code>returns_twice</code> attribute tells the compiler that a function may
+     <br><dt><code>returns_twice</code><dd><a name="index-g_t_0040code_007breturns_005ftwice_007d-function-attribute-3328"></a><a name="index-functions-that-return-more-than-once-3329"></a>The <code>returns_twice</code> attribute tells the compiler that a function may
 return more than one time.  The compiler ensures that all registers
 are dead before calling such a function and emits a warning about
 the variables that may be clobbered after the second return from the
@@ -696,7 +696,7 @@ function.  Examples of such functions are <code>setjmp</code> and <code>vfork</c
 The <code>longjmp</code>-like counterpart of such function, if any, might need
 to be marked with the <code>noreturn</code> attribute.
 
-     <br><dt><code>section ("</code><var>section-name</var><code>")</code><dd><a name="index-g_t_0040code_007bsection_007d-function-attribute-3324"></a><a name="index-functions-in-arbitrary-sections-3325"></a>Normally, the compiler places the code it generates in the <code>text</code> section. 
+     <br><dt><code>section ("</code><var>section-name</var><code>")</code><dd><a name="index-g_t_0040code_007bsection_007d-function-attribute-3330"></a><a name="index-functions-in-arbitrary-sections-3331"></a>Normally, the compiler places the code it generates in the <code>text</code> section. 
 Sometimes, however, you need additional sections, or you need certain
 particular functions to appear in special sections.  The <code>section</code>
 attribute specifies that a function lives in a particular section. 
@@ -711,7 +711,7 @@ attribute is not available on all platforms.
 If you need to map the entire contents of a module to a particular
 section, consider using the facilities of the linker instead.
 
-     <br><dt><code>sentinel</code><dd><a name="index-g_t_0040code_007bsentinel_007d-function-attribute-3326"></a>This function attribute ensures that a parameter in a function call is
+     <br><dt><code>sentinel</code><dd><a name="index-g_t_0040code_007bsentinel_007d-function-attribute-3332"></a>This function attribute ensures that a parameter in a function call is
 an explicit <code>NULL</code>.  The attribute is only valid on variadic
 functions.  By default, the sentinel is located at position zero, the
 last parameter of the function call.  If an optional integer position
@@ -734,7 +734,7 @@ with a copy that redefines NULL appropriately.
      <p>The warnings for missing or incorrect sentinels are enabled with
 <samp><span class="option">-Wformat</span></samp>.
 
-     <br><dt><code>simd</code><dt><code>simd("</code><var>mask</var><code>")</code><dd><a name="index-g_t_0040code_007bsimd_007d-function-attribute-3327"></a>This attribute enables creation of one or more function versions that
+     <br><dt><code>simd</code><dt><code>simd("</code><var>mask</var><code>")</code><dd><a name="index-g_t_0040code_007bsimd_007d-function-attribute-3333"></a>This attribute enables creation of one or more function versions that
 can process multiple arguments using SIMD instructions from a
 single invocation.  Specifying this attribute allows compiler to
 assume that such versions are available at link time (provided
@@ -755,11 +755,11 @@ attribute on the same function.
 present on a declaration and the <samp><span class="option">-fopenmp</span></samp> or <samp><span class="option">-fopenmp-simd</span></samp>
 switch is specified, then the attribute is ignored.
 
-     <br><dt><code>stack_protect</code><dd><a name="index-g_t_0040code_007bstack_005fprotect_007d-function-attribute-3328"></a>This attribute adds stack protection code to the function if
+     <br><dt><code>stack_protect</code><dd><a name="index-g_t_0040code_007bstack_005fprotect_007d-function-attribute-3334"></a>This attribute adds stack protection code to the function if
 flags <samp><span class="option">-fstack-protector</span></samp>, <samp><span class="option">-fstack-protector-strong</span></samp>
 or <samp><span class="option">-fstack-protector-explicit</span></samp> are set.
 
-     <br><dt><code>target (</code><var>options</var><code>)</code><dd><a name="index-g_t_0040code_007btarget_007d-function-attribute-3329"></a>Multiple target back ends implement the <code>target</code> attribute
+     <br><dt><code>target (</code><var>options</var><code>)</code><dd><a name="index-g_t_0040code_007btarget_007d-function-attribute-3335"></a>Multiple target back ends implement the <code>target</code> attribute
 to specify that a function is to
 be compiled with different target options than specified on the
 command line.  This can be used for instance to have functions
@@ -791,7 +791,7 @@ or separate the options with a comma (`<samp><span class="samp">,</span></samp>'
 <a href="ARM-Function-Attributes.html#ARM-Function-Attributes">ARM Function Attributes</a>,and <a href="Nios-II-Function-Attributes.html#Nios-II-Function-Attributes">Nios II Function Attributes</a>,
 for details.
 
-     <br><dt><code>target_clones (</code><var>options</var><code>)</code><dd><a name="index-g_t_0040code_007btarget_005fclones_007d-function-attribute-3330"></a>The <code>target_clones</code> attribute is used to specify that a function
+     <br><dt><code>target_clones (</code><var>options</var><code>)</code><dd><a name="index-g_t_0040code_007btarget_005fclones_007d-function-attribute-3336"></a>The <code>target_clones</code> attribute is used to specify that a function
 be cloned into multiple versions compiled with different target options
 than specified on the command line.  The supported options and restrictions
 are the same as for <code>target</code> attribute.
@@ -802,11 +802,11 @@ one compiled with <samp><span class="option">-msse4.1</span></samp> and another 
 It also creates a resolver function (see the <code>ifunc</code> attribute
 above) that dynamically selects a clone suitable for current architecture.
 
-     <br><dt><code>unused</code><dd><a name="index-g_t_0040code_007bunused_007d-function-attribute-3331"></a>This attribute, attached to a function, means that the function is meant
+     <br><dt><code>unused</code><dd><a name="index-g_t_0040code_007bunused_007d-function-attribute-3337"></a>This attribute, attached to a function, means that the function is meant
 to be possibly unused.  GCC does not produce a warning for this
 function.
 
-     <br><dt><code>used</code><dd><a name="index-g_t_0040code_007bused_007d-function-attribute-3332"></a>This attribute, attached to a function, means that code must be emitted
+     <br><dt><code>used</code><dd><a name="index-g_t_0040code_007bused_007d-function-attribute-3338"></a>This attribute, attached to a function, means that code must be emitted
 for the function even if it appears that the function is not referenced. 
 This is useful, for example, when the function is referenced only in
 inline assembly.
@@ -815,7 +815,7 @@ inline assembly.
 attribute also means that the function is instantiated if the
 class itself is instantiated.
 
-     <br><dt><code>visibility ("</code><var>visibility_type</var><code>")</code><dd><a name="index-g_t_0040code_007bvisibility_007d-function-attribute-3333"></a>This attribute affects the linkage of the declaration to which it is attached. 
+     <br><dt><code>visibility ("</code><var>visibility_type</var><code>")</code><dd><a name="index-g_t_0040code_007bvisibility_007d-function-attribute-3339"></a>This attribute affects the linkage of the declaration to which it is attached. 
 It can be applied to variables (see <a href="Common-Variable-Attributes.html#Common-Variable-Attributes">Common Variable Attributes</a>) and types
 (see <a href="Common-Type-Attributes.html#Common-Type-Attributes">Common Type Attributes</a>) as well as functions.
 
@@ -910,7 +910,7 @@ visibility of their template.
      <p>If both the template and enclosing class have explicit visibility, the
 visibility from the template is used.
 
-     <br><dt><code>warn_unused_result</code><dd><a name="index-g_t_0040code_007bwarn_005funused_005fresult_007d-function-attribute-3334"></a>The <code>warn_unused_result</code> attribute causes a warning to be emitted
+     <br><dt><code>warn_unused_result</code><dd><a name="index-g_t_0040code_007bwarn_005funused_005fresult_007d-function-attribute-3340"></a>The <code>warn_unused_result</code> attribute causes a warning to be emitted
 if a caller of the function with this attribute does not use its
 return value.  This is useful for functions where not checking
 the result is either a security problem or always a bug, such as
@@ -926,14 +926,14 @@ the result is either a security problem or always a bug, such as
      </pre>
      <p class="noindent">results in warning on line 5.
 
-     <br><dt><code>weak</code><dd><a name="index-g_t_0040code_007bweak_007d-function-attribute-3335"></a>The <code>weak</code> attribute causes the declaration to be emitted as a weak
+     <br><dt><code>weak</code><dd><a name="index-g_t_0040code_007bweak_007d-function-attribute-3341"></a>The <code>weak</code> attribute causes the declaration to be emitted as a weak
 symbol rather than a global.  This is primarily useful in defining
 library functions that can be overridden in user code, though it can
 also be used with non-function declarations.  Weak symbols are supported
 for ELF targets, and also for a.out targets when using the GNU assembler
 and linker.
 
-     <br><dt><code>weakref</code><dt><code>weakref ("</code><var>target</var><code>")</code><dd><a name="index-g_t_0040code_007bweakref_007d-function-attribute-3336"></a>The <code>weakref</code> attribute marks a declaration as a weak reference. 
+     <br><dt><code>weakref</code><dt><code>weakref ("</code><var>target</var><code>")</code><dd><a name="index-g_t_0040code_007bweakref_007d-function-attribute-3342"></a>The <code>weakref</code> attribute marks a declaration as a weak reference. 
 Without arguments, it should be accompanied by an <code>alias</code> attribute
 naming the target symbol.  Optionally, the <var>target</var> may be given as
 an argument to <code>weakref</code> itself.  In either case, <code>weakref</code>

@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Target-Macros.html#Target-Macros">Targe
 
 <h3 class="section">17.29 Adding support for named address spaces</h3>
 
-<p><a name="index-named-address-spaces-4938"></a>
+<p><a name="index-named-address-spaces-4939"></a>
 The draft technical report of the ISO/IEC JTC1 S22 WG14 N1275
 standards committee, <cite>Programming Languages - C - Extensions to
 support embedded processors</cite>, specifies a syntax for embedded
@@ -88,21 +88,21 @@ named address space #1:
      c_register_addr_space ("__ea", ADDR_SPACE_EA);
 </pre>
  <div class="defun">
-&mdash; Target Hook: machine_mode <b>TARGET_ADDR_SPACE_POINTER_MODE</b> (<var>addr_space_t address_space</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fPOINTER_005fMODE-4939"></a></var><br>
+&mdash; Target Hook: machine_mode <b>TARGET_ADDR_SPACE_POINTER_MODE</b> (<var>addr_space_t address_space</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fPOINTER_005fMODE-4940"></a></var><br>
 <blockquote><p>Define this to return the machine mode to use for pointers to
 <var>address_space</var> if the target supports named address spaces. 
 The default version of this hook returns <code>ptr_mode</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: machine_mode <b>TARGET_ADDR_SPACE_ADDRESS_MODE</b> (<var>addr_space_t address_space</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fADDRESS_005fMODE-4940"></a></var><br>
+&mdash; Target Hook: machine_mode <b>TARGET_ADDR_SPACE_ADDRESS_MODE</b> (<var>addr_space_t address_space</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fADDRESS_005fMODE-4941"></a></var><br>
 <blockquote><p>Define this to return the machine mode to use for addresses in
 <var>address_space</var> if the target supports named address spaces. 
 The default version of this hook returns <code>Pmode</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_VALID_POINTER_MODE</b> (<var>machine_mode mode, addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fVALID_005fPOINTER_005fMODE-4941"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_VALID_POINTER_MODE</b> (<var>machine_mode mode, addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fVALID_005fPOINTER_005fMODE-4942"></a></var><br>
 <blockquote><p>Define this to return nonzero if the port can handle pointers
 with machine mode <var>mode</var> to address space <var>as</var>.  This target
 hook is the same as the <code>TARGET_VALID_POINTER_MODE</code> target hook,
@@ -113,7 +113,7 @@ target hooks for the given address space.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_LEGITIMATE_ADDRESS_P</b> (<var>machine_mode mode, rtx exp, bool strict, addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fLEGITIMATE_005fADDRESS_005fP-4942"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_LEGITIMATE_ADDRESS_P</b> (<var>machine_mode mode, rtx exp, bool strict, addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fLEGITIMATE_005fADDRESS_005fP-4943"></a></var><br>
 <blockquote><p>Define this to return true if <var>exp</var> is a valid address for mode
 <var>mode</var> in the named address space <var>as</var>.  The <var>strict</var>
 parameter says whether strict addressing is in effect after reload has
@@ -123,7 +123,7 @@ explicit named address space support.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: rtx <b>TARGET_ADDR_SPACE_LEGITIMIZE_ADDRESS</b> (<var>rtx x, rtx oldx, machine_mode mode, addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fLEGITIMIZE_005fADDRESS-4943"></a></var><br>
+&mdash; Target Hook: rtx <b>TARGET_ADDR_SPACE_LEGITIMIZE_ADDRESS</b> (<var>rtx x, rtx oldx, machine_mode mode, addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fLEGITIMIZE_005fADDRESS-4944"></a></var><br>
 <blockquote><p>Define this to modify an invalid address <var>x</var> to be a valid address
 with mode <var>mode</var> in the named address space <var>as</var>.  This target
 hook is the same as the <code>TARGET_LEGITIMIZE_ADDRESS</code> target hook,
@@ -131,7 +131,7 @@ except that it includes explicit named address space support.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_SUBSET_P</b> (<var>addr_space_t subset, addr_space_t superset</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fSUBSET_005fP-4944"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_SUBSET_P</b> (<var>addr_space_t subset, addr_space_t superset</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fSUBSET_005fP-4945"></a></var><br>
 <blockquote><p>Define this to return whether the <var>subset</var> named address space is
 contained within the <var>superset</var> named address space.  Pointers to
 a named address space that is a subset of another named address space
@@ -141,13 +141,13 @@ converted to pointers to a subset address space via explicit casts.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_ZERO_ADDRESS_VALID</b> (<var>addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fZERO_005fADDRESS_005fVALID-4945"></a></var><br>
+&mdash; Target Hook: bool <b>TARGET_ADDR_SPACE_ZERO_ADDRESS_VALID</b> (<var>addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fZERO_005fADDRESS_005fVALID-4946"></a></var><br>
 <blockquote><p>Define this to modify the default handling of address 0 for the
 address space.  Return true if 0 should be considered a valid address. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: rtx <b>TARGET_ADDR_SPACE_CONVERT</b> (<var>rtx op, tree from_type, tree to_type</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fCONVERT-4946"></a></var><br>
+&mdash; Target Hook: rtx <b>TARGET_ADDR_SPACE_CONVERT</b> (<var>rtx op, tree from_type, tree to_type</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fCONVERT-4947"></a></var><br>
 <blockquote><p>Define this to convert the pointer expression represented by the RTL
 <var>op</var> with type <var>from_type</var> that points to a named address
 space to a new pointer expression with type <var>to_type</var> that points
@@ -157,13 +157,13 @@ as determined by the <code>TARGET_ADDR_SPACE_SUBSET_P</code> target hook.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: int <b>TARGET_ADDR_SPACE_DEBUG</b> (<var>addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fDEBUG-4947"></a></var><br>
+&mdash; Target Hook: int <b>TARGET_ADDR_SPACE_DEBUG</b> (<var>addr_space_t as</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fDEBUG-4948"></a></var><br>
 <blockquote><p>Define this to define how the address space is encoded in dwarf. 
 The result is the value to be used with <code>DW_AT_address_class</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Target Hook: void <b>TARGET_ADDR_SPACE_DIAGNOSE_USAGE</b> (<var>addr_space_t as, location_t loc</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fDIAGNOSE_005fUSAGE-4948"></a></var><br>
+&mdash; Target Hook: void <b>TARGET_ADDR_SPACE_DIAGNOSE_USAGE</b> (<var>addr_space_t as, location_t loc</var>)<var><a name="index-TARGET_005fADDR_005fSPACE_005fDIAGNOSE_005fUSAGE-4949"></a></var><br>
 <blockquote><p>Define this hook if the availability of an address space depends on
 command line options and some diagnostics should be printed when the
 address space is used.  This hook is called during parsing and allows

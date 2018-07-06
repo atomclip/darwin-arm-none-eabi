@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C-Extensions.html#C-Extensions">C Exten
 
 <h3 class="section">6.16 Named Address Spaces</h3>
 
-<p><a name="index-Named-Address-Spaces-3194"></a>
+<p><a name="index-Named-Address-Spaces-3200"></a>
 As an extension, GNU C supports named address spaces as
 defined in the N1275 draft of ISO/IEC DTR 18037.  Support for named
 address spaces in GCC will evolve as the draft technical report
@@ -82,17 +82,17 @@ needed to locate read-only data in flash memory
 without using (inline) assembler code.
 
      <dl>
-<dt><code>__flash</code><dd><a name="index-g_t_0040code_007b_005f_005fflash_007d-AVR-Named-Address-Spaces-3195"></a>The <code>__flash</code> qualifier locates data in the
+<dt><code>__flash</code><dd><a name="index-g_t_0040code_007b_005f_005fflash_007d-AVR-Named-Address-Spaces-3201"></a>The <code>__flash</code> qualifier locates data in the
 <code>.progmem.data</code> section. Data is read using the <code>LPM</code>
 instruction. Pointers to this address space are 16 bits wide.
 
-     <br><dt><code>__flash1</code><dt><code>__flash2</code><dt><code>__flash3</code><dt><code>__flash4</code><dt><code>__flash5</code><dd><a name="index-g_t_0040code_007b_005f_005fflash1_007d-AVR-Named-Address-Spaces-3196"></a><a name="index-g_t_0040code_007b_005f_005fflash2_007d-AVR-Named-Address-Spaces-3197"></a><a name="index-g_t_0040code_007b_005f_005fflash3_007d-AVR-Named-Address-Spaces-3198"></a><a name="index-g_t_0040code_007b_005f_005fflash4_007d-AVR-Named-Address-Spaces-3199"></a><a name="index-g_t_0040code_007b_005f_005fflash5_007d-AVR-Named-Address-Spaces-3200"></a>These are 16-bit address spaces locating data in section
+     <br><dt><code>__flash1</code><dt><code>__flash2</code><dt><code>__flash3</code><dt><code>__flash4</code><dt><code>__flash5</code><dd><a name="index-g_t_0040code_007b_005f_005fflash1_007d-AVR-Named-Address-Spaces-3202"></a><a name="index-g_t_0040code_007b_005f_005fflash2_007d-AVR-Named-Address-Spaces-3203"></a><a name="index-g_t_0040code_007b_005f_005fflash3_007d-AVR-Named-Address-Spaces-3204"></a><a name="index-g_t_0040code_007b_005f_005fflash4_007d-AVR-Named-Address-Spaces-3205"></a><a name="index-g_t_0040code_007b_005f_005fflash5_007d-AVR-Named-Address-Spaces-3206"></a>These are 16-bit address spaces locating data in section
 <code>.progmem</code><var>N</var><code>.data</code> where <var>N</var> refers to
 address space <code>__flash</code><var>N</var>. 
 The compiler sets the <code>RAMPZ</code> segment register appropriately
 before reading data by means of the <code>ELPM</code> instruction.
 
-     <br><dt><code>__memx</code><dd><a name="index-g_t_0040code_007b_005f_005fmemx_007d-AVR-Named-Address-Spaces-3201"></a>This is a 24-bit address space that linearizes flash and RAM:
+     <br><dt><code>__memx</code><dd><a name="index-g_t_0040code_007b_005f_005fmemx_007d-AVR-Named-Address-Spaces-3207"></a>This is a 24-bit address space that linearizes flash and RAM:
 If the high bit of the address is set, data is read from
 RAM using the lower two bytes as RAM address. 
 If the high bit of the address is clear, data is read from flash
@@ -194,7 +194,7 @@ attribute <code>progmem</code>, see <a href="AVR-Variable-Attributes.html#AVR-Va
 
 <h4 class="subsection">6.16.2 M32C Named Address Spaces</h4>
 
-<p><a name="index-g_t_0040code_007b_005f_005ffar_007d-M32C-Named-Address-Spaces-3202"></a>
+<p><a name="index-g_t_0040code_007b_005f_005ffar_007d-M32C-Named-Address-Spaces-3208"></a>
 On the M32C target, with the R8C and M16C CPU variants, variables
 qualified with <code>__far</code> are accessed using 32-bit addresses in
 order to access memory beyond the first 64&nbsp;<!-- /@w -->Ki bytes.  If
@@ -203,7 +203,7 @@ effect.
 
 <h4 class="subsection">6.16.3 RL78 Named Address Spaces</h4>
 
-<p><a name="index-g_t_0040code_007b_005f_005ffar_007d-RL78-Named-Address-Spaces-3203"></a>
+<p><a name="index-g_t_0040code_007b_005f_005ffar_007d-RL78-Named-Address-Spaces-3209"></a>
 On the RL78 target, variables qualified with <code>__far</code> are accessed
 with 32-bit pointers (20-bit addresses) rather than the default 16-bit
 addresses.  Non-far variables are assumed to appear in the topmost
@@ -211,7 +211,7 @@ addresses.  Non-far variables are assumed to appear in the topmost
 
 <h4 class="subsection">6.16.4 SPU Named Address Spaces</h4>
 
-<p><a name="index-g_t_0040code_007b_005f_005fea_007d-SPU-Named-Address-Spaces-3204"></a>
+<p><a name="index-g_t_0040code_007b_005f_005fea_007d-SPU-Named-Address-Spaces-3210"></a>
 On the SPU target variables may be declared as
 belonging to another address space by qualifying the type with the
 <code>__ea</code> address space identifier:
@@ -225,12 +225,12 @@ space.
 
 <h4 class="subsection">6.16.5 x86 Named Address Spaces</h4>
 
-<p><a name="index-x86-named-address-spaces-3205"></a>
+<p><a name="index-x86-named-address-spaces-3211"></a>
 On the x86 target, variables may be declared as being relative
 to the <code>%fs</code> or <code>%gs</code> segments.
 
      <dl>
-<dt><code>__seg_fs</code><dt><code>__seg_gs</code><dd><a name="index-g_t_0040code_007b_005f_005fseg_005ffs_007d-x86-named-address-space-3206"></a><a name="index-g_t_0040code_007b_005f_005fseg_005fgs_007d-x86-named-address-space-3207"></a>The object is accessed with the respective segment override prefix.
+<dt><code>__seg_fs</code><dt><code>__seg_gs</code><dd><a name="index-g_t_0040code_007b_005f_005fseg_005ffs_007d-x86-named-address-space-3212"></a><a name="index-g_t_0040code_007b_005f_005fseg_005fgs_007d-x86-named-address-space-3213"></a>The object is accessed with the respective segment override prefix.
 
      <p>The respective segment base must be set via some method specific to
 the operating system.  Rather than require an expensive system call

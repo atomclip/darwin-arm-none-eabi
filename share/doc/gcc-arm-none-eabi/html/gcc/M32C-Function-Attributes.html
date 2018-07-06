@@ -57,16 +57,16 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported by the M32C back end:
 
      <dl>
-<dt><code>bank_switch</code><dd><a name="index-g_t_0040code_007bbank_005fswitch_007d-function-attribute_002c-M32C-3397"></a>When added to an interrupt handler with the M32C port, causes the
+<dt><code>bank_switch</code><dd><a name="index-g_t_0040code_007bbank_005fswitch_007d-function-attribute_002c-M32C-3403"></a>When added to an interrupt handler with the M32C port, causes the
 prologue and epilogue to use bank switching to preserve the registers
 rather than saving them on the stack.
 
-     <br><dt><code>fast_interrupt</code><dd><a name="index-g_t_0040code_007bfast_005finterrupt_007d-function-attribute_002c-M32C-3398"></a>Use this attribute on the M32C port to indicate that the specified
+     <br><dt><code>fast_interrupt</code><dd><a name="index-g_t_0040code_007bfast_005finterrupt_007d-function-attribute_002c-M32C-3404"></a>Use this attribute on the M32C port to indicate that the specified
 function is a fast interrupt handler.  This is just like the
 <code>interrupt</code> attribute, except that <code>freit</code> is used to return
 instead of <code>reit</code>.
 
-     <br><dt><code>function_vector</code><dd><a name="index-g_t_0040code_007bfunction_005fvector_007d-function-attribute_002c-M16C_002fM32C-3399"></a>On M16C/M32C targets, the <code>function_vector</code> attribute declares a
+     <br><dt><code>function_vector</code><dd><a name="index-g_t_0040code_007bfunction_005fvector_007d-function-attribute_002c-M16C_002fM32C-3405"></a>On M16C/M32C targets, the <code>function_vector</code> attribute declares a
 special page subroutine call function. Use of this attribute reduces
 the code size by 2 bytes for each call generated to the
 subroutine. The argument to the attribute is the vector number entry
@@ -98,7 +98,7 @@ then be sure to write this declaration in both files.
 
      <p>This attribute is ignored for R8C target.
 
-     <br><dt><code>interrupt</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-M32C-3400"></a>Use this attribute to indicate
+     <br><dt><code>interrupt</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-M32C-3406"></a>Use this attribute to indicate
 that the specified function is an interrupt handler.  The compiler generates
 function entry and exit sequences suitable for use in an interrupt handler
 when this attribute is present. 

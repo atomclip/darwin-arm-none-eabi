@@ -60,49 +60,49 @@ similar command-line options (see <a href="AArch64-Options.html#AArch64-Options"
 per-function basis.
 
      <dl>
-<dt><code>general-regs-only</code><dd><a name="index-g_t_0040code_007bgeneral_002dregs_002donly_007d-function-attribute_002c-AArch64-3337"></a>Indicates that no floating-point or Advanced SIMD registers should be
+<dt><code>general-regs-only</code><dd><a name="index-g_t_0040code_007bgeneral_002dregs_002donly_007d-function-attribute_002c-AArch64-3343"></a>Indicates that no floating-point or Advanced SIMD registers should be
 used when generating code for this function.  If the function explicitly
 uses floating-point code, then the compiler gives an error.  This is
 the same behavior as that of the command-line option
 <samp><span class="option">-mgeneral-regs-only</span></samp>.
 
-     <br><dt><code>fix-cortex-a53-835769</code><dd><a name="index-g_t_0040code_007bfix_002dcortex_002da53_002d835769_007d-function-attribute_002c-AArch64-3338"></a>Indicates that the workaround for the Cortex-A53 erratum 835769 should be
+     <br><dt><code>fix-cortex-a53-835769</code><dd><a name="index-g_t_0040code_007bfix_002dcortex_002da53_002d835769_007d-function-attribute_002c-AArch64-3344"></a>Indicates that the workaround for the Cortex-A53 erratum 835769 should be
 applied to this function.  To explicitly disable the workaround for this
 function specify the negated form: <code>no-fix-cortex-a53-835769</code>. 
 This corresponds to the behavior of the command line options
 <samp><span class="option">-mfix-cortex-a53-835769</span></samp> and <samp><span class="option">-mno-fix-cortex-a53-835769</span></samp>.
 
-     <br><dt><code>cmodel=</code><dd><a name="index-g_t_0040code_007bcmodel_003d_007d-function-attribute_002c-AArch64-3339"></a>Indicates that code should be generated for a particular code model for
+     <br><dt><code>cmodel=</code><dd><a name="index-g_t_0040code_007bcmodel_003d_007d-function-attribute_002c-AArch64-3345"></a>Indicates that code should be generated for a particular code model for
 this function.  The behavior and permissible arguments are the same as
 for the command line option <samp><span class="option">-mcmodel=</span></samp>.
 
-     <br><dt><code>strict-align</code><dd><a name="index-g_t_0040code_007bstrict_002dalign_007d-function-attribute_002c-AArch64-3340"></a>Indicates that the compiler should not assume that unaligned memory references
+     <br><dt><code>strict-align</code><dd><a name="index-g_t_0040code_007bstrict_002dalign_007d-function-attribute_002c-AArch64-3346"></a>Indicates that the compiler should not assume that unaligned memory references
 are handled by the system.  The behavior is the same as for the command-line
 option <samp><span class="option">-mstrict-align</span></samp>.
 
-     <br><dt><code>omit-leaf-frame-pointer</code><dd><a name="index-g_t_0040code_007bomit_002dleaf_002dframe_002dpointer_007d-function-attribute_002c-AArch64-3341"></a>Indicates that the frame pointer should be omitted for a leaf function call. 
+     <br><dt><code>omit-leaf-frame-pointer</code><dd><a name="index-g_t_0040code_007bomit_002dleaf_002dframe_002dpointer_007d-function-attribute_002c-AArch64-3347"></a>Indicates that the frame pointer should be omitted for a leaf function call. 
 To keep the frame pointer, the inverse attribute
 <code>no-omit-leaf-frame-pointer</code> can be specified.  These attributes have
 the same behavior as the command-line options <samp><span class="option">-momit-leaf-frame-pointer</span></samp>
 and <samp><span class="option">-mno-omit-leaf-frame-pointer</span></samp>.
 
-     <br><dt><code>tls-dialect=</code><dd><a name="index-g_t_0040code_007btls_002ddialect_003d_007d-function-attribute_002c-AArch64-3342"></a>Specifies the TLS dialect to use for this function.  The behavior and
+     <br><dt><code>tls-dialect=</code><dd><a name="index-g_t_0040code_007btls_002ddialect_003d_007d-function-attribute_002c-AArch64-3348"></a>Specifies the TLS dialect to use for this function.  The behavior and
 permissible arguments are the same as for the command-line option
 <samp><span class="option">-mtls-dialect=</span></samp>.
 
-     <br><dt><code>arch=</code><dd><a name="index-g_t_0040code_007barch_003d_007d-function-attribute_002c-AArch64-3343"></a>Specifies the architecture version and architectural extensions to use
+     <br><dt><code>arch=</code><dd><a name="index-g_t_0040code_007barch_003d_007d-function-attribute_002c-AArch64-3349"></a>Specifies the architecture version and architectural extensions to use
 for this function.  The behavior and permissible arguments are the same as
 for the <samp><span class="option">-march=</span></samp> command-line option.
 
-     <br><dt><code>tune=</code><dd><a name="index-g_t_0040code_007btune_003d_007d-function-attribute_002c-AArch64-3344"></a>Specifies the core for which to tune the performance of this function. 
+     <br><dt><code>tune=</code><dd><a name="index-g_t_0040code_007btune_003d_007d-function-attribute_002c-AArch64-3350"></a>Specifies the core for which to tune the performance of this function. 
 The behavior and permissible arguments are the same as for the <samp><span class="option">-mtune=</span></samp>
 command-line option.
 
-     <br><dt><code>cpu=</code><dd><a name="index-g_t_0040code_007bcpu_003d_007d-function-attribute_002c-AArch64-3345"></a>Specifies the core for which to tune the performance of this function and also
+     <br><dt><code>cpu=</code><dd><a name="index-g_t_0040code_007bcpu_003d_007d-function-attribute_002c-AArch64-3351"></a>Specifies the core for which to tune the performance of this function and also
 whose architectural features to use.  The behavior and valid arguments are the
 same as for the <samp><span class="option">-mcpu=</span></samp> command-line option.
 
-     <br><dt><code>sign-return-address</code><dd><a name="index-g_t_0040code_007bsign_002dreturn_002daddress_007d-function-attribute_002c-AArch64-3346"></a>Select the function scope on which return address signing will be applied.  The
+     <br><dt><code>sign-return-address</code><dd><a name="index-g_t_0040code_007bsign_002dreturn_002daddress_007d-function-attribute_002c-AArch64-3352"></a>Select the function scope on which return address signing will be applied.  The
 behavior and permissible arguments are the same as for the command-line option
 <samp><span class="option">-msign-return-address=</span></samp>.  The default value is <code>none</code>.
 

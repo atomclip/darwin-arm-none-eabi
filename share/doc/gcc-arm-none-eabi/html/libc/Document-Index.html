@@ -5,7 +5,7 @@
 <meta name="description" content="Untitled">
 <meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
-<link rel="prev" href="Arglists.html#Arglists" title="Arglists">
+<link rel="prev" href="Overflow-Protection.html#Overflow-Protection" title="Overflow Protection">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <meta http-equiv="Content-Style-Type" content="text/css">
 <style type="text/css"><!--
@@ -24,7 +24,7 @@
 <div class="node">
 <p>
 <a name="Document-Index"></a>
-Previous:&nbsp;<a rel="previous" accesskey="p" href="Arglists.html#Arglists">Arglists</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Overflow-Protection.html#Overflow-Protection">Overflow Protection</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
 </div>
@@ -32,17 +32,18 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <h2 class="unnumbered">Document Index</h2>
 
 <ul class="index-cp" compact>
-<li><a href="Stubs.html#index-g_t_0040code_007berrno_007d-global-vs-macro-588"><code>errno</code> global vs macro</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
+<li><a href="Stubs.html#index-g_t_0040code_007berrno_007d-global-vs-macro-589"><code>errno</code> global vs macro</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
 <li><a href="Reentrancy.html#index-extra-argument_002c-reentrant-fns-559">extra argument, reentrant fns</a>: <a href="Reentrancy.html#Reentrancy">Reentrancy</a></li>
 <li><a href="Reentrancy.html#index-global-reentrancy-structure-557">global reentrancy structure</a>: <a href="Reentrancy.html#Reentrancy">Reentrancy</a></li>
-<li><a href="Syscalls.html#index-linking-the-C-library-584">linking the C library</a>: <a href="Syscalls.html#Syscalls">Syscalls</a></li>
+<li><a href="Syscalls.html#index-linking-the-C-library-585">linking the C library</a>: <a href="Syscalls.html#Syscalls">Syscalls</a></li>
+<li><a href="Object-Size-Checking.html#index-list-of-overflow-protected-functions-584">list of overflow protected functions</a>: <a href="Object-Size-Checking.html#Object-Size-Checking">Object Size Checking</a></li>
 <li><a href="Reentrancy.html#index-list-of-reentrant-functions-560">list of reentrant functions</a>: <a href="Reentrancy.html#Reentrancy">Reentrancy</a></li>
-<li><a href="Stubs.html#index-OS-interface-subroutines-587">OS interface subroutines</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
+<li><a href="Stubs.html#index-OS-interface-subroutines-588">OS interface subroutines</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
 <li><a href="Reentrancy.html#index-reentrancy-553">reentrancy</a>: <a href="Reentrancy.html#Reentrancy">Reentrancy</a></li>
 <li><a href="Reentrancy.html#index-reentrancy-structure-556">reentrancy structure</a>: <a href="Reentrancy.html#Reentrancy">Reentrancy</a></li>
 <li><a href="Reentrancy.html#index-reentrant-function-list-561">reentrant function list</a>: <a href="Reentrancy.html#Reentrancy">Reentrancy</a></li>
-<li><a href="Stubs.html#index-stubs-585">stubs</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
-<li><a href="Stubs.html#index-subroutines-for-OS-interface-586">subroutines for OS interface</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
+<li><a href="Stubs.html#index-stubs-586">stubs</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
+<li><a href="Stubs.html#index-subroutines-for-OS-interface-587">subroutines for OS interface</a>: <a href="Stubs.html#Stubs">Stubs</a></li>
 </ul>
 <div class="contents">
 <h2>Table of Contents</h2>
@@ -275,31 +276,32 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <li><a href="wmemcmp.html#wmemcmp">6.2 <code>wmemcmp</code>&mdash;compare wide characters in memory</a>
 <li><a href="wmemcpy.html#wmemcpy">6.3 <code>wmemcpy</code>&mdash;copy wide characters in memory</a>
 <li><a href="wmemmove.html#wmemmove">6.4 <code>wmemmove</code>&mdash;copy wide characters in memory with overlapping areas</a>
-<li><a href="wmemset.html#wmemset">6.5 <code>wmemset</code>&mdash;set wide characters in memory</a>
-<li><a href="wcscat.html#wcscat">6.6 <code>wcscat</code>&mdash;concatenate two wide-character strings</a>
-<li><a href="wcschr.html#wcschr">6.7 <code>wcschr</code>&mdash;wide-character string scanning operation</a>
-<li><a href="wcscmp.html#wcscmp">6.8 <code>wcscmp</code>&mdash;compare two wide-character strings</a>
-<li><a href="wcscoll.html#wcscoll">6.9 <code>wcscoll</code>&mdash;locale-specific wide-character string compare</a>
-<li><a href="wcscpy.html#wcscpy">6.10 <code>wcscpy</code>&mdash;copy a wide-character string</a>
-<li><a href="wcpcpy.html#wcpcpy">6.11 <code>wcpcpy</code>&mdash;copy a wide-character string returning a pointer to its end</a>
-<li><a href="wcscspn.html#wcscspn">6.12 <code>wcscspn</code>&mdash;get length of a complementary wide substring</a>
-<li><a href="wcsftime.html#wcsftime">6.13 <code>wcsftime</code>&mdash;convert date and time to a formatted wide-character string</a>
-<li><a href="wcslcat.html#wcslcat">6.14 <code>wcslcat</code>&mdash;concatenate wide-character strings to specified length</a>
-<li><a href="wcslcpy.html#wcslcpy">6.15 <code>wcslcpy</code>&mdash;copy a wide-character string to specified length</a>
-<li><a href="wcslen.html#wcslen">6.16 <code>wcslen</code>&mdash;get wide-character string length</a>
-<li><a href="wcsncat.html#wcsncat">6.17 <code>wcsncat</code>&mdash;concatenate part of two wide-character strings</a>
-<li><a href="wcsncmp.html#wcsncmp">6.18 <code>wcsncmp</code>&mdash;compare part of two wide-character strings</a>
-<li><a href="wcsncpy.html#wcsncpy">6.19 <code>wcsncpy</code>&mdash;copy part of a wide-character string</a>
-<li><a href="wcpncpy.html#wcpncpy">6.20 <code>wcpncpy</code>&mdash;copy part of a wide-character string returning a pointer to its end</a>
-<li><a href="wcsnlen.html#wcsnlen">6.21 <code>wcsnlen</code>&mdash;get fixed-size wide-character string length</a>
-<li><a href="wcspbrk.html#wcspbrk">6.22 <code>wcspbrk</code>&mdash;&ndash;scan wide-character string for a wide-character code</a>
-<li><a href="wcsrchr.html#wcsrchr">6.23 <code>wcsrchr</code>&mdash;wide-character string scanning operation</a>
-<li><a href="wcsspn.html#wcsspn">6.24 <code>wcsspn</code>&mdash;get length of a wide substring</a>
-<li><a href="wcsstr.html#wcsstr">6.25 <code>wcsstr</code>&mdash;find a wide-character substring</a>
-<li><a href="wcstok.html#wcstok">6.26 <code>wcstok</code>&mdash;get next token from a string</a>
-<li><a href="wcswidth.html#wcswidth">6.27 <code>wcswidth</code>&mdash;number of column positions of a wide-character string</a>
-<li><a href="wcsxfrm.html#wcsxfrm">6.28 <code>wcsxfrm</code>&mdash;locale-specific wide-character string transformation</a>
-<li><a href="wcwidth.html#wcwidth">6.29 <code>wcwidth</code>&mdash;number of column positions of a wide-character code</a>
+<li><a href="wmempcpy.html#wmempcpy">6.5 <code>wmempcpy</code>&mdash;copy wide characters in memory and return end pointer</a>
+<li><a href="wmemset.html#wmemset">6.6 <code>wmemset</code>&mdash;set wide characters in memory</a>
+<li><a href="wcscat.html#wcscat">6.7 <code>wcscat</code>&mdash;concatenate two wide-character strings</a>
+<li><a href="wcschr.html#wcschr">6.8 <code>wcschr</code>&mdash;wide-character string scanning operation</a>
+<li><a href="wcscmp.html#wcscmp">6.9 <code>wcscmp</code>&mdash;compare two wide-character strings</a>
+<li><a href="wcscoll.html#wcscoll">6.10 <code>wcscoll</code>&mdash;locale-specific wide-character string compare</a>
+<li><a href="wcscpy.html#wcscpy">6.11 <code>wcscpy</code>&mdash;copy a wide-character string</a>
+<li><a href="wcpcpy.html#wcpcpy">6.12 <code>wcpcpy</code>&mdash;copy a wide-character string returning a pointer to its end</a>
+<li><a href="wcscspn.html#wcscspn">6.13 <code>wcscspn</code>&mdash;get length of a complementary wide substring</a>
+<li><a href="wcsftime.html#wcsftime">6.14 <code>wcsftime</code>&mdash;convert date and time to a formatted wide-character string</a>
+<li><a href="wcslcat.html#wcslcat">6.15 <code>wcslcat</code>&mdash;concatenate wide-character strings to specified length</a>
+<li><a href="wcslcpy.html#wcslcpy">6.16 <code>wcslcpy</code>&mdash;copy a wide-character string to specified length</a>
+<li><a href="wcslen.html#wcslen">6.17 <code>wcslen</code>&mdash;get wide-character string length</a>
+<li><a href="wcsncat.html#wcsncat">6.18 <code>wcsncat</code>&mdash;concatenate part of two wide-character strings</a>
+<li><a href="wcsncmp.html#wcsncmp">6.19 <code>wcsncmp</code>&mdash;compare part of two wide-character strings</a>
+<li><a href="wcsncpy.html#wcsncpy">6.20 <code>wcsncpy</code>&mdash;copy part of a wide-character string</a>
+<li><a href="wcpncpy.html#wcpncpy">6.21 <code>wcpncpy</code>&mdash;copy part of a wide-character string returning a pointer to its end</a>
+<li><a href="wcsnlen.html#wcsnlen">6.22 <code>wcsnlen</code>&mdash;get fixed-size wide-character string length</a>
+<li><a href="wcspbrk.html#wcspbrk">6.23 <code>wcspbrk</code>&mdash;&ndash;scan wide-character string for a wide-character code</a>
+<li><a href="wcsrchr.html#wcsrchr">6.24 <code>wcsrchr</code>&mdash;wide-character string scanning operation</a>
+<li><a href="wcsspn.html#wcsspn">6.25 <code>wcsspn</code>&mdash;get length of a wide substring</a>
+<li><a href="wcsstr.html#wcsstr">6.26 <code>wcsstr</code>&mdash;find a wide-character substring</a>
+<li><a href="wcstok.html#wcstok">6.27 <code>wcstok</code>&mdash;get next token from a string</a>
+<li><a href="wcswidth.html#wcswidth">6.28 <code>wcswidth</code>&mdash;number of column positions of a wide-character string</a>
+<li><a href="wcsxfrm.html#wcsxfrm">6.29 <code>wcsxfrm</code>&mdash;locale-specific wide-character string transformation</a>
+<li><a href="wcwidth.html#wcwidth">6.30 <code>wcwidth</code>&mdash;number of column positions of a wide-character code</a>
 </li></ul>
 <li><a name="toc_Signals" href="Signals.html#Signals">7 Signal Handling (<samp><span class="file">signal.h</span></samp>)</a>
 <ul>
@@ -332,43 +334,48 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <li><a href="_005f_005fretarget_005flock_005finit.html#_005f_005fretarget_005flock_005finit">11.2 <code>__retarget_lock_init</code>, <code>__retarget_lock_init_recursive</code>, <code>__retarget_lock_close</code>, <code>__retarget_lock_close_recursive</code>, <code>__retarget_lock_acquire</code>, <code>__retarget_lock_acquire_recursive</code>, <code>__retarget_lock_try_acquire</code>, <code>__retarget_lock_try_acquire_recursive</code>, <code>__retarget_lock_release</code>, <code>__retarget_lock_release_recursive</code>&mdash;locking routines</a>
 <li><a href="unctrl.html#unctrl">11.3 <code>unctrl</code>&mdash;get printable representation of a character</a>
 </li></ul>
-<li><a name="toc_Syscalls" href="Syscalls.html#Syscalls">12 System Calls</a>
+<li><a name="toc_Overflow-Protection" href="Overflow-Protection.html#Overflow-Protection">12 Overflow Protection</a>
 <ul>
-<li><a href="Stubs.html#Stubs">12.1 Definitions for OS interface</a>
-<li><a href="Reentrant-Syscalls.html#Reentrant-Syscalls">12.2 Reentrant covers for OS subroutines</a>
+<li><a href="Stack-Smashing-Protection.html#Stack-Smashing-Protection">12.1 Stack Smashing Protection</a>
+<li><a href="Object-Size-Checking.html#Object-Size-Checking">12.2 Object Size Checking</a>
+</li></ul>
+<li><a name="toc_Syscalls" href="Syscalls.html#Syscalls">13 System Calls</a>
 <ul>
-<li><a href="_005fclose_005fr.html#_005fclose_005fr">12.2.1 <code>_close_r</code>&mdash;Reentrant version of close</a>
-<li><a href="_005fexecve_005fr.html#_005fexecve_005fr">12.2.2 <code>_execve_r</code>&mdash;Reentrant version of execve</a>
-<li><a href="_005ffork_005fr.html#_005ffork_005fr">12.2.3 <code>_fork_r</code>&mdash;Reentrant version of fork</a>
-<li><a href="_005fwait_005fr.html#_005fwait_005fr">12.2.4 <code>_wait_r</code>&mdash;Reentrant version of wait</a>
-<li><a href="_005ffstat_005fr.html#_005ffstat_005fr">12.2.5 <code>_fstat_r</code>&mdash;Reentrant version of fstat</a>
-<li><a href="_005flink_005fr.html#_005flink_005fr">12.2.6 <code>_link_r</code>&mdash;Reentrant version of link</a>
-<li><a href="_005flseek_005fr.html#_005flseek_005fr">12.2.7 <code>_lseek_r</code>&mdash;Reentrant version of lseek</a>
-<li><a href="_005fopen_005fr.html#_005fopen_005fr">12.2.8 <code>_open_r</code>&mdash;Reentrant version of open</a>
-<li><a href="_005fread_005fr.html#_005fread_005fr">12.2.9 <code>_read_r</code>&mdash;Reentrant version of read</a>
-<li><a href="_005fsbrk_005fr.html#_005fsbrk_005fr">12.2.10 <code>_sbrk_r</code>&mdash;Reentrant version of sbrk</a>
-<li><a href="_005fkill_005fr.html#_005fkill_005fr">12.2.11 <code>_kill_r</code>&mdash;Reentrant version of kill</a>
-<li><a href="_005fgetpid_005fr.html#_005fgetpid_005fr">12.2.12 <code>_getpid_r</code>&mdash;Reentrant version of getpid</a>
-<li><a href="_005fstat_005fr.html#_005fstat_005fr">12.2.13 <code>_stat_r</code>&mdash;Reentrant version of stat</a>
-<li><a href="_005ftimes_005fr.html#_005ftimes_005fr">12.2.14 <code>_times_r</code>&mdash;Reentrant version of times</a>
-<li><a href="_005funlink_005fr.html#_005funlink_005fr">12.2.15 <code>_unlink_r</code>&mdash;Reentrant version of unlink</a>
-<li><a href="_005fwrite_005fr.html#_005fwrite_005fr">12.2.16 <code>_write_r</code>&mdash;Reentrant version of write</a>
+<li><a href="Stubs.html#Stubs">13.1 Definitions for OS interface</a>
+<li><a href="Reentrant-Syscalls.html#Reentrant-Syscalls">13.2 Reentrant covers for OS subroutines</a>
+<ul>
+<li><a href="_005fclose_005fr.html#_005fclose_005fr">13.2.1 <code>_close_r</code>&mdash;Reentrant version of close</a>
+<li><a href="_005fexecve_005fr.html#_005fexecve_005fr">13.2.2 <code>_execve_r</code>&mdash;Reentrant version of execve</a>
+<li><a href="_005ffork_005fr.html#_005ffork_005fr">13.2.3 <code>_fork_r</code>&mdash;Reentrant version of fork</a>
+<li><a href="_005fwait_005fr.html#_005fwait_005fr">13.2.4 <code>_wait_r</code>&mdash;Reentrant version of wait</a>
+<li><a href="_005ffstat_005fr.html#_005ffstat_005fr">13.2.5 <code>_fstat_r</code>&mdash;Reentrant version of fstat</a>
+<li><a href="_005flink_005fr.html#_005flink_005fr">13.2.6 <code>_link_r</code>&mdash;Reentrant version of link</a>
+<li><a href="_005flseek_005fr.html#_005flseek_005fr">13.2.7 <code>_lseek_r</code>&mdash;Reentrant version of lseek</a>
+<li><a href="_005fopen_005fr.html#_005fopen_005fr">13.2.8 <code>_open_r</code>&mdash;Reentrant version of open</a>
+<li><a href="_005fread_005fr.html#_005fread_005fr">13.2.9 <code>_read_r</code>&mdash;Reentrant version of read</a>
+<li><a href="_005fsbrk_005fr.html#_005fsbrk_005fr">13.2.10 <code>_sbrk_r</code>&mdash;Reentrant version of sbrk</a>
+<li><a href="_005fkill_005fr.html#_005fkill_005fr">13.2.11 <code>_kill_r</code>&mdash;Reentrant version of kill</a>
+<li><a href="_005fgetpid_005fr.html#_005fgetpid_005fr">13.2.12 <code>_getpid_r</code>&mdash;Reentrant version of getpid</a>
+<li><a href="_005fstat_005fr.html#_005fstat_005fr">13.2.13 <code>_stat_r</code>&mdash;Reentrant version of stat</a>
+<li><a href="_005ftimes_005fr.html#_005ftimes_005fr">13.2.14 <code>_times_r</code>&mdash;Reentrant version of times</a>
+<li><a href="_005funlink_005fr.html#_005funlink_005fr">13.2.15 <code>_unlink_r</code>&mdash;Reentrant version of unlink</a>
+<li><a href="_005fwrite_005fr.html#_005fwrite_005fr">13.2.16 <code>_write_r</code>&mdash;Reentrant version of write</a>
 </li></ul>
 </li></ul>
-<li><a name="toc_Arglists" href="Arglists.html#Arglists">13 Variable Argument Lists</a>
+<li><a name="toc_Arglists" href="Arglists.html#Arglists">14 Variable Argument Lists</a>
 <ul>
-<li><a href="Stdarg.html#Stdarg">13.1 ANSI-standard macros, <samp><span class="file">stdarg.h</span></samp></a>
+<li><a href="Stdarg.html#Stdarg">14.1 ANSI-standard macros, <samp><span class="file">stdarg.h</span></samp></a>
 <ul>
-<li><a href="va_005fstart.html#va_005fstart">13.1.1 Initialize variable argument list</a>
-<li><a href="va_005farg.html#va_005farg">13.1.2 Extract a value from argument list</a>
-<li><a href="va_005fend.html#va_005fend">13.1.3 Abandon a variable argument list</a>
+<li><a href="va_005fstart.html#va_005fstart">14.1.1 Initialize variable argument list</a>
+<li><a href="va_005farg.html#va_005farg">14.1.2 Extract a value from argument list</a>
+<li><a href="va_005fend.html#va_005fend">14.1.3 Abandon a variable argument list</a>
 </li></ul>
-<li><a href="Varargs.html#Varargs">13.2 Traditional macros, <samp><span class="file">varargs.h</span></samp></a>
+<li><a href="Varargs.html#Varargs">14.2 Traditional macros, <samp><span class="file">varargs.h</span></samp></a>
 <ul>
-<li><a href="va_005falist.html#va_005falist">13.2.1 Declare variable arguments</a>
-<li><a href="va_005fstart_002dtrad.html#va_005fstart_002dtrad">13.2.2 Initialize variable argument list</a>
-<li><a href="va_005farg_002dtrad.html#va_005farg_002dtrad">13.2.3 Extract a value from argument list</a>
-<li><a href="va_005fend_002dtrad.html#va_005fend_002dtrad">13.2.4 Abandon a variable argument list</a>
+<li><a href="va_005falist.html#va_005falist">14.2.1 Declare variable arguments</a>
+<li><a href="va_005fstart_002dtrad.html#va_005fstart_002dtrad">14.2.2 Initialize variable argument list</a>
+<li><a href="va_005farg_002dtrad.html#va_005farg_002dtrad">14.2.3 Extract a value from argument list</a>
+<li><a href="va_005fend_002dtrad.html#va_005fend_002dtrad">14.2.4 Abandon a variable argument list</a>
 </li></ul>
 </li></ul>
 <li><a name="toc_Document-Index" href="Document-Index.html#Document-Index">Document Index</a>

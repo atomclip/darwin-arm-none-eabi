@@ -95,13 +95,13 @@ of them implement the function that is part of the name.
 
      <dl>
 <dt><code>__float128 __builtin_infq (void)</code><dd>Similar to <code>__builtin_inf</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005finfq-4429"></a>
+<a name="index-g_t_005f_005fbuiltin_005finfq-4438"></a>
 <br><dt><code>__float128 __builtin_huge_valq (void)</code><dd>Similar to <code>__builtin_huge_val</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005fhuge_005fvalq-4430"></a>
+<a name="index-g_t_005f_005fbuiltin_005fhuge_005fvalq-4439"></a>
 <br><dt><code>__float128 __builtin_nanq (void)</code><dd>Similar to <code>__builtin_nan</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005fnanq-4431"></a>
+<a name="index-g_t_005f_005fbuiltin_005fnanq-4440"></a>
 <br><dt><code>__float128 __builtin_nansq (void)</code><dd>Similar to <code>__builtin_nans</code>, except the return type is <code>__float128</code>. 
-<a name="index-g_t_005f_005fbuiltin_005fnansq-4432"></a></dl>
+<a name="index-g_t_005f_005fbuiltin_005fnansq-4441"></a></dl>
 
  <p>The following built-in function is always available.
 
@@ -114,7 +114,7 @@ barrier.
 check the target platform type.
 
 <div class="defun">
-&mdash; Built-in Function: void <b>__builtin_cpu_init</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005finit-4433"></a></var><br>
+&mdash; Built-in Function: void <b>__builtin_cpu_init</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005finit-4442"></a></var><br>
 <blockquote><p>This function runs the CPU detection code to check the type of CPU and the
 features supported.  This built-in function needs to be invoked along with the built-in functions
 to check CPU type and features, <code>__builtin_cpu_is</code> and
@@ -144,7 +144,7 @@ don't support constructor priority.
       </blockquote></div>
 
 <div class="defun">
-&mdash; Built-in Function: int <b>__builtin_cpu_is</b> (<var>const char *cpuname</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fis-4434"></a></var><br>
+&mdash; Built-in Function: int <b>__builtin_cpu_is</b> (<var>const char *cpuname</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fis-4443"></a></var><br>
 <blockquote><p>This function returns a positive integer if the run-time CPU
 is of type <var>cpuname</var>
 and returns <code>0</code> otherwise. The following CPU names can be detected:
@@ -188,7 +188,9 @@ and returns <code>0</code> otherwise. The following CPU names can be detected:
 
           <br><dt>`<samp><span class="samp">btver2</span></samp>'<dd>AMD Family 16h CPU.
 
-          <br><dt>`<samp><span class="samp">znver1</span></samp>'<dd>AMD Family 17h CPU. 
+          <br><dt>`<samp><span class="samp">amdfam17h</span></samp>'<dd>AMD Family 17h CPU.
+
+          <br><dt>`<samp><span class="samp">znver1</span></samp>'<dd>AMD Family 17h Zen version 1. 
 </dl>
 
       <p>Here is an example:
@@ -204,7 +206,7 @@ and returns <code>0</code> otherwise. The following CPU names can be detected:
       </blockquote></div>
 
 <div class="defun">
-&mdash; Built-in Function: int <b>__builtin_cpu_supports</b> (<var>const char *feature</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fsupports-4435"></a></var><br>
+&mdash; Built-in Function: int <b>__builtin_cpu_supports</b> (<var>const char *feature</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcpu_005fsupports-4444"></a></var><br>
 <blockquote><p>This function returns a positive integer if the run-time CPU
 supports <var>feature</var>
 and returns <code>0</code> otherwise. The following features can be detected:

@@ -57,47 +57,47 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported by the Blackfin back end:
 
      <dl>
-<dt><code>exception_handler</code><dd><a name="index-g_t_0040code_007bexception_005fhandler_007d-function-attribute-3368"></a><a name="index-exception-handler-functions_002c-Blackfin-3369"></a>Use this attribute on the Blackfin to indicate that the specified function
+<dt><code>exception_handler</code><dd><a name="index-g_t_0040code_007bexception_005fhandler_007d-function-attribute-3374"></a><a name="index-exception-handler-functions_002c-Blackfin-3375"></a>Use this attribute on the Blackfin to indicate that the specified function
 is an exception handler.  The compiler generates function entry and
 exit sequences suitable for use in an exception handler when this
 attribute is present.
 
-     <br><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-Blackfin-3370"></a>Use this attribute to
+     <br><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-Blackfin-3376"></a>Use this attribute to
 indicate that the specified function is an interrupt handler.  The compiler
 generates function entry and exit sequences suitable for use in an
 interrupt handler when this attribute is present.
 
-     <br><dt><code>kspisusp</code><dd><a name="index-g_t_0040code_007bkspisusp_007d-function-attribute_002c-Blackfin-3371"></a><a name="index-User-stack-pointer-in-interrupts-on-the-Blackfin-3372"></a>When used together with <code>interrupt_handler</code>, <code>exception_handler</code>
+     <br><dt><code>kspisusp</code><dd><a name="index-g_t_0040code_007bkspisusp_007d-function-attribute_002c-Blackfin-3377"></a><a name="index-User-stack-pointer-in-interrupts-on-the-Blackfin-3378"></a>When used together with <code>interrupt_handler</code>, <code>exception_handler</code>
 or <code>nmi_handler</code>, code is generated to load the stack pointer
 from the USP register in the function prologue.
 
-     <br><dt><code>l1_text</code><dd><a name="index-g_t_0040code_007bl1_005ftext_007d-function-attribute_002c-Blackfin-3373"></a>This attribute specifies a function to be placed into L1 Instruction
+     <br><dt><code>l1_text</code><dd><a name="index-g_t_0040code_007bl1_005ftext_007d-function-attribute_002c-Blackfin-3379"></a>This attribute specifies a function to be placed into L1 Instruction
 SRAM. The function is put into a specific section named <code>.l1.text</code>. 
 With <samp><span class="option">-mfdpic</span></samp>, function calls with a such function as the callee
 or caller uses inlined PLT.
 
-     <br><dt><code>l2</code><dd><a name="index-g_t_0040code_007bl2_007d-function-attribute_002c-Blackfin-3374"></a>This attribute specifies a function to be placed into L2
+     <br><dt><code>l2</code><dd><a name="index-g_t_0040code_007bl2_007d-function-attribute_002c-Blackfin-3380"></a>This attribute specifies a function to be placed into L2
 SRAM. The function is put into a specific section named
 <code>.l2.text</code>. With <samp><span class="option">-mfdpic</span></samp>, callers of such functions use
 an inlined PLT.
 
-     <br><dt><code>longcall</code><dt><code>shortcall</code><dd><a name="index-indirect-calls_002c-Blackfin-3375"></a><a name="index-g_t_0040code_007blongcall_007d-function-attribute_002c-Blackfin-3376"></a><a name="index-g_t_0040code_007bshortcall_007d-function-attribute_002c-Blackfin-3377"></a>The <code>longcall</code> attribute
+     <br><dt><code>longcall</code><dt><code>shortcall</code><dd><a name="index-indirect-calls_002c-Blackfin-3381"></a><a name="index-g_t_0040code_007blongcall_007d-function-attribute_002c-Blackfin-3382"></a><a name="index-g_t_0040code_007bshortcall_007d-function-attribute_002c-Blackfin-3383"></a>The <code>longcall</code> attribute
 indicates that the function might be far away from the call site and
 require a different (more expensive) calling sequence.  The
 <code>shortcall</code> attribute indicates that the function is always close
 enough for the shorter calling sequence to be used.  These attributes
 override the <samp><span class="option">-mlongcall</span></samp> switch.
 
-     <br><dt><code>nesting</code><dd><a name="index-g_t_0040code_007bnesting_007d-function-attribute_002c-Blackfin-3378"></a><a name="index-Allow-nesting-in-an-interrupt-handler-on-the-Blackfin-processor-3379"></a>Use this attribute together with <code>interrupt_handler</code>,
+     <br><dt><code>nesting</code><dd><a name="index-g_t_0040code_007bnesting_007d-function-attribute_002c-Blackfin-3384"></a><a name="index-Allow-nesting-in-an-interrupt-handler-on-the-Blackfin-processor-3385"></a>Use this attribute together with <code>interrupt_handler</code>,
 <code>exception_handler</code> or <code>nmi_handler</code> to indicate that the function
 entry code should enable nested interrupts or exceptions.
 
-     <br><dt><code>nmi_handler</code><dd><a name="index-g_t_0040code_007bnmi_005fhandler_007d-function-attribute_002c-Blackfin-3380"></a><a name="index-NMI-handler-functions-on-the-Blackfin-processor-3381"></a>Use this attribute on the Blackfin to indicate that the specified function
+     <br><dt><code>nmi_handler</code><dd><a name="index-g_t_0040code_007bnmi_005fhandler_007d-function-attribute_002c-Blackfin-3386"></a><a name="index-NMI-handler-functions-on-the-Blackfin-processor-3387"></a>Use this attribute on the Blackfin to indicate that the specified function
 is an NMI handler.  The compiler generates function entry and
 exit sequences suitable for use in an NMI handler when this
 attribute is present.
 
-     <br><dt><code>saveall</code><dd><a name="index-g_t_0040code_007bsaveall_007d-function-attribute_002c-Blackfin-3382"></a><a name="index-save-all-registers-on-the-Blackfin-3383"></a>Use this attribute to indicate that
+     <br><dt><code>saveall</code><dd><a name="index-g_t_0040code_007bsaveall_007d-function-attribute_002c-Blackfin-3388"></a><a name="index-save-all-registers-on-the-Blackfin-3389"></a>Use this attribute to indicate that
 all registers except the stack pointer should be saved in the prologue
 regardless of whether they are used or not. 
 </dl>

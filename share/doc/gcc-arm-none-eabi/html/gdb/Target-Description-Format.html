@@ -10,7 +10,7 @@
 <link rel="next" href="Predefined-Target-Types.html#Predefined-Target-Types" title="Predefined Target Types">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988-2017 Free Software Foundation, Inc.
+Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Target-Descriptions.html#Target-Descrip
 
 <h3 class="section">G.2 Target Description Format</h3>
 
-<p><a name="index-target-descriptions_002c-XML-format-3562"></a>
+<p><a name="index-target-descriptions_002c-XML-format-3575"></a>
 A target description annex is an <a href="http://www.w3.org/XML/">XML</a>
 document which complies with the Document Type Definition provided in
 the <span class="sc">gdb</span> sources in <samp><span class="file">gdb/features/gdb-target.dtd</span></samp>.  This
@@ -97,7 +97,7 @@ the version mismatch.
 
 <h4 class="subsection">G.2.1 Inclusion</h4>
 
-<p><a name="index-target-descriptions_002c-inclusion-3563"></a><a name="index-XInclude-3564"></a><a name="index-g_t_003cxi_003ainclude_003e-3565"></a>
+<p><a name="index-target-descriptions_002c-inclusion-3576"></a><a name="index-XInclude-3577"></a><a name="index-g_t_003cxi_003ainclude_003e-3578"></a>
 It can sometimes be valuable to split a target description up into
 several different annexes, either for organizational purposes, or to
 share files between different possible target descriptions.  You can
@@ -117,7 +117,7 @@ original description.
 
 <h4 class="subsection">G.2.2 Architecture</h4>
 
-<p><a name="index-g_t_003carchitecture_003e-3566"></a>
+<p><a name="index-g_t_003carchitecture_003e-3579"></a>
 An `<samp><span class="samp">&lt;architecture&gt;</span></samp>' element has this form:
 
 <pre class="smallexample">       &lt;architecture&gt;<var>arch</var>&lt;/architecture&gt;
@@ -127,7 +127,7 @@ An `<samp><span class="samp">&lt;architecture&gt;</span></samp>' element has thi
 
 <h4 class="subsection">G.2.3 OS ABI</h4>
 
-<p><a name="index-g_t_0040code_007b_003cosabi_003e_007d-3567"></a>
+<p><a name="index-g_t_0040code_007b_003cosabi_003e_007d-3580"></a>
 This optional field was introduced in <span class="sc">gdb</span> version 7.0. 
 Previous versions of <span class="sc">gdb</span> ignore it.
 
@@ -140,7 +140,7 @@ Previous versions of <span class="sc">gdb</span> ignore it.
 
 <h4 class="subsection">G.2.4 Compatible Architecture</h4>
 
-<p><a name="index-g_t_0040code_007b_003ccompatible_003e_007d-3568"></a>
+<p><a name="index-g_t_0040code_007b_003ccompatible_003e_007d-3581"></a>
 This optional field was introduced in <span class="sc">gdb</span> version 7.0. 
 Previous versions of <span class="sc">gdb</span> ignore it.
 
@@ -164,7 +164,7 @@ capability with `<samp><span class="samp">&lt;compatible&gt;</span></samp>' is a
 </pre>
    <h4 class="subsection">G.2.5 Features</h4>
 
-<p><a name="index-g_t_003cfeature_003e-3569"></a>
+<p><a name="index-g_t_003cfeature_003e-3582"></a>
 Each `<samp><span class="samp">&lt;feature&gt;</span></samp>' describes some logical portion of the target
 system.  Features are currently used to describe available CPU
 registers and the types of their contents.  A `<samp><span class="samp">&lt;feature&gt;</span></samp>' element
@@ -192,14 +192,14 @@ and enum types.
 a unique (within the containing `<samp><span class="samp">&lt;feature&gt;</span></samp>') name to the type. 
 Types must be defined before they are used.
 
-   <p><a name="index-g_t_003cvector_003e-3570"></a>Some targets offer vector registers, which can be treated as arrays
+   <p><a name="index-g_t_003cvector_003e-3583"></a>Some targets offer vector registers, which can be treated as arrays
 of scalar elements.  These types are written as `<samp><span class="samp">&lt;vector&gt;</span></samp>' elements,
 specifying the array element type, <var>type</var>, and the number of elements,
 <var>count</var>:
 
 <pre class="smallexample">     &lt;vector id="<var>id</var>" type="<var>type</var>" count="<var>count</var>"/&gt;
 </pre>
-   <p><a name="index-g_t_003cunion_003e-3571"></a>If a register's value is usefully viewed in multiple ways, define it
+   <p><a name="index-g_t_003cunion_003e-3584"></a>If a register's value is usefully viewed in multiple ways, define it
 with a union type containing the useful representations.  The
 `<samp><span class="samp">&lt;union&gt;</span></samp>' element contains one or more `<samp><span class="samp">&lt;field&gt;</span></samp>' elements,
 each of which has a <var>name</var> and a <var>type</var>:
@@ -209,7 +209,7 @@ each of which has a <var>name</var> and a <var>type</var>:
        ...
      &lt;/union&gt;
 </pre>
-   <p><a name="index-g_t_003cstruct_003e-3572"></a><a name="index-g_t_003cflags_003e-3573"></a>If a register's value is composed from several separate values, define
+   <p><a name="index-g_t_003cstruct_003e-3585"></a><a name="index-g_t_003cflags_003e-3586"></a>If a register's value is composed from several separate values, define
 it with either a structure type or a flags type. 
 A flags type may only contain bitfields. 
 A structure type may either contain only bitfields or contain no bitfields. 
@@ -274,7 +274,7 @@ defining them with `<samp><span class="samp">flags</span></samp>':
 
 <h4 class="subsection">G.2.7 Registers</h4>
 
-<p><a name="index-g_t_003creg_003e-3574"></a>
+<p><a name="index-g_t_003creg_003e-3587"></a>
 Each register is represented as an element with this form:
 
 <pre class="smallexample">     &lt;reg name="<var>name</var>"
@@ -312,10 +312,13 @@ for <var>bitsize</var>, and <code>float</code> is a floating point type (in the
 architecture's normal floating point format) of the correct size for
 <var>bitsize</var>.  The default is <code>int</code>.
 
-     <br><dt><var>group</var><dd>The register group to which this register belongs.  It must
-be either <code>general</code>, <code>float</code>, or <code>vector</code>.  If no
-<var>group</var> is specified, <span class="sc">gdb</span> will not display the register
-in <code>info registers</code>.
+     <br><dt><var>group</var><dd>The register group to which this register belongs.  It can be one of the
+standard register groups <code>general</code>, <code>float</code>, <code>vector</code> or an
+arbitrary string.  Group names should be limited to alphanumeric characters. 
+If a group name is made up of multiple words the words may be separated by
+hyphens; e.g. <code>special-group</code> or <code>ultra-special-group</code>.  If no
+<var>group</var> is specified, <span class="sc">gdb</span> will not display the register in
+<code>info registers</code>.
 
    </dl>
 

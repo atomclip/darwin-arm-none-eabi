@@ -57,12 +57,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Function-Attributes.html#Function-Attri
 <p>These function attributes are supported by the m68k back end:
 
      <dl>
-<dt><code>interrupt</code><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-m68k-3404"></a><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-m68k-3405"></a>Use this attribute to
+<dt><code>interrupt</code><dt><code>interrupt_handler</code><dd><a name="index-g_t_0040code_007binterrupt_007d-function-attribute_002c-m68k-3410"></a><a name="index-g_t_0040code_007binterrupt_005fhandler_007d-function-attribute_002c-m68k-3411"></a>Use this attribute to
 indicate that the specified function is an interrupt handler.  The compiler
 generates function entry and exit sequences suitable for use in an
 interrupt handler when this attribute is present.  Either name may be used.
 
-     <br><dt><code>interrupt_thread</code><dd><a name="index-g_t_0040code_007binterrupt_005fthread_007d-function-attribute_002c-fido-3406"></a>Use this attribute on fido, a subarchitecture of the m68k, to indicate
+     <br><dt><code>interrupt_thread</code><dd><a name="index-g_t_0040code_007binterrupt_005fthread_007d-function-attribute_002c-fido-3412"></a>Use this attribute on fido, a subarchitecture of the m68k, to indicate
 that the specified function is an interrupt handler that is designed
 to run as a thread.  The compiler omits generate prologue/epilogue
 sequences and replaces the return instruction with a <code>sleep</code>

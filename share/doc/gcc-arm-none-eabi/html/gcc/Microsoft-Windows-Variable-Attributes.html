@@ -59,10 +59,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Variable-Attributes.html#Variable-Attri
 attributes available on all x86 targets.
 
      <dl>
-<dt><code>dllimport</code><dt><code>dllexport</code><dd><a name="index-g_t_0040code_007bdllimport_007d-variable-attribute-3599"></a><a name="index-g_t_0040code_007bdllexport_007d-variable-attribute-3600"></a>The <code>dllimport</code> and <code>dllexport</code> attributes are described in
+<dt><code>dllimport</code><dt><code>dllexport</code><dd><a name="index-g_t_0040code_007bdllimport_007d-variable-attribute-3607"></a><a name="index-g_t_0040code_007bdllexport_007d-variable-attribute-3608"></a>The <code>dllimport</code> and <code>dllexport</code> attributes are described in
 <a href="Microsoft-Windows-Function-Attributes.html#Microsoft-Windows-Function-Attributes">Microsoft Windows Function Attributes</a>.
 
-     <br><dt><code>selectany</code><dd><a name="index-g_t_0040code_007bselectany_007d-variable-attribute-3601"></a>The <code>selectany</code> attribute causes an initialized global variable to
+     <br><dt><code>selectany</code><dd><a name="index-g_t_0040code_007bselectany_007d-variable-attribute-3609"></a>The <code>selectany</code> attribute causes an initialized global variable to
 have link-once semantics.  When multiple definitions of the variable are
 encountered by the linker, the first is selected and the remainder are
 discarded.  Following usage by the Microsoft compiler, the linker is told
@@ -81,7 +81,7 @@ targets.  You can use <code>__declspec (selectany)</code> as a synonym for
 <code>__attribute__ ((selectany))</code> for compatibility with other
 compilers.
 
-     <br><dt><code>shared</code><dd><a name="index-g_t_0040code_007bshared_007d-variable-attribute-3602"></a>On Microsoft Windows, in addition to putting variable definitions in a named
+     <br><dt><code>shared</code><dd><a name="index-g_t_0040code_007bshared_007d-variable-attribute-3610"></a>On Microsoft Windows, in addition to putting variable definitions in a named
 section, the section can also be shared among all running copies of an
 executable or DLL.  For example, this small program defines shared data
 by putting it in a named section <code>shared</code> and marking the section

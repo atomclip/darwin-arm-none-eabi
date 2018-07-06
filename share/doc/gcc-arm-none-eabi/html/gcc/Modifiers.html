@@ -54,16 +54,16 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Constraints.html#Constraints">Constrain
 
 <h5 class="subsubsection">6.45.3.3 Constraint Modifier Characters</h5>
 
-<p><a name="index-modifiers-in-constraints-3737"></a><a name="index-constraint-modifier-characters-3738"></a>
+<p><a name="index-modifiers-in-constraints-3745"></a><a name="index-constraint-modifier-characters-3746"></a>
 <!-- prevent bad page break with this line -->
 Here are constraint modifier characters.
 
      
-<a name="index-g_t_0040samp_007b_003d_007d-in-constraint-3739"></a>
+<a name="index-g_t_0040samp_007b_003d_007d-in-constraint-3747"></a>
 <dl><dt>`<samp><span class="samp">=</span></samp>'<dd>Means that this operand is written to by this instruction:
 the previous value is discarded and replaced by new data.
 
-     <p><a name="index-g_t_0040samp_007b_002b_007d-in-constraint-3740"></a><br><dt>`<samp><span class="samp">+</span></samp>'<dd>Means that this operand is both read and written by the instruction.
+     <p><a name="index-g_t_0040samp_007b_002b_007d-in-constraint-3748"></a><br><dt>`<samp><span class="samp">+</span></samp>'<dd>Means that this operand is both read and written by the instruction.
 
      <p>When the compiler fixes up the operands to satisfy the constraints,
 it needs to know which operands are read by the instruction and
@@ -74,7 +74,7 @@ other operands are assumed to only be read.
      <p>If you specify `<samp><span class="samp">=</span></samp>' or `<samp><span class="samp">+</span></samp>' in a constraint, you put it in the
 first character of the constraint string.
 
-     <p><a name="index-g_t_0040samp_007b_0026_007d-in-constraint-3741"></a><a name="index-earlyclobber-operand-3742"></a><br><dt>`<samp><span class="samp">&amp;</span></samp>'<dd>Means (in a particular alternative) that this operand is an
+     <p><a name="index-g_t_0040samp_007b_0026_007d-in-constraint-3749"></a><a name="index-earlyclobber-operand-3750"></a><br><dt>`<samp><span class="samp">&amp;</span></samp>'<dd>Means (in a particular alternative) that this operand is an
 <dfn>earlyclobber</dfn> operand, which is written before the instruction is
 finished using the input operands.  Therefore, this operand may not lie
 in a register that is read by the instruction or as part of any memory
@@ -99,7 +99,7 @@ operand, then that operand is written only after it's used.
 <dfn>earlyclobber</dfn> operand is ill-formed and will be rejected by the
 compiler.
 
-     <p><a name="index-g_t_0040samp_007b_0025_007d-in-constraint-3743"></a><br><dt>`<samp><span class="samp">%</span></samp>'<dd>Declares the instruction to be commutative for this operand and the
+     <p><a name="index-g_t_0040samp_007b_0025_007d-in-constraint-3751"></a><br><dt>`<samp><span class="samp">%</span></samp>'<dd>Declares the instruction to be commutative for this operand and the
 following operand.  This means that the compiler may interchange the
 two operands if that is the cheapest way to make all operands fit the
 constraints.  `<samp><span class="samp">%</span></samp>' applies to all alternatives and must appear as

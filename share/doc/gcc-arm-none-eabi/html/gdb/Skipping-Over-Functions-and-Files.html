@@ -10,7 +10,7 @@
 <link rel="next" href="Signals.html#Signals" title="Signals">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988-2017 Free Software Foundation, Inc.
+Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Stopping.html#Stopping">Stopping</a>
 
 <h3 class="section">5.3 Skipping Over Functions and Files</h3>
 
-<p><a name="index-skipping-over-functions-and-files-368"></a>
+<p><a name="index-skipping-over-functions-and-files-372"></a>
 The program you are debugging may contain some functions which are
 uninteresting to debug.  The <code>skip</code> command lets you tell <span class="sc">gdb</span> to
 skip a function, all functions in a file or a particular function in
@@ -89,7 +89,7 @@ See for example `<samp><span class="samp">man 7 glob</span></samp>' on <span cla
 description of <code>glob</code>-style patterns.
 
      
-<a name="index-skip-369"></a>
+<a name="index-skip-373"></a>
 <dl><dt><code>skip </code><span class="roman">[</span><var>options</var><span class="roman">]</span><dd>The basic form of the <code>skip</code> command takes zero or more options
 that specify what to skip. 
 The <var>options</var> argument is any useful combination of the following:
@@ -97,7 +97,7 @@ The <var>options</var> argument is any useful combination of the following:
           <dl>
 <dt><code>-file </code><var>file</var><dt><code>-fi </code><var>file</var><dd>Functions in <var>file</var> will be skipped over when stepping.
 
-          <br><dt><code>-gfile </code><var>file-glob-pattern</var><dt><code>-gfi </code><var>file-glob-pattern</var><dd><a name="index-skipping-over-files-via-glob_002dstyle-patterns-370"></a>Functions in files matching <var>file-glob-pattern</var> will be skipped
+          <br><dt><code>-gfile </code><var>file-glob-pattern</var><dt><code>-gfi </code><var>file-glob-pattern</var><dd><a name="index-skipping-over-files-via-glob_002dstyle-patterns-374"></a>Functions in files matching <var>file-glob-pattern</var> will be skipped
 over when stepping.
 
           <pre class="smallexample">               (gdb) skip -gfi utils/*.c
@@ -106,7 +106,7 @@ over when stepping.
 named by <var>linespec</var> will be skipped over when stepping. 
 See <a href="Specify-Location.html#Specify-Location">Specify Location</a>.
 
-          <br><dt><code>-rfunction </code><var>regexp</var><dt><code>-rfu </code><var>regexp</var><dd><a name="index-skipping-over-functions-via-regular-expressions-371"></a>Functions whose name matches <var>regexp</var> will be skipped over when stepping.
+          <br><dt><code>-rfunction </code><var>regexp</var><dt><code>-rfu </code><var>regexp</var><dd><a name="index-skipping-over-functions-via-regular-expressions-375"></a>Functions whose name matches <var>regexp</var> will be skipped over when stepping.
 
           <p>This form is useful for complex function names. 
 For example, there is generally no need to step into C<tt>++</tt> <code>std::string</code>
@@ -127,7 +127,7 @@ in the <code>std</code> namespace you can do:
      <p>If no options are specified, the function you're currently debugging
 will be skipped.
 
-     <p><a name="index-skip-function-372"></a><br><dt><code>skip function </code><span class="roman">[</span><var>linespec</var><span class="roman">]</span><dd>After running this command, the function named by <var>linespec</var> or the
+     <p><a name="index-skip-function-376"></a><br><dt><code>skip function </code><span class="roman">[</span><var>linespec</var><span class="roman">]</span><dd>After running this command, the function named by <var>linespec</var> or the
 function containing the line named by <var>linespec</var> will be skipped over when
 stepping.  See <a href="Specify-Location.html#Specify-Location">Specify Location</a>.
 
@@ -137,7 +137,7 @@ will be skipped.
      <p>(If you have a function called <code>file</code> that you want to skip, use
 <kbd>skip function file</kbd>.)
 
-     <p><a name="index-skip-file-373"></a><br><dt><code>skip file </code><span class="roman">[</span><var>filename</var><span class="roman">]</span><dd>After running this command, any function whose source lives in <var>filename</var>
+     <p><a name="index-skip-file-377"></a><br><dt><code>skip file </code><span class="roman">[</span><var>filename</var><span class="roman">]</span><dd>After running this command, any function whose source lives in <var>filename</var>
 will be skipped over when stepping.
 
      <pre class="smallexample">          (gdb) skip file boring.c
@@ -151,7 +151,7 @@ you're currently debugging will be skipped.
 These are the commands for managing your list of skips:
 
      
-<a name="index-info-skip-374"></a>
+<a name="index-info-skip-378"></a>
 <dl><dt><code>info skip </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Print details about the specified skip(s).  If <var>range</var> is not specified,
 print a table with details about all functions and files marked for skipping. 
 <code>info skip</code> prints the following information about each skip:
@@ -170,13 +170,13 @@ Otherwise it is `<samp><span class="samp">n</span></samp>'.
 If no function is specified this is `<samp><span class="samp">&lt;none&gt;</span></samp>'. 
 </dl>
 
-     <p><a name="index-skip-delete-375"></a><br><dt><code>skip delete </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Delete the specified skip(s).  If <var>range</var> is not specified, delete all
+     <p><a name="index-skip-delete-379"></a><br><dt><code>skip delete </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Delete the specified skip(s).  If <var>range</var> is not specified, delete all
 skips.
 
-     <p><a name="index-skip-enable-376"></a><br><dt><code>skip enable </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Enable the specified skip(s).  If <var>range</var> is not specified, enable all
+     <p><a name="index-skip-enable-380"></a><br><dt><code>skip enable </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Enable the specified skip(s).  If <var>range</var> is not specified, enable all
 skips.
 
-     <p><a name="index-skip-disable-377"></a><br><dt><code>skip disable </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Disable the specified skip(s).  If <var>range</var> is not specified, disable all
+     <p><a name="index-skip-disable-381"></a><br><dt><code>skip disable </code><span class="roman">[</span><var>range</var><span class="roman">]</span><dd>Disable the specified skip(s).  If <var>range</var> is not specified, disable all
 skips.
 
    </dl>

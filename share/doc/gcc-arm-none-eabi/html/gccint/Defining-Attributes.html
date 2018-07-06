@@ -52,8 +52,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Insn-Attributes.html#Insn-Attributes">I
 
 <h4 class="subsection">16.19.1 Defining Attributes and their Values</h4>
 
-<p><a name="index-defining-attributes-and-their-values-3747"></a><a name="index-attributes_002c-defining-3748"></a>
-<a name="index-define_005fattr-3749"></a>The <code>define_attr</code> expression is used to define each attribute required
+<p><a name="index-defining-attributes-and-their-values-3748"></a><a name="index-attributes_002c-defining-3749"></a>
+<a name="index-define_005fattr-3750"></a>The <code>define_attr</code> expression is used to define each attribute required
 by the target machine.  It looks like:
 
 <pre class="smallexample">     (define_attr <var>name</var> <var>list-of-values</var> <var>default</var>)
@@ -79,7 +79,7 @@ an explicit value for this attribute.  See <a href="Attr-Example.html#Attr-Examp
 information on the handling of defaults.  See <a href="Constant-Attributes.html#Constant-Attributes">Constant Attributes</a>,
 for information on attributes that do not depend on any particular insn.
 
- <p><a name="index-insn_002dattr_002eh-3750"></a>For each defined attribute, a number of definitions are written to the
+ <p><a name="index-insn_002dattr_002eh-3751"></a>For each defined attribute, a number of definitions are written to the
 <samp><span class="file">insn-attr.h</span></samp> file.  For cases where an explicit set of values is
 specified for an attribute, the following are defined:
 
@@ -130,7 +130,7 @@ See <a href="Mnemonic-Attribute.html#Mnemonic-Attribute">Mnemonic Attribute</a>.
 `<samp><span class="samp">HAVE_ATTR_</span><var>name</var></samp>' `<samp><span class="samp">#define</span></samp>' is also written when the
 attribute is not defined; in that case, it is defined as `<samp><span class="samp">0</span></samp>'.
 
- <p><a name="index-define_005fenum_005fattr-3751"></a><a name="define_005fenum_005fattr"></a>
+ <p><a name="index-define_005fenum_005fattr-3752"></a><a name="define_005fenum_005fattr"></a>
 Another way of defining an attribute is to use:
 
 <pre class="smallexample">     (define_enum_attr "<var>attr</var>" "<var>enum</var>" <var>default</var>)

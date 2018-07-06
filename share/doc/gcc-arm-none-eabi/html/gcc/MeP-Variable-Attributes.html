@@ -64,31 +64,31 @@ addition to these memory regions, the MeP target has a separate 16-bit
 control bus which is specified with <code>cb</code> attributes.
 
      <dl>
-<dt><code>based</code><dd><a name="index-g_t_0040code_007bbased_007d-variable-attribute_002c-MeP-3593"></a>Any variable with the <code>based</code> attribute is assigned to the
+<dt><code>based</code><dd><a name="index-g_t_0040code_007bbased_007d-variable-attribute_002c-MeP-3601"></a>Any variable with the <code>based</code> attribute is assigned to the
 <code>.based</code> section, and is accessed with relative to the
 <code>$tp</code> register.
 
-     <br><dt><code>tiny</code><dd><a name="index-g_t_0040code_007btiny_007d-variable-attribute_002c-MeP-3594"></a>Likewise, the <code>tiny</code> attribute assigned variables to the
+     <br><dt><code>tiny</code><dd><a name="index-g_t_0040code_007btiny_007d-variable-attribute_002c-MeP-3602"></a>Likewise, the <code>tiny</code> attribute assigned variables to the
 <code>.tiny</code> section, relative to the <code>$gp</code> register.
 
-     <br><dt><code>near</code><dd><a name="index-g_t_0040code_007bnear_007d-variable-attribute_002c-MeP-3595"></a>Variables with the <code>near</code> attribute are assumed to have addresses
+     <br><dt><code>near</code><dd><a name="index-g_t_0040code_007bnear_007d-variable-attribute_002c-MeP-3603"></a>Variables with the <code>near</code> attribute are assumed to have addresses
 that fit in a 24-bit addressing mode.  This is the default for large
 variables (<code>-mtiny=4</code> is the default) but this attribute can
 override <code>-mtiny=</code> for small variables, or override <code>-ml</code>.
 
-     <br><dt><code>far</code><dd><a name="index-g_t_0040code_007bfar_007d-variable-attribute_002c-MeP-3596"></a>Variables with the <code>far</code> attribute are addressed using a full
+     <br><dt><code>far</code><dd><a name="index-g_t_0040code_007bfar_007d-variable-attribute_002c-MeP-3604"></a>Variables with the <code>far</code> attribute are addressed using a full
 32-bit address.  Since this covers the entire memory space, this
 allows modules to make no assumptions about where variables might be
 stored.
 
-     <br><dt><code>io</code><dd><a name="index-g_t_0040code_007bio_007d-variable-attribute_002c-MeP-3597"></a><dt><code>io (</code><var>addr</var><code>)</code><dd>Variables with the <code>io</code> attribute are used to address
+     <br><dt><code>io</code><dd><a name="index-g_t_0040code_007bio_007d-variable-attribute_002c-MeP-3605"></a><dt><code>io (</code><var>addr</var><code>)</code><dd>Variables with the <code>io</code> attribute are used to address
 memory-mapped peripherals.  If an address is specified, the variable
 is assigned that address, else it is not assigned an address (it is
 assumed some other module assigns an address).  Example:
 
      <pre class="smallexample">          int timer_count __attribute__((io(0x123)));
      </pre>
-     <br><dt><code>cb</code><dt><code>cb (</code><var>addr</var><code>)</code><dd><a name="index-g_t_0040code_007bcb_007d-variable-attribute_002c-MeP-3598"></a>Variables with the <code>cb</code> attribute are used to access the control
+     <br><dt><code>cb</code><dt><code>cb (</code><var>addr</var><code>)</code><dd><a name="index-g_t_0040code_007bcb_007d-variable-attribute_002c-MeP-3606"></a>Variables with the <code>cb</code> attribute are used to access the control
 bus, using special instructions.  <code>addr</code> indicates the control bus
 address.  Example:
 

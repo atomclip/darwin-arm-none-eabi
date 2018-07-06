@@ -94,15 +94,16 @@ does not support <code>"JIS"</code>.
    <p>(<code>""</code> is also accepted; if given, the settings are read from the
 corresponding LC_* environment variables and $LANG according to POSIX rules.)
 
-   <p>This implementation also supports the modifier <code>"cjknarrow"</code>, which
-affects how the functions <code>wcwidth</code> and <code>wcswidth</code> handle characters
-from the "CJK Ambiguous Width" category of characters described at
-http://www.unicode.org/reports/tr11/#Ambiguous. These characters have a width
-of 1 for singlebyte charsets and a width of 2 for multibyte charsets
-other than UTF-8. For UTF-8, their width depends on the language specifier:
+   <p>This implementation also supports the modifiers <code>"cjknarrow"</code> and
+<code>"cjkwide"</code>, which affect how the functions <code>wcwidth</code> and <code>wcswidth</code>
+handle characters from the "CJK Ambiguous Width" category of characters
+described at http://www.unicode.org/reports/tr11/#Ambiguous. 
+These characters have a width of 1 for singlebyte charsets and a width of 2
+for multibyte charsets other than UTF-8. 
+For UTF-8, their width depends on the language specifier:
 it is 2 for <code>"zh"</code> (Chinese), <code>"ja"</code> (Japanese), and <code>"ko"</code> (Korean),
-and 1 for everything else. Specifying <code>"cjknarrow"</code> forces a width of 1,
-independent of charset and language.
+and 1 for everything else. Specifying <code>"cjknarrow"</code> or <code>"cjkwide"</code>
+forces a width of 1 or 2, respectively, independent of charset and language.
 
    <p>If you use <code>NULL</code> as the <var>locale</var> argument, <code>setlocale</code> returns a
 pointer to the string representing the current locale.  The acceptable
@@ -139,6 +140,14 @@ this implementation, always those of the C locale).
 <strong>Portability</strong><br>
 ANSI C requires <code>setlocale</code>, but the only locale required across all
 implementations is the C locale.
+
+   <pre class="sp">
+
+</pre>
+<strong>Notes</strong><br>
+There is no ISO-8859-12 codepage.  It's also refused by this implementation.
+
+   <p>No supporting OS subroutines are required.
 
    <pre class="sp">
 

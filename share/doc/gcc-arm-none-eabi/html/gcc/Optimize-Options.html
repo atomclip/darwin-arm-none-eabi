@@ -972,7 +972,7 @@ flow and turn the statement with erroneous or undefined behavior into a trap.
 This flag is enabled by default at <samp><span class="option">-O2</span></samp> and higher and depends on
 <samp><span class="option">-fdelete-null-pointer-checks</span></samp> also being enabled.
 
-     <br><dt><code>-fisolate-erroneous-paths-attribute</code><dd><a name="index-fisolate_002derroneous_002dpaths_002dattribute-886"></a>Detect paths that trigger erroneous or undefined behavior due a null value
+     <br><dt><code>-fisolate-erroneous-paths-attribute</code><dd><a name="index-fisolate_002derroneous_002dpaths_002dattribute-886"></a>Detect paths that trigger erroneous or undefined behavior due to a null value
 being used in a way forbidden by a <code>returns_nonnull</code> or <code>nonnull</code>
 attribute.  Isolate those paths from the main control flow and turn the
 statement with erroneous or undefined behavior into a trap.  This is not
@@ -1401,7 +1401,8 @@ equivalent and mean that functions are not aligned.
      <p>Some assemblers only support this flag when <var>n</var> is a power of two;
 in that case, it is rounded up.
 
-     <p>If <var>n</var> is not specified or is zero, use a machine-dependent default.
+     <p>If <var>n</var> is not specified or is zero, use a machine-dependent default. 
+The maximum allowed <var>n</var> option value is 65536.
 
      <p>Enabled at levels <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>.
 
@@ -1422,7 +1423,8 @@ equivalent and mean that labels are not aligned.
 are greater than this value, then their values are used instead.
 
      <p>If <var>n</var> is not specified or is zero, use a machine-dependent default
-which is very likely to be `<samp><span class="samp">1</span></samp>', meaning no alignment.
+which is very likely to be `<samp><span class="samp">1</span></samp>', meaning no alignment. 
+The maximum allowed <var>n</var> option value is 65536.
 
      <p>Enabled at levels <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>.
 
@@ -1432,7 +1434,8 @@ executed many times, this makes up for any execution of the dummy
 operations.
 
      <p><samp><span class="option">-fno-align-loops</span></samp> and <samp><span class="option">-falign-loops=1</span></samp> are
-equivalent and mean that loops are not aligned.
+equivalent and mean that loops are not aligned. 
+The maximum allowed <var>n</var> option value is 65536.
 
      <p>If <var>n</var> is not specified or is zero, use a machine-dependent default.
 
@@ -1446,7 +1449,8 @@ need be executed.
      <p><samp><span class="option">-fno-align-jumps</span></samp> and <samp><span class="option">-falign-jumps=1</span></samp> are
 equivalent and mean that loops are not aligned.
 
-     <p>If <var>n</var> is not specified or is zero, use a machine-dependent default.
+     <p>If <var>n</var> is not specified or is zero, use a machine-dependent default. 
+The maximum allowed <var>n</var> option value is 65536.
 
      <p>Enabled at levels <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>.
 
