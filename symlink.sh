@@ -1,6 +1,6 @@
 #!/bin/sh
 # Create symlinks for GNU Arm embedded toolchain for macOS
-VERSION=0.0.6
+VERSION=0.1.2
 TOOLCHAIN=~/.vscode/extensions/atomclip.darwin-arm-none-eabi-${VERSION}/bin
 CROSS=arm-none-eabi-
 
