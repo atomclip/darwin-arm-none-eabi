@@ -88,7 +88,7 @@ test:
 
 ## Release Notes
 
-### Version 0.1.1
+### Version 0.1.2
 Fixed typo in path to repository causing a wrong link in the marketplace.
 
 Added a path to the libgcc files. 
