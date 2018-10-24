@@ -6,4 +6,5 @@
 This extension has moved to another repository and will no longer be updated. 
 You can uninstall this extension. 
 
+Install this extension:
 [GNU Arm embedded toolchain for macOS](https://marketplace.visualstudio.com/items?itemName=metalcode-eu.windows-arm-none-eabi)
